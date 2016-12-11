@@ -12,7 +12,7 @@ html
       title Horsetail Tech
 
     block(name='stylesheets')
-      link(rel='stylesheet' href='css/index.css')
+      link(rel='stylesheet' href='css/main.css')
 
   body(role='document' id='{{ pageId }}')
 
@@ -21,6 +21,9 @@ html
 
     main(role='main')
       block(name='content')
+
+    footer
+      include(src='/includes/_footer.sgr')
 
     block(name='javascript')
       script(src='js/main.js' defer)
