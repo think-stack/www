@@ -1,6 +1,7 @@
 nav
-  #logo: a(href='/')
-    img(src='./img/ht-logo.png')
+  #logo
+    a(href='/')
+      img(src='./img/ht-logo.png')
 
   ul
     li: a(href='/') About
