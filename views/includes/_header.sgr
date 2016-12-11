@@ -1,0 +1,7 @@
+nav
+  #logo: a(href='/')
+    img(src='./img/ht-logo.png')
+
+  ul
+    li: a(href='/') About
+    li: a(href='/') Services
