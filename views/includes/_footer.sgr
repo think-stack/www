@@ -8,4 +8,4 @@
 
 #footer-nav
   ul
-    li: a(href='/terms') terms &amp; conditions
+    li: a(href='/terms-conditions') terms &amp; conditions
