@@ -20,7 +20,10 @@ html
       include(src='/includes/_header.sgr')
 
     main(role='main')
-      block(name='content')
+      block(name='main')
+
+    section#services
+      include(src='/includes/_services.sgr')
 
     footer
       include(src='/includes/_footer.sgr')
