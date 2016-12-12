@@ -1,0 +1,56 @@
+html
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+      meta(name='description' content='')
+      meta(name='author' content='asasmith')
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block(name='title')
+      title Horsetail Tech
+
+    block(name='stylesheets')
+      link(rel='stylesheet' href='css/main.css')
+
+  body(role='document' id='{{ pageId }}')
+
+  header
+    include(src='/includes/_header.sgr')
+
+  main
+    h2 HORSETAIL TECHNOLOGIES, LLC STANDARD ADDITIONAL MSA TERMS
+      p
+        span Cooperation.
+        |  Client shall cooperate with Horsetail to provide any information and/or resources reasonably requested by Horsetail from time to time in connection with the Services, including but not limited to, providing access to Client’s systems, records, facilities, employees, officers and/or directors. Periodic reboots for such devices as firewalls, routers and servers are required to apply/activate critical update patches and configuration changes. Horsetail’s Services are predicated upon Client’s support and commitment to providing time/scheduling for network device reboots with its staff and/or users support. Virus mitigation within the scope of this Agreement is predicated on Client satisfying recommended backup schemes and having appropriate anti-virus software with current updates.
+
+      p
+        span Acknowledgments.
+        |  Client acknowledges Horsetail has and will continue to have relationships with parties other than Client in the industry in which Client does business, pursuant to which Horsetail may acquire information of interest to Client, which may or may not be confidential or proprietary information of Horsetail or a third party. Client further acknowledges Horsetail will have no obligation to disclose such information to Client, or to use such information in connection with the provision of the Services. Further, Horsetail may now or in the future evaluate or do business with competitors or potential competitors of Client. Neither the execution of the Agreement nor Horsetail’s receipt of any confidential or proprietary information will in any way restrict or preclude such activities nor constitute a breach of any provisions of the Agreement absent some other breach of the provisions hereof.
+
+      p
+        span Indemnification.
+        |  Client shall indemnify and hold harmless Horsetail and its directors, officers, employees and members from and against any and all claims, actions, proceedings, losses, liabilities, damages, costs and expenses, including attorneys’ fees, arising out of, relating to or in connection with any breach by Client of any covenant, promise, agreement, representation or warranty made by Client in this Agreement.
+
+      p
+        span Representations.
+        |  Client’s representative signing the Agreement hereby represents and warrants to Horsetail that s/he has the unconditional authority to enter into the Agreement on behalf of Client, and such authority has been granted in accordance with the requirements of Client’s organizational documents.
+
+      p
+        span Travel.
+        |  Reimbursement for reasonable and actual expenses shall be made in accordance with the following:
+
+      ul
+        li 1. Air Travel – Lowest unrestricted coach fare, when possible.
+        li 2. Rented Automobile – Compact type, unless not practical.
+        li 3. Meals, Incidentals, and Lodging– Actual and reasonable costs supported by original receipts.
+        li 4. Private Vehicle Usage – Mileage at the current federal mileage reimbursement rate.
+        li 5. Miscellaneous Expense – Actual and reasonable pre-approved costs that are directly and reasonably required for performance of the Services.
+        li 6. Alcohol and most entertainment costs are not allowable expenses.
+
+
+
+
+
+  footer
+    include(src='/includes/_footer.sgr')

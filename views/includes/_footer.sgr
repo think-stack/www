@@ -8,4 +8,6 @@
 
 #footer-nav
   ul
-    li: a(href='/terms-conditions') terms &amp; conditions
+    li: a(href='/standard-msa-terms') Standard MSA terms
+    li: a(href='/rss-terms') RSS terms
+    li: a(href='/mss-terms') MSS terms
