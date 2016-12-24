@@ -1,0 +1,11 @@
+section#clients
+  h1 Prestigous client list
+
+  #logos
+    img(src="./img/client_logos/ht-solarity.png")
+    img(src="./img/client_logos/ht-argent.png")
+    img(src="./img/client_logos/ht-mutual.png")
+    img(src="./img/client_logos/ht-infirst.png")
+    img(src="./img/client_logos/ht-marriot.png")
+    img(src="./img/client_logos/ht-coastal.png")
+    img(src="./img/client_logos/ht-alp.png")

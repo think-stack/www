@@ -1,72 +1,132 @@
 #index
 
   & main
-    background: url('/img/ht-bg.jpg') no-repeat center center fixed
-    background-size: cover
     display: flex
     flex-direction: column
-    justify-content: flex-end
-    color: #fff
-    min-height: 80vh
-    text-align: center
+    min-height: 97vh
+    text-align: left
 
     & p
       padding: 0
-      font-size: 1.25em
 
     & #hero
-      background-color: #111
-      opacity: .8
       width: 100%
+      margin: auto 4em
 
-      & .hero-wrapper
-        max-width: 40em
-        margin: 0 auto
-        padding: 1.5em 0
+      & h1
+        padding-bottom: 1.5em
+        line-height: 115%
+        max-width: 16em
 
-        & h1
-          line-height: 115%
 
-        & p
-          padding: 0 2em
+      & p
+        padding: 0 2em
+        max-width: 32em
 
-          @media (min-width: 44em)
-            padding: 0
+        @media (min-width: 44em)
+          padding: 0
 
-  & #services
+  & section
+    height: 60vh
+    background-color: #f7f7f7
+    display: flex
+    justify-content: space-around
+    width: 100%
+
+    & h1
+      color: var(--htOrange)
+      margin: auto 0
+      max-width: 12em
+      line-height: 1.5em
+    & p
+      max-width: 32em
+      margin: auto 0
+
+  & blockquote
+    background-color: var(--htBlue)
+    color: white
+    display: flex
+    flex-direction: column
+    height: 12em
 
     & p
-      max-width: 40em
+      font-size: 1.5em
+      max-width: 24em
       margin: auto
-      padding: 1em 1em
-      font-size: 1.25em
 
-    & ul
+      &:before
+        content: '"'
+
+      &:after
+        content: '"'
+
+    & cite
+      margin-bottom: 2em
+      align-self: center
+
+  & #tech
+    background-color: #fff
+
+  & #clients
+    display: flex
+    flex-direction: column
+    height: auto
+
+    & h1
+      width: 100%
+      color: var(--htBlue)
+      margin: 1em auto 0
+      text-align: center
+
+
+    & #logos
       display: flex
-      flex-direction: column
-      font-size: 1.4em
-      padding: 1em 0
+      flex-wrap: wrap
+      justify-content: space-around
+
+      & img
+        margin: auto 1em
+        flex: 0 1 auto
+
+  & #experts
+    background-color: #fff
+
+  & #contact
+    height: 12em
+    background-color: var(--htBlue)
+    justify-content: center
+
+    & h1
       color: #fff
-      background-color: #111
+      margin: auto .5em
 
-      @media (min-width: 44em)
-        padding: 2em 0
+    & a
+      margin: auto 1em
+      padding: .5em 1em
+      color: #fff
+      background-color: var(--htOrange)
+      border-bottom: 3px solid color(var(--htOrange) blackness(50%))
+      border-radius: 10px
+      box-shadow: 3px 3px 3px #29333a
+      font-weight: bold
+      font-size: 1.15em
+      text-transform: uppercase
+      cursor: pointer
 
+      &:hover
+        background-color: color(var(--htOrange) saturation(+100%))
+        transition: background-color .4s ease-out
 
-      @media (min-width: 44em)
-        flex-direction: row
-        justify-content: space-around
+      &:active
+        box-shadow: 1px 1px 1px #212121
+        border-bottom: 2px solid color(var(--htOrange) blackness(50%))
+        transform: translateY(3px)
 
-      & li
-        cursor: pointer
-        margin: auto
-        padding: .5em
+      &:focus
+        outline: 0
 
-        &.active
-          color: var(--htOrange)
-
-        &:hover
-          color: var(--htOrange)
-
-    & .hide
-      display: none
+      /*#button:active {
+	box-shadow: 2px 2px 2px #777;
+	border-bottom:1px solid #0045A6;
+	transform: translateY(3px);
+}*/

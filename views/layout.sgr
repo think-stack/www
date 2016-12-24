@@ -16,14 +16,22 @@ html
 
   body(role='document' id='{{ pageId }}')
 
-    header
-      include(src='/includes/_header.sgr')
-
     main(role='main')
       block(name='main')
 
-    section#services
-      include(src='/includes/_services.sgr')
+    include(src='/includes/_risk.sgr')
+
+    include(src='/includes/_testimonial.sgr')
+
+    include(src='/includes/_tech.sgr')
+
+    include(src='/includes/_clients.sgr')
+
+    include(src='/includes/_experts.sgr')
+
+    include(src='/includes/_contact.sgr')
+
+    include(src='/includes/_relationships.sgr')
 
     footer
       include(src='/includes/_footer.sgr')
