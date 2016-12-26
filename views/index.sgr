@@ -1,6 +1,7 @@
 extends(src='layout.sgr')
   block(name='main')
 
+<<<<<<< HEAD
     main
 
       #hero
