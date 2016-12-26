@@ -11,7 +11,7 @@ module.exports = {
     html: '*(**/)*.sgr',
     css: '*(**/)*.sss'
   },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*'],
+  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*'],
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
@@ -22,6 +22,7 @@ module.exports = {
     return cssStandards({ webpack: ctx })
   },
   babel: { presets: [jsStandards] },
+  server: {open: false},
   plugins: [
     new HardSourcePlugin({
       environmentPaths: { root: __dirname },
