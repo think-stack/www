@@ -3,6 +3,6 @@ nav
     a(href='/')
       img(src='./img/ht-logo.png')
 
-  // ul
-  //   li: a(href='/') About
-  //   li: a(href='/') Services
+  ul
+    li: a(href='/about') About
+    li: a(href='/contact') Contact

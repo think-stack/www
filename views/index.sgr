@@ -1,6 +1,23 @@
 extends(src='layout.sgr')
   block(name='main')
-    #hero
-      .hero-wrapper
+
+<<<<<<< HEAD
+    main
+
+      #hero
         h1 We're a new kind of IT company built just for specialized organizations
         p Highly regulated industries need a technology partner that understands the special issues they face, so we created one. Horsetail Technologies merges business strategy with technology to manage risk, compliance and IT maintenance for busy organizations.
+
+    include(src='/includes/_risk.sgr')
+
+    include(src='/includes/_testimonial.sgr')
+
+    include(src='/includes/_tech.sgr')
+
+    include(src='/includes/_clients.sgr')
+
+    include(src='/includes/_experts.sgr')
+
+    include(src='/includes/_contact.sgr')
+
+    include(src='/includes/_relationships.sgr')

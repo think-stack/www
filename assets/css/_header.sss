@@ -1,25 +1,43 @@
 header
-  color: #fff
-  background-color: #111
+  color: #111
   font-size: 1.2em
 
   & nav
     display: flex
-    justify-content: space-between
+    flex-direction: column
+    justify-content: center
+
+    @media (min-width: 49em)
+      flex-direction: row
+      justify-content: space-between
 
     & ul
       display: flex
       text-transform: uppercase
-      align-items: center
-      margin-right: 3em
+      margin: auto
+
+      @media (min-width: 49em)
+        margin: auto 0
+
 
       & li
-        padding: .5em 0 .5em 2em
+        padding: 1em
+        margin: auto
 
-    & #logo img
-      width: 250px
-      margin: 1em
-      flex: 2
+        @media (min-width: 49em)
+          padding: 0 1em
 
-      @media (min-width: 44em)
+          &:last-of-type
+            padding-right: 2em
+
+    & #logo
+      margin: 2em auto
+
+      & img
+        width: 15.625em
+        margin: auto
+
+
+      @media (min-width: 49em)
         margin: 1em 1em 1em 3em
+        flex: 1 0 auto
