@@ -7,4 +7,4 @@ section#clients
     img(src="./img/client_logos/ht-argent.png")
     img(src="./img/client_logos/ht-mutual.png")
     img(src="./img/client_logos/ht-infirst.png")
-    img(src="./img/client_logos/ht-alp.png")
+    // img(src="./img/client_logos/ht-alp.png")
