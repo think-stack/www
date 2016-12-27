@@ -19,14 +19,12 @@ html
     header
       include(src='/includes/_header.sgr')
 
-    main(role='main')
-      block(name='main')
-
-    section#services
-      include(src='/includes/_services.sgr')
+    block(name='main')
 
     footer
       include(src='/includes/_footer.sgr')
+
+    include(src='/includes/_icon-sprite.sgr')
 
     block(name='javascript')
       script(src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous")

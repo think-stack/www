@@ -1,0 +1,90 @@
+#about
+
+  & main
+    display: flex
+    flex-direction: column
+    height: 80vh
+
+    & #hero
+      width: 90%
+      margin: auto
+
+      @media (min-width: 49em)
+        width: 100%
+        margin: auto 4em
+
+      & h1
+        padding-bottom: 1.5em
+        line-height: 115%
+        width: 90%
+        margin: auto
+
+        @media (min-width: 49em)
+          max-width: 16em
+          margin: auto 0
+
+
+      & p
+        width: 90%
+        margin: auto
+
+        @media (min-width: 49em)
+          max-width: 32em
+          margin: auto 0
+  & #team
+
+    & h1
+      max-width: 20em
+      margin: 3em auto
+      text-align: center
+
+    & #bio
+      display: flex
+      flex-direction: column
+
+      & .bio-wrapper
+        display: flex
+        flex-direction: column
+        width: 90%
+        margin: 0 auto 6em
+
+        @media (min-width: 49em)
+          width: 75%
+          flex-direction: row
+
+        &:nth-child(even)
+          & .bio-content
+            order: 2
+
+            @media (min-width: 49em)
+              margin-left: 3.5em
+
+          & figure
+            order: 1
+
+        & .bio-content
+          order: 2
+
+          @media (min-width: 49em)
+            order: 1
+
+          & p
+            padding: 0 0 1em
+
+            @media (min-width: 49em)
+              padding: 0 2em 1em 0
+
+        & figure
+          order: 1
+          text-align: center
+
+          @media (min-width: 49em)
+            order: 2
+
+
+          & img
+            border-radius: 10px
+
+          & ul
+            text-align: center
+            margin: 1em 0 2em
