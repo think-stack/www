@@ -1,0 +1,10 @@
+section#clients
+  h1 On the frontlines of industry change
+  p Our clients are specialized teams, credit unions and regulated organizations who fight to push their industries forward within the limitations of mandatory compliance and risk management.
+
+  #logos
+    img(src="./img/client_logos/ht-solarity.png")
+    img(src="./img/client_logos/ht-argent.png")
+    img(src="./img/client_logos/ht-mutual.png")
+    img(src="./img/client_logos/ht-infirst.png")
+    // img(src="./img/client_logos/ht-alp.png")

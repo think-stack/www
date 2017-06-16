@@ -1,7 +1,7 @@
-#contact
+#footer-contact
   p
     span 1300 Thames Street
-    span Ground Suite #20
+    span Ground Floor, Suite 20
     span Baltimore, MD 21231​
     span: a(href='tel:1-410-560-5601') (410) 560-5601​
     span: a(href='mailto:info@horsetailtech.com') info@horsetailtech.com

@@ -1,0 +1,37 @@
+extends(src='layout.sgr')
+  block(name='main')
+
+    main
+
+    section#address
+      .wrapper
+        h2 Location
+        p 1300 Thames Street
+        p Ground Floor, Suite 20
+        p Baltimore, MD 21231
+
+    section#general
+      .wrapper
+        h2 General Inquiries
+        ul
+          li
+            a(href="mailto:info@horsetailtech.com")  info@horsetailtech.com
+          li
+            a(href="tel:1-410-560-5601") (410) 560-5601
+
+    section#social
+      .wrapper
+        h2 Follow Us
+        ul
+          li: a(href='https://www.facebook.com/horsetailtech/')
+            |
+              svg(viewBox='0 0 20 20' class='icon icon-facebook')
+                use(xlink:href='#icon-facebook')
+          li: a(href='https://twitter.com/HorsetailTech')
+            |
+              svg(viewBox='0 0 20 20' class='icon icon-twitter')
+                use(xlink:href='#icon-twitter')
+          li: a(href='https://www.linkedin.com/company/horsetail-technologies')
+            |
+              svg(viewBox='0 0 19.2 19.2' class='icon icon-linkedin')
+                use(xlink:href='#icon-linkedin')

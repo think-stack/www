@@ -11,6 +11,7 @@
     "babel-preset-latest": "^6.16.0",
     "hard-source-webpack-plugin": "0.2.2",
     "image-webpack-loader": "^3.0.0",
+    "markdown-it": "^8.2.1",
     "reshape-standard": "^0.4.2",
     "spike": "^0.13.0",
     "spike-css-standards": "^0.1.3",

@@ -2,8 +2,12 @@ footer
   color: #fff
   background-color: #111
   display: flex
+  flex-direction: column-reverse
   justify-content: space-between
   text-transform: uppercase
+
+  @media (min-width: 48em)
+    flex-direction: row
 
   & a
     color: currentColor
@@ -11,15 +15,29 @@ footer
   & p
     padding: 0
 
-  & #contact
-    margin: 1em 1em 1em 3em
+  & #footer-contact
+    margin: auto
+    padding-bottom: 1em
+
+    @media (min-width: 48em)
+      margin: 1em 1em 1em 3em
+      padding-top: 1em
 
     & p
       display: flex
       flex-direction: column
+      text-align: center
+
+      @media (min-width: 48em)
+        text-align: left
 
   & #footer-nav
     display: flex
     flex-direction: column
-    text-align: right
-    margin: 1em 3em 1em 1em
+    text-align: center
+    margin: auto
+    padding: 1em 0
+
+    @media (min-width: 48em)
+      margin: 1em 3em 1em 1em
+      text-align: right

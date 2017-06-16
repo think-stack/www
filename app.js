@@ -22,6 +22,7 @@ module.exports = {
     return cssStandards({ webpack: ctx })
   },
   babel: { presets: [jsStandards] },
+  server: {open: false},
   plugins: [
     new HardSourcePlugin({
       environmentPaths: { root: __dirname },
