@@ -37,8 +37,7 @@
           margin: auto 0
 
   & section
-    height: 60vh
-    background-color: #f7f7f7
+    height: 90vh
     display: flex
     flex-direction: column
 
@@ -67,15 +66,19 @@
         margin: auto 0
 
   & blockquote
+    font-family: var(--headerFont)
     background-color: var(--tsGrey)
     color: white
     display: flex
     flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 75vh
 
     & p
-      font-size: 1.5em
+      font-size: 2.25rem
+      line-height: 125%
       width: 80%
-      margin: auto
       padding: 1em
 
       @media (min-width: 48em)
@@ -88,8 +91,8 @@
         content: '"'
 
     & cite
-      margin-bottom: 1em
-      align-self: center
+      margin: 0 10em 1em auto
+      align-self: flex-end  
 
   & #tech
     background-color: #fff
@@ -147,18 +150,20 @@
     background-color: #fff
 
   & #cta
-    height: 16em
-    background-color: var(--tsBlue)
-    justify-content: center
+    max-height: 60vh
+    flex-direction: column
+    align-items: center
+    // background-color: var(--tsBlue)
+    justify-content: space-around
 
     & h1
-      color: #fff
+      color: var(--tsGrey)
       margin: auto .5em
       max-width: 20em
       text-align: left
 
     & a
-      width: 8.5em
+      width: 17.5em
       margin: auto
       padding: .5em 1em
       color: #fff
