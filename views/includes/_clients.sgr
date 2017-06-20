@@ -4,6 +4,7 @@ section#clients
 
   #logos
     img(src='./img/client_logos/berm-mc-logo.svg')
-    img(src='./img/client_logos/elm-logo-yellow.svg')
-    img(src='./img/client_logos/bckrm-logo-type-wht.png')
+    img(src='./img/client_logos/elm-logo-wht.svg')
+    img(src='./img/client_logos/bckrm-logo-type-wht.svg')
+    img(src='./img/client_logos/linq-logo2.png')
 

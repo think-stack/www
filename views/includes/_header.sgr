@@ -1,7 +1,7 @@
 nav
   #logo
     a(href='/')
-      img(src='./img/ht-logo.png')
+      img(src='./img/ts-logo-lockup-color.jpg')
 
   ul
     li: a(href='/about') About
