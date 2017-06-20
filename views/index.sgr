@@ -20,3 +20,5 @@ extends(src='layout.sgr')
     include(src='/includes/_cta.sgr')
 
     include(src='/includes/_relationships.sgr')
+
+    include(src='/includes/_modal.sgr')
