@@ -1,10 +1,9 @@
 section#clients
-  h1 On the frontlines of industry change
-  p Our clients are specialized teams, credit unions and regulated organizations who fight to push their industries forward within the limitations of mandatory compliance and risk management.
+  h1 Tech-driven brands we believe in
+  p The purpose-driven organizations we work with understand that deliberately designed technology vehicles are what enable iconic brands.
 
   #logos
-    img(src="./img/client_logos/ht-solarity.png")
-    img(src="./img/client_logos/ht-argent.png")
-    img(src="./img/client_logos/ht-mutual.png")
-    img(src="./img/client_logos/ht-infirst.png")
-    // img(src="./img/client_logos/ht-alp.png")
+    img(src='./img/client_logos/berm-mc-logo.svg')
+    img(src='./img/client_logos/elm-logo-yellow.svg')
+    img(src='./img/client_logos/bckrm-logo-type-wht.png')
+

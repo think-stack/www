@@ -3,8 +3,8 @@ extends(src='layout.sgr')
 
     main
       #hero
-        h1 Horsetail brings entrepreneurial thinking to highly regulated organizations
-        p We are a team of entrepreneurs, technologists, project managers and data analysts who help organizations that are highly dependent upon secure, compliant, and stable technology platforms.
+        h1 A design thinking approach to the IT stack
+        p Think|Stack is a Baltimore-based IT innovations company. We believe exceptional technology should be delivered through thoughtful and meticulous design that drives a well-executed technology stack.
 
     #team
       h1 Leadership
@@ -15,8 +15,8 @@ extends(src='layout.sgr')
           .bio-content
             h2 Chris Sachse
             h3 CEO & Co-founder
-            p Chris has been founding companies since his sophomore year in college. His early success in marketing and entrepreneurship empowered him to build a managed service offering from the ground up. Intrigued by credit unions and the focus they could provide for managed service delivery, he joined his business partner, Mark Berman, to found Horsetail Technologies, which has since expanded to serve highly regulated industries beyond banking.
-            p Chris has a Bachelor’s Degree in Business Finance and completed his   Master’s in Leadership. He recently completed the CUES Innovation Institute held at MIT and he works closely with Filene on many projects. He serves on various non-profit boards and as an advisor to the credit union community on innovation, operational efficiency and security.
+            p Chris has been founding companies since his sophomore year in college. His early success in marketing and entrepreneurship empowered him to build a strategy-fueled IT service offering from the ground up. Originally piloted in highly regulated organizations, Chris has applied the experience of innovating in resource-restrictive organizations to everyone from early stage startups to global organizations. 
+            p Chris has a Bachelor’s Degree in Business Finance and completed his Master’s in Leadership. He recently completed the CUES Innovation Institute held at MIT and he works closely with Filene on many projects. He serves on various non-profit boards and is an active advocate of the YearUp program. 
           figure
             img(src="./img/team/chris-sachse.jpg")
             ul.social
@@ -29,9 +29,8 @@ extends(src='layout.sgr')
           .bio-content
             h2 Mark Berman
             h3 Principal & Co-founder
-            p Mark provides leadership, technical focus and product refinement for the systems that fuel Horsetail's mission. He previously worked as President of Mary Sue Candies and later as COO of Ruxton Chocolates. In 2009, he began work as CTO and COO for Berman McAleer, Inc., a wealth management firm managing $425MM in assets. He brings his experience in production operations, sales, marketing and most importantly applied technology and computer science to Horsetail Technologies.
-            p Mark graduated with a degree in Computer Science from the College of William and Mary in Virginia. During his undergraduate career he completed extensive graduate training at NASA’s Langley Air Force base and then moved on to Loyola College in Baltimore where he received his MBA.Mark serves on the Executive Committee of the Greenspring Montessori school and the Shohola Scholarship Foundation, which provides a summer camp experience to those who cannot otherwise afford it.
-
+            p Mark provides leadership, technical focus and product refinement for the systems that fuel Think|sStack's mission. He previously worked as President of Mary Sue Candies and later as COO of Ruxton Chocolates. In 2009, he began work as CTO and COO for Berman McAleer, Inc., a wealth management firm managing $425MM in assets. He brings his experience in production operations, sales, marketing and most importantly applied technology and computer science to Think|Stack.
+            p Mark graduated with a degree in Computer Science from the College of William and Mary in Virginia. During his undergraduate career he completed extensive graduate training at NASA’s Langley Air Force base and then moved on to Loyola College in Baltimore where he received his MBA. Mark serves on the Executive Committee of the Greenspring Montessori school and the Shohola Scholarship Foundation, which provides a summer camp experience to those who cannot otherwise afford it.
           figure
             img(src="./img/team/mark-berman.jpg")
             ul.social
