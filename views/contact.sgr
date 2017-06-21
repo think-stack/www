@@ -15,7 +15,7 @@ extends(src='layout.sgr')
         h2 General Inquiries
         ul
           li
-            a(href="mailto:info@horsetailtech.com")  info@horsetailtech.com
+            a(href="mailto:info@thinkstack.co")  info@thinkstack.co
           li
             a(href="tel:1-410-560-5601") (410) 560-5601
 
