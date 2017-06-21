@@ -1,2 +1,13 @@
-section#modal.open
+#modal.open
+  p#button x
+  #modal-content
+    h1 Horsetail Technologies is now Think|Stack
+    p When we started Horsetail Technologies in 2011, we wanted to use design thinking to teach highly regulated organizations how to use technology to provide meaningful customer experiences—to shift their status quo. Since then, we’ve grown to use this mindset to shape corporations, startups, mentorship programs, and individuals into true innovators.
+    p This change didn’t happen overnight, but when we realized that our clients, ideas, and offerings had dramatically evolved as we did, we knew it was time for a change.
+    p Today, we’re excited to roll out a new brand identity and expanded offerings that support our mission: use technology to improve people’s lives and create change.
+    h1 Introducing Think|Stack
+    p Our new brand represents our belief that technology should support experiences and bring people together rather than dictating it. Whether designing experiences that delight customers or creating social impact, people should come before the technology.
+    p Our new namesake is inspired by how we believe exceptional technology should be delivered: thoughtful and meticulous design that drives a well-executed technology stack.
+    
+#modal-overlay.open
   
