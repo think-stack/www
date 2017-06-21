@@ -13,9 +13,9 @@
     "image-webpack-loader": "^3.0.0",
     "markdown-it": "^8.2.1",
     "reshape-standard": "^1.1.0",
-    "spike-css-standards": "^1.0.0",
+    "spike-css-standards": "^2.0.1",
     "spike-page-id": "^1.0.0",
-    "webpack": "^2.5.1"
+    "webpack": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^0.19.1",
