@@ -17,18 +17,30 @@ header
       margin: auto
 
       @media (min-width: 49em)
-        margin: auto 0
+        margin: auto 1em 
 
 
       & li
-        padding: 1em
-        margin: auto
+        margin: 1em
+
+        & a.closed
+
+          &:after
+            display: block
+            content: ''
+            border-bottom: 1px solid #000
+            transform: scaleX(0)
+            transition: transform .5s ease
+          &:hover::after
+            transform: scaleX(1)
+
+        & a.active
+          border-bottom: 1px solid black
+    
 
         @media (min-width: 49em)
-          padding: 0 1em
 
           &:last-of-type
-            padding-right: 2em
 
     & #logo
       margin: 2em auto
@@ -43,5 +55,5 @@ header
 
 
       @media (min-width: 49em)
-        margin: 1.5em 1em 1em 3em
+        margin: 1.5em 1em 1em 2em
         flex: 1 0 auto
