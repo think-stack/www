@@ -73,15 +73,19 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    height: 75vh
+    height: 40vh
+
+    @media (min-width: 48em) 
+      height: 75vh
 
     & p
-      font-size: 2.25rem
+      font-size: 1rem
       line-height: 125%
       width: 80%
       padding: 1em
 
       @media (min-width: 48em)
+        font-size: 2.25rem
         max-width: 24em
 
       &:before
