@@ -1,4 +1,4 @@
-#modal.open
+#modal.closed
   p#button x
   #modal-content
     h1 Horsetail Technologies is now Think|Stack.
@@ -9,5 +9,5 @@
     p Our new brand represents our belief that technology should support experiences and bring people together rather than dictating it. Whether designing experiences that delight customers or creating social impact, people should come before the technology.
     p Our new namesake is inspired by how we believe exceptional technology should be delivered: thoughtful and meticulous design that drives a well-executed technology stack.
     
-#modal-overlay.open
+#modal-overlay.closed
   

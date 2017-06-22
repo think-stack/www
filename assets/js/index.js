@@ -6,18 +6,19 @@ let visited = localStorage.getItem('visited')
 let modal = document.getElementById('modal')
 const overlay = document.getElementById('modal-overlay')
 
-window.onload = function () {
+window.onload = function modalDisplay () {
+  setTimeout (function () {
   if (visited != 'true') {
-    console.log(modal)
     localStorage.setItem('visited', true)
     console.log(localStorage.getItem('visited'))
+    modal.classList.add('open')
+    modal.classList.remove('closed')
+    overlay.classList.add('open')
+    overlay.classList.remove('closed')
   } else {
-    modal.classList.remove('open')
-    modal.classList.add('closed')
-    overlay.classList.remove('open')
-    overlay.classList.add('closed')
-    console.log(modal)
+    console.log('visited')
   }
+}, 1000)
 }
 
 // close modal
