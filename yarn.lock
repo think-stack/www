@@ -93,10 +93,6 @@ ajv-keywords@^1.0.0, ajv-keywords@^1.1.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.5.1.tgz#314dd0a4b3368fad3dfcdc54ede6171b886daf3c"
 
-ajv-keywords@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.1.0.tgz#a296e17f7bfae7c1ce4f7e0de53d29cb32162df0"
-
 ajv@^4.7.0, ajv@^4.9.1:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
@@ -104,7 +100,7 @@ ajv@^4.7.0, ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-ajv@^5.0.0, ajv@^5.1.5:
+ajv@^5.0.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.2.1.tgz#dcd03045175883ba1b636e5ae9ec3df9ab85323a"
   dependencies:
@@ -444,7 +440,7 @@ babel-code-frame@^6.16.0, babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@^6.17.0, babel-core@^6.24.1, babel-core@^6.25.0:
+babel-core@^6.17.0, babel-core@^6.24.1:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.25.0.tgz#7dd42b0463c742e9d5296deb3ec67a9322dad729"
   dependencies:
@@ -582,7 +578,7 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-loader@^7.1.1:
+babel-loader@^7.0.0:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.1.tgz#b87134c8b12e3e4c2a94e0546085bc680a2b8488"
   dependencies:
@@ -2122,7 +2118,7 @@ engine.io@1.8.0:
     engine.io-parser "1.3.1"
     ws "1.1.1"
 
-enhanced-resolve@^3.0.0, enhanced-resolve@^3.3.0:
+enhanced-resolve@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-3.3.0.tgz#950964ecc7f0332a42321b673b38dc8ff15535b3"
   dependencies:
@@ -3494,7 +3490,7 @@ items@2.x.x:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/items/-/items-2.1.1.tgz#8bd16d9c83b19529de5aea321acaada78364a198"
 
-joi@^10.0.0, joi@^10.2.0, joi@^10.6.0:
+joi@^10.0.0, joi@^10.2.0, joi@^10.5.2:
   version "10.6.0"
   resolved "https://registry.yarnpkg.com/joi/-/joi-10.6.0.tgz#52587f02d52b8b75cdb0c74f0b164a191a0e1fc2"
   dependencies:
@@ -4891,7 +4887,7 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@^2.0.6:
+postcss-loader@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.6.tgz#8c7e0055a3df1889abc6bad52dd45b2f41bbc6fc"
   dependencies:
@@ -6076,10 +6072,6 @@ source-list-map@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-1.1.2.tgz#9889019d1024cce55cdc069498337ef6186a11a1"
 
-source-list-map@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.0.tgz#aaa47403f7b245a92fbc97ea08f250d6087ed085"
-
 source-loader@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/source-loader/-/source-loader-0.2.0.tgz#b362d65885d540f069ceecd5ad4fbb67572ab87b"
@@ -6123,30 +6115,30 @@ spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
-spike-core@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/spike-core/-/spike-core-2.0.0.tgz#1e7b99fd37d117a840239e0771e64fe2ac18e610"
+spike-core@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/spike-core/-/spike-core-1.3.1.tgz#4a3ca5a15bda9758b8e291a082fbcfe04d4d9352"
   dependencies:
-    babel-core "^6.25.0"
-    babel-loader "^7.1.1"
+    babel-core "^6.24.1"
+    babel-loader "^7.0.0"
     browser-sync "^2.18.12"
     browser-sync-webpack-plugin "^1.1.4"
     filewrap "^1.0.0"
     glob "^7.1.2"
     hygienist-middleware "^0.1.3"
-    joi "^10.6.0"
+    joi "^10.5.2"
     lodash.difference "^4.5.0"
     lodash.merge "^4.6.0"
     lodash.union "^4.6.0"
     micromatch "^3.0.3"
     mkdirp "^0.5.1"
-    postcss-loader "^2.0.6"
+    postcss-loader "^2.0.5"
     reshape-loader "^1.0.0"
     rimraf "^2.6.1"
     source-loader "^0.2.0"
     spike-util "^1.2.0"
     sprout "^1.2.1"
-    webpack "^3.0.0"
+    webpack "^2.6.1"
     when "^3.7.8"
 
 spike-css-standards@^2.0.1:
@@ -6199,15 +6191,15 @@ spike-util@^1.2.0:
     micromatch "^2.3.8"
     when "^3.7.7"
 
-spike@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/spike/-/spike-2.0.0.tgz#cc0dc9f56c47e8dbe8eb44940a84bfef748bfdf3"
+spike@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/spike/-/spike-1.3.1.tgz#1d9d842fbe1a84a975a14f18066711c3ab4b3a87"
   dependencies:
     argparse "^1.0.9"
-    chalk "^2.0.0"
+    chalk "^1.1.3"
     inquirer "^3.1.0"
     lodash.reduce "^4.6.0"
-    spike-core "^2.0.0"
+    spike-core "^1.3.1"
     universal-analytics "^0.4.13"
 
 split-string@^2.1.0:
@@ -6646,7 +6638,7 @@ uc.micro@^1.0.1, uc.micro@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
 
-uglify-js@^2.7.3, uglify-js@^2.8.27, uglify-js@^2.8.29:
+uglify-js@^2.7.3, uglify-js@^2.8.27:
   version "2.8.29"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.8.29.tgz#29c5733148057bb4e1f75df35b7a9cb72e6a59dd"
   dependencies:
@@ -6658,14 +6650,6 @@ uglify-js@^2.7.3, uglify-js@^2.8.27, uglify-js@^2.8.29:
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
-
-uglifyjs-webpack-plugin@^0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-0.4.6.tgz#b951f4abb6bd617e66f63eb891498e391763e309"
-  dependencies:
-    source-map "^0.5.6"
-    uglify-js "^2.8.29"
-    webpack-sources "^1.0.1"
 
 uid-number@^0.0.6:
   version "0.0.6"
@@ -6906,14 +6890,7 @@ webpack-sources@^0.2.3:
     source-list-map "^1.1.1"
     source-map "~0.5.3"
 
-webpack-sources@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.0.1.tgz#c7356436a4d13123be2e2426a05d1dad9cbe65cf"
-  dependencies:
-    source-list-map "^2.0.0"
-    source-map "~0.5.3"
-
-webpack@^2.5.1:
+webpack@^2.5.1, webpack@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.6.1.tgz#2e0457f0abb1ac5df3ab106c69c672f236785f07"
   dependencies:
@@ -6937,33 +6914,6 @@ webpack@^2.5.1:
     uglify-js "^2.8.27"
     watchpack "^1.3.1"
     webpack-sources "^0.2.3"
-    yargs "^6.0.0"
-
-webpack@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.1.0.tgz#ac0675e500db835f9ab2369d29ba096f51ad0731"
-  dependencies:
-    acorn "^5.0.0"
-    acorn-dynamic-import "^2.0.0"
-    ajv "^5.1.5"
-    ajv-keywords "^2.0.0"
-    async "^2.1.2"
-    enhanced-resolve "^3.3.0"
-    escope "^3.6.0"
-    interpret "^1.0.0"
-    json-loader "^0.5.4"
-    json5 "^0.5.1"
-    loader-runner "^2.3.0"
-    loader-utils "^1.1.0"
-    memory-fs "~0.4.1"
-    mkdirp "~0.5.0"
-    node-libs-browser "^2.0.0"
-    source-map "^0.5.3"
-    supports-color "^3.1.0"
-    tapable "~0.2.5"
-    uglifyjs-webpack-plugin "^0.4.6"
-    watchpack "^1.3.1"
-    webpack-sources "^1.0.1"
     yargs "^6.0.0"
 
 weinre@^2.0.0-pre-I0Z7U9OV:
