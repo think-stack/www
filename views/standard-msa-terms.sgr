@@ -8,7 +8,7 @@ html
       meta(name="viewport" content="width=device-width, initial-scale=1")
 
     block(name='title')
-      title Horsetail Tech
+      title Think|Stack
 
     block(name='stylesheets')
       link(rel='stylesheet' href='css/main.css')
@@ -19,22 +19,22 @@ html
     include(src='/includes/_header.sgr')
 
   main
-    h2 HORSETAIL TECHNOLOGIES, LLC STANDARD ADDITIONAL MSA TERMS
+    h2 Think|Stack, LLC STANDARD ADDITIONAL MSA TERMS
       p
         span Cooperation.
-        |  Client shall cooperate with Horsetail to provide any information and/or resources reasonably requested by Horsetail from time to time in connection with the Services, including but not limited to, providing access to Client’s systems, records, facilities, employees, officers and/or directors. Periodic reboots for such devices as firewalls, routers and servers are required to apply/activate critical update patches and configuration changes. Horsetail’s Services are predicated upon Client’s support and commitment to providing time/scheduling for network device reboots with its staff and/or users support. Virus mitigation within the scope of this Agreement is predicated on Client satisfying recommended backup schemes and having appropriate anti-virus software with current updates.
+        |  Client shall cooperate with Think|Stack to provide any information and/or resources reasonably requested by Think|Stack from time to time in connection with the Services, including but not limited to, providing access to Client’s systems, records, facilities, employees, officers and/or directors. Periodic reboots for such devices as firewalls, routers and servers are required to apply/activate critical update patches and configuration changes. Think|Stack’s Services are predicated upon Client’s support and commitment to providing time/scheduling for network device reboots with its staff and/or users support. Virus mitigation within the scope of this Agreement is predicated on Client satisfying recommended backup schemes and having appropriate anti-virus software with current updates.
 
       p
         span Acknowledgments.
-        |  Client acknowledges Horsetail has and will continue to have relationships with parties other than Client in the industry in which Client does business, pursuant to which Horsetail may acquire information of interest to Client, which may or may not be confidential or proprietary information of Horsetail or a third party. Client further acknowledges Horsetail will have no obligation to disclose such information to Client, or to use such information in connection with the provision of the Services. Further, Horsetail may now or in the future evaluate or do business with competitors or potential competitors of Client. Neither the execution of the Agreement nor Horsetail’s receipt of any confidential or proprietary information will in any way restrict or preclude such activities nor constitute a breach of any provisions of the Agreement absent some other breach of the provisions hereof.
+        |  Client acknowledges Think|Stack has and will continue to have relationships with parties other than Client in the industry in which Client does business, pursuant to which Think|Stack may acquire information of interest to Client, which may or may not be confidential or proprietary information of Think|Stack or a third party. Client further acknowledges Think|Stack will have no obligation to disclose such information to Client, or to use such information in connection with the provision of the Services. Further, Think|Stack may now or in the future evaluate or do business with competitors or potential competitors of Client. Neither the execution of the Agreement nor Think|Stack’s receipt of any confidential or proprietary information will in any way restrict or preclude such activities nor constitute a breach of any provisions of the Agreement absent some other breach of the provisions hereof.
 
       p
         span Indemnification.
-        |  Client shall indemnify and hold harmless Horsetail and its directors, officers, employees and members from and against any and all claims, actions, proceedings, losses, liabilities, damages, costs and expenses, including attorneys’ fees, arising out of, relating to or in connection with any breach by Client of any covenant, promise, agreement, representation or warranty made by Client in this Agreement.
+        |  Client shall indemnify and hold harmless Think|Stack and its directors, officers, employees and members from and against any and all claims, actions, proceedings, losses, liabilities, damages, costs and expenses, including attorneys’ fees, arising out of, relating to or in connection with any breach by Client of any covenant, promise, agreement, representation or warranty made by Client in this Agreement.
 
       p
         span Representations.
-        |  Client’s representative signing the Agreement hereby represents and warrants to Horsetail that s/he has the unconditional authority to enter into the Agreement on behalf of Client, and such authority has been granted in accordance with the requirements of Client’s organizational documents.
+        |  Client’s representative signing the Agreement hereby represents and warrants to Think|Stack that s/he has the unconditional authority to enter into the Agreement on behalf of Client, and such authority has been granted in accordance with the requirements of Client’s organizational documents.
 
       p
         span Travel.

@@ -5,3 +5,8 @@
     a(href='tel:1-410-560-5601') 410-560-5601
       | &#10070
     a(href='mailto:info@thinkstack.co') info@thinkstack.co
+
+#footer-terms
+  a(href='/standard-msa-terms') Standard Managed Services Terms
+  a(href='/mss-terms') Managed Services Supplemental Terms
+  a(href='/rss-terms') Retainer Services Supplemental Terms

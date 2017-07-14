@@ -2,7 +2,7 @@ footer
   color: #fff
   background-color: var(--tsGrey)
   display: flex
-  flex-direction: column-reverse
+  flex-direction: column
   justify-content: space-between
 
   @media (min-width: 48em)
@@ -17,9 +17,11 @@ footer
   & #footer-contact
     margin: auto
     padding-bottom: 1em
+    padding-top: 1em
+    flex: 1 1 auto
 
     @media (min-width: 48em)
-      margin: 1em auto
+      margin: 1em 
       padding-top: 1em
 
     & p
@@ -28,5 +30,20 @@ footer
       text-align: center
 
       @media (min-width: 48em)
-        text-align: center
+        text-align: left
 
+  & #footer-terms
+    display: flex
+    flex-direction: column
+    flex: 1 1 auto
+    justify-content: center
+    margin: 1em
+    text-align: right
+
+    & a
+      text-align: center
+      font-size: 1.05em
+      margin: .25em 0 
+
+      @media (min-width: 48em)
+        text-align: right
