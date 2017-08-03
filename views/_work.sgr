@@ -1,0 +1,5 @@
+extends(src='layout.sgr')
+  block(name='main')
+    main  
+      p hello
+      p {{ item.title }}
