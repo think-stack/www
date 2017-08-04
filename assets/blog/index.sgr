@@ -1,4 +1,0 @@
-extends(src='layout.sgr')
-  block(name='main')
-    each(loop='post in dato.post')
-      p {{ post.slug }}
