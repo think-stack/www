@@ -1,0 +1,16 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    .header
+
+    section.text-only
+      .think-col
+        .wrapper
+          h2 thinking header
+          p Trust fund kale chips lomo, everyday carry venmo pork belly copper mug hell of kitsch. Salvia mlkshk kickstarter heirloom gluten-free. Fixie food truck 3 wolf moon mixtape. Letterpress salvia tumblr gastropub prism keytar lo-fi.
+
+      .tech-col
+        .wrapper
+          h2 stack header
+          p Hashtag taiyaki polaroid, post-ironic scenester green juice four dollar toast put a bird on it craft beer gastropub godard pok pok. Lo-fi disrupt bitters keytar vinyl listicle. Kombucha selvage tousled, bushwick cloud bread bitters wayfarers tacos tumblr locavore kale chips tofu tbh irony. 
+        

@@ -2,3 +2,4 @@ extends(src='layout.sgr')
   block(name='content')
     main  
       p hello
+      p {{ item.title }}

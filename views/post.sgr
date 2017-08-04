@@ -1,5 +1,4 @@
-extends(src='layout.sgr')
-  block(name='main')
+extends(src='./layout.sgr')
+  block(name='content')
     main  
       p hello
-      p {{ item.title }}
