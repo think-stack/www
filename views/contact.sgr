@@ -1,5 +1,5 @@
 extends(src='layout.sgr')
-  block(name='main')
+  block(name='content')
 
     main
 

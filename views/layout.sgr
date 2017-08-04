@@ -15,14 +15,14 @@ html
       title Think|Stack
 
     block(name='stylesheets')
-      link(rel='stylesheet' href='css/main.css')
+      link(rel='stylesheet' href='/css/main.css')
 
   body(role='document' id='{{ pageId }}')
 
     header
       include(src='/includes/_header.sgr')
 
-    block(name='main')
+    block(name='content')
 
     footer
       include(src='/includes/_footer.sgr')
