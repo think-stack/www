@@ -49,9 +49,17 @@ module.exports = {
           name: 'post',
           template: {
             path: 'views/post.sgr',
-            output: (post) => {return `blog/${post.slug}.html`}
+            output: (post) => {return `blog/${post.title}.html`}
           },
           json: 'blog.json'
+        },
+        {
+          name: 'work',
+          template: {
+            path: 'views/work.sgr',
+            output: (work) => { return `work/${work.title}.html`}
+          },
+          json: 'work.json'
         }
       ],
       json: 'data.json'
