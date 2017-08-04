@@ -3,8 +3,7 @@ section#clients
   p The purpose-driven organizations we work with understand that deliberately designed technology vehicles are what enable iconic brands.
 
   #logos
-    img(src='./img/client_logos/berm-mc-logo.svg')
-    img(src='./img/client_logos/elm-logo-wht.svg')
-    img(src='./img/client_logos/bckrm-logo-type-wht.svg')
-    img(src='./img/client_logos/linq-logo2.png')
-
+    img(src='/img/client_logos/berm-mc-logo.svg')
+    img(src='/img/client_logos/elm-logo-wht.svg')
+    img(src='/img/client_logos/bckrm-logo-type-wht.svg')
+    img(src='/img/client_logos/linq-logo2.png')
