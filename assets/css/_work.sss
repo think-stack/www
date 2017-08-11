@@ -1,41 +1,221 @@
 #work-test
 
-  & header
+  & > header
     color: #fff
+    min-height: 95vh 
+    background-image: url('https://www.datocms-assets.com/2857/1501601420-test-project-bg.jpg')
+    background-size: cover
+    background-color: var(--tsGrey)
+    background-blend-mode: multiply
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+    & .hero
+      max-width: 24em
+      padding: 2em
+      font-size: 1.5em
+      line-height: 1.2em
 
-  & .header
+  & section
+    display: flex
+    min-height: 100vh
+    overflow: hidden
+    position: relative
+
+    & .people-col,
+    & .tech-col
+      display: flex
+      flex-direction: column
+      // flex: 1 0 98% uncomment after testing
+      flex: 1 0 100% // delete after testing
+
+      @media (min-width: 48em)
+        flex: 1 0 50%
+
+      & svg
+        stroke: var(--tsGreen)
+        width: 100%
+
+      &.slide
+        transform: translate(-100%)
+        transition: transform .5s ease-in-out
+      
+      & .wrapper
+        width: 80%
+        padding-bottom: 2em
+
+        @media (min-width: 48em)
+          width: 50%
+
+        & > header
+          display: flex
+          color: var(--tsGrey)
+          align-items: center
+
+          & h2
+            margin: 0
+            line-height: 1em
+
+    & .tech-col
+      justify-content: flex-end
+      background-color: var(--tsLightGreen)
+      transform: translate(0)
+      transition: transform .5s ease-in-out
+
+      & header
+        justify-content: flex-end
+        & h2
+          order: 2
+
+    & .people-col
+      padding-left: 4em      
+
+    & .tech-col
+      padding-right: 4em
+
+    & .feature-image
+      position: absolute
+      z-index: 1
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      text-align: center
+      width: 100%
+
+      @media (min-width: 48em)
+        width: 60%
+      
+      & img 
+        width: 80%
+
+        @media (min-width: 48em)
+          width: 80%
+
+  & section.feature
+    min-height: 110vh
+
+    @media (min-width: 46em)
+      min-height: 220vh
+
+    @media (min-width: 48em)
+      min-height: 100vh
+
+    & .people-col
+      align-items: flex-start
+      justify-content: flex-end
+
+      @media (min-width: 48em)
+        justify-content: flex-start
+        padding-top: 8em
+
+    & .tech-col
+      align-items: flex-end
+      text-align: right
+
+  & section.quote
+    display: flex
+    flex-direction: column
+    min-height: 30em
+    background-image: url('https://www.datocms-assets.com/2857/1501601420-test-project-bg.jpg')
+    background-size: cover
+    background-color: var(--tsGrey)
+    background-blend-mode: multiply
+    color: white
+    justify-content: center
+
+    & blockquote
+      font-family: var(--headerFont)
+      font-size: 2.5em
+      line-height: 1.2em
+      align-self: center
+      padding: 2em 0 1em 0
+      width: 90%
+      text-align: center
+
+      @media (min-width: 48em)
+        max-width: 24em
+        text-align: left
+
+      &:before,
+      &:after
+        font-size: 1.5em
+
+      &:before
+        content: '\201c'
+        position: absolute
+        left: 0
+
+        @media (min-width: 48em)
+          left: 2.2em
+      
+      &:after
+        content: '\201d'
+        position: relative
+        right: -1em
+        bottom: -.5em
+
+        @media (min-width: 48em)
+          right: 0
+          bottom: 0
+
+    & p
+      align-self: center
+
+  & .image
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    & figure
+      align-self: center
+      padding: 1em 0 2em 0
+
+      & img
+        width: 30em
+
+        @media (min-width: 48em)
+          width: 50em
+
+    & p
+      width: 80%
+      align-self: center
+      padding-bottom: 2em
+
+      @media (min-width: 48em)
+        max-width: 30em
+    
+  & .statistics
+    color: #fff
     min-height: 20em
     background-image: url('https://www.datocms-assets.com/2857/1501601420-test-project-bg.jpg')
     background-size: cover
     background-color: var(--tsGrey)
     background-blend-mode: multiply
-    position: relative
-    top: -7.5em
-    z-index: -1
-
-  & section
     display: flex
-    min-height: 100vh
+    flex-direction: column
+    justify-content: space-around
+  
+    @media (min-width: 48em)
+      flex-direction: row
+      justify-content: center
 
-    & div
-      width: 80%
-
-      & .wrapper
-        padding: 6em 2em
- 
-    & .think-col,
-    & .tech-col
+    & > div
+      flex: 0 1 25%
+      text-align: center
       display: flex
       flex-direction: column
-      align-items: center
+      justify-content: center
 
-    & .think-col
-      flex: 0 1 50%
-      text-align: right
+      &:last-of-type
+        padding-bottom: 1em
 
-    & .tech-col
-      flex: 0 1 50%
-      justify-content: flex-end
-      background-color: var(--tsGreen)
+        @media (min-width: 48em) 
+          padding-bottom: 0
 
+      & p
+        line-height: 1.2em
       
+        &:nth-of-type(1)
+          font-size: 5em
+          font-family: var(--headerFont)

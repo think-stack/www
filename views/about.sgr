@@ -1,6 +1,9 @@
 extends(src='layout.sgr')
   block(name='content')
 
+    header
+      include(src='/includes/_header.sgr')
+
     main
       #hero
         h1 {{ dato.about[0].heroStatement }}

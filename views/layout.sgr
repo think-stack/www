@@ -19,9 +19,6 @@ html
 
   body(role='document' id='{{ pageId }}')
 
-    header
-      include(src='/includes/_header.sgr')
-
     block(name='content')
 
     footer
@@ -31,4 +28,4 @@ html
 
     block(name='javascript')
       script(src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous")
-      script(src='js/main.js' defer)
+      script(src='/js/main.js' defer)

@@ -1,16 +1,91 @@
 extends(src='layout.sgr')
   block(name='content')
 
-    .header
+    header
+      include(src='/includes/_header-dark.sgr')
+      .hero
+        p Semiotics pok pok venmo tacos lomo plaid microdosing literally blog bespoke skateboard tattooed umami air plant chillwave. Disrupt venmo humblebrag knausgaard polaroid.
 
-    section.text-only
-      .think-col
+    // .header
+
+
+    section.feature
+
+      figure.feature-image
+        img(src='/img/imac-test-dashboard.png')
+
+      .people-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#cl')
         .wrapper
-          h2 thinking header
-          p Trust fund kale chips lomo, everyday carry venmo pork belly copper mug hell of kitsch. Salvia mlkshk kickstarter heirloom gluten-free. Fixie food truck 3 wolf moon mixtape. Letterpress salvia tumblr gastropub prism keytar lo-fi.
+          header
+            h2 people header
+          
+          p Trust fund kale chips lomo, everyday carry venmo pork belly copper mug hell of kitsch. Salvia mlkshk kickstarter heirloom gluten-free.           
 
       .tech-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#clr')
         .wrapper
-          h2 stack header
-          p Hashtag taiyaki polaroid, post-ironic scenester green juice four dollar toast put a bird on it craft beer gastropub godard pok pok. Lo-fi disrupt bitters keytar vinyl listicle. Kombucha selvage tousled, bushwick cloud bread bitters wayfarers tacos tumblr locavore kale chips tofu tbh irony. 
-        
+          header
+            h2 tech header
+              
+          p Hashtag taiyaki polaroid, post-ironic scenester green juice four dollar toast put a bird on it craft beer gastropub godard pok pok. Lo-fi disrupt bitters keytar vinyl listicle. 
+
+    section.quote
+      blockquote Continuous effort - not strength or intelligence - is the key to unlocking our potential.
+      p Winston Churchill
+
+    section.feature
+
+      figure.feature-image
+        img(src='/img/imac-test-dashboard.png')
+
+      .people-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#cl')
+        .wrapper
+          header
+            h2 people header
+          
+          p Trust fund kale chips lomo, everyday carry venmo pork belly copper mug hell of kitsch. Salvia mlkshk kickstarter heirloom gluten-free.           
+
+      .tech-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#clr')
+        .wrapper
+          header
+            h2 tech header
+              
+          p Hashtag taiyaki polaroid, post-ironic scenester green juice four dollar toast put a bird on it craft beer gastropub godard pok pok. Lo-fi disrupt bitters keytar vinyl listicle. 
+
+    section.statistics
+      div
+        p 3600+
+        p bright young minds Year Up serves annually
+      div
+        p 250+
+        p companies currently benefitting from Year Up talent
+
+    section.feature
+
+      figure.feature-image
+        img(src='/img/imac-test-dashboard.png')
+
+      .people-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#cl')
+        .wrapper
+          header
+            h2 people header
+          
+          p Trust fund kale chips lomo, everyday carry venmo pork belly copper mug hell of kitsch. Salvia mlkshk kickstarter heirloom gluten-free.           
+
+      .tech-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#clr')
+        .wrapper
+          header
+            h2 tech header
+              
+          p Hashtag taiyaki polaroid, post-ironic scenester green juice four dollar toast put a bird on it craft beer gastropub godard pok pok. Lo-fi disrupt bitters keytar vinyl listicle. 

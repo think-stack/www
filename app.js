@@ -1,11 +1,11 @@
-const path = require('path')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const SpikeDatoCMS = require('spike-datocms')
+const sugarml = require('sugarml')
+const sugarss = require('sugarss')
 const locals = {}
-
 
 // Used to convert anything to URL friendly slug
 // thanks @mwickett
@@ -24,18 +24,16 @@ function slugify (text) {
 
 module.exports = {
   devtool: 'source-map',
-  matchers: {
-    html: '*(**/)*.sgr',
-    css: '*(**/)*.sss'
-  },
+  matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
   ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*', '**/_*'],
   reshape: htmlStandards({
+    parser: sugarml,
     root: './views',
     locals: (ctx) => { return Object.assign(locals, { pageId: pageId(ctx) }, { slugify: slugify } )}
   }),
-  postcss: cssStandards(),
+  postcss: cssStandards({ parser: sugarss }),
   babel: jsStandards(),
-  server:{open: false},
+  server: { open: false },
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
@@ -44,21 +42,12 @@ module.exports = {
         {
           name: 'about',
           json: 'about.json'
-        },
-        {
+        }, {
           name: 'post',
-          template: {
-            path: 'views/post.sgr',
-            output: (post) => {return `blog/${post.title}.html`}
-          },
           json: 'blog.json'
         },
         {
           name: 'work',
-          template: {
-            path: 'views/work.sgr',
-            output: (work) => { return `work/${work.title}.html`}
-          },
           json: 'work.json'
         }
       ],
@@ -66,3 +55,4 @@ module.exports = {
     })
   ]
 }
+
