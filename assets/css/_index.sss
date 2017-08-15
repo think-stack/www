@@ -6,12 +6,13 @@
     min-height: 97vh
     text-align: left
 
-    & p
-      padding: 1em 0
-
     & #hero
       width: 90%
       margin: auto
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 80vh
 
       @media (min-width: 48em)
         width: 100%
@@ -21,21 +22,66 @@
         padding-bottom: 1.5em
         line-height: 115%
         width: 90%
-        margin: auto
 
         @media (min-width: 48em)
           max-width: 16em
-          margin: auto 0
 
 
       & p
         width: 90%
-        margin: auto
 
         @media (min-width: 48em)
           max-width: 26em
-          margin: auto 0
 
+    & .work
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: 50%
+      max-height: 50vh
+      color: white
+      align-items: center 
+      justify-content: center
+      padding: 1em 3em
+      background-color: var(--tsGrey)
+      background-blend-mode: multiply
+
+      &:nth-of-type(odd)
+        & .content
+          & p
+            margin-right: 0
+
+      &:nth-of-type(even)
+        & .image
+          order: 2
+          text-align: right
+
+        & .content
+          text-align: left
+          
+          & p
+            margin-left: 0
+
+      & .image
+        flex: 0 1 auto
+
+        & img
+          max-width: 50%
+
+      & .content
+        flex: 0 1 100%
+        text-align: right
+        line-height: 2em
+
+        & p
+          margin-bottom: .5em
+
+        & a
+          font-style: italic
+          transition: all .2s ease-in-out
+
+          &:hover
+            font-size: 1.05em
+        
   & section
     height: 90vh
     display: flex
@@ -55,7 +101,6 @@
 
       @media (min-width: 48em)
         max-width: 12em
-        margin: auto 0
 
     & p
       width: 90%
@@ -63,7 +108,6 @@
 
       @media (min-width: 48em)
         max-width: 24em
-        margin: auto 0
 
   & blockquote
     font-family: var(--headerFont)
@@ -189,7 +233,7 @@
 
       &:active
         box-shadow: 1px 1px 1px #212121
-        border-bottom: 2px solid color(var(--htOrange) blackness(50%))
+        border-bottom: 2px solid color(var(--tsRed) blackness(50%))
         transform: translateY(3px)
 
       &:focus
@@ -207,6 +251,3 @@
         text-transform: capitalize
         font-size: 1.25em
         font-style: italic
-
-        @media (min-width: 44em)
-          padding: 1em 0

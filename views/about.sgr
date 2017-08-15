@@ -1,11 +1,13 @@
 extends(src='layout.sgr')
-  block(name='main')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
 
     main
       #hero
-        h1 A design thinking approach to the IT stack
-        p Think|Stack is a Baltimore-based IT innovations company. Our promise is clear and ambitious: Drive the evolution of automation, continuity, and security delivery through continuous innovation. We believe exceptional technology should be delivered through thoughtful and meticulous design that drives a well-executed technology stack.
-
+        h1 {{ dato.about[0].heroStatement }}
+        p {{ dato.about[0].introParagraph}}
     #team
       h1 Leadership
 
