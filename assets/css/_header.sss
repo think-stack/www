@@ -11,14 +11,64 @@ header
       flex-direction: row
       justify-content: space-between
 
+    & #nav-toggle
+      position: absolute
+      top: 2.5em
+      right: 2em
+      z-index: 10
+ 
+      & input 
+        display: block
+        position: absolute
+        top: -8px
+        right: -8px
+        width: 40px
+        height: 32px
+        cursor: pointer
+        opacity: 0
+        z-index: 11
+
+        &:checked ~ span
+          background: white
+
+        &:checked ~span:first-of-type
+          transform: rotate(45deg) translate(7px, 5px)
+
+        &:checked ~ span:nth-of-type(2)
+          display: none
+
+        &:checked ~ span:last-of-type
+          transform: rotate(-45deg)
+
+      & span
+        display: block
+        position: relative
+        width: 33px
+        height: 4px
+        margin-bottom: 5px
+        border-radius: .2em
+        background: var(--tsBlue)
+        z-index: 10
+        transition: transform .25s ease-in-out
+
+    & #nav-panel
+      display: flex
+      position: absolute
+      top: 0
+      left: 0 
+      bottom: 0
+      right: 0
+      background: var(--tsBlue)
+      color: white
+      flex-direction: column
+      justify-content: center
+      align-items: center 
+      font-size: 1.5em
+      opacity: 0
+
     & ul
       display: flex
       text-transform: uppercase
-      margin: auto
-
-      @media (min-width: 49em)
-        margin: auto 1em 
-
 
       & li
         margin: 1em
@@ -33,10 +83,6 @@ header
             transition: transform .5s ease
           &:hover::after
             transform: scaleX(1)
-
-        & a.active
-          border-bottom: 1px solid black
-    
 
         @media (min-width: 49em)
 
