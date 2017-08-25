@@ -1,3 +1,16 @@
+#logo
+  img(src='img/logo-full-lockup-white.png')
+
+#email
+  a(href='mailto:collaborating@thinkstack.co')
+
+#cta
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tortor quis erat ultrices dapibus a quis massa.
+  a(href='#') work with us
+
+#social
+  
+
 #footer-contact
   p 1300 Thames Street, Ground Floor, Suite 20
   p Baltimore, MD 21231 
