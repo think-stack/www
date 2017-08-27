@@ -80,7 +80,7 @@ html
         p {{ item.statistics[0].statOneSupport }}
       div
         p {{ item.statistics[0].statTwo }}
-        p {{ item.statistics[0].statOneSupport }}
+        p {{ item.statistics[0].statTwoSupport }}
 
     section.feature
 
