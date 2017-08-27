@@ -1,8 +1,115 @@
-extends(src='layout.sgr')
-  block(name='content')
-    
-    header
-      include(src='/includes/_header-dark.sgr')
+doctype html
+html
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+      meta(name='description' content='We design meaningful customer experiences and innovative technology solutions for conscious brands')
+      meta(name='author' content='asasmith')
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      link(rel='icon' type='img/png' sizes='32x32' href='/favicon-32x32.png')
+      link(rel='icon' type='img/png' sizes='16x16' href='/favicon-16x16.png')
+      link(rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5')
 
-    main  
-      p hello
+    block(name='title')
+      title Think|Stack
+
+    block(name='stylesheets')
+      link(rel='stylesheet' href='/css/main.css')
+
+  body(role='document' id='work')
+
+    header(style="background: url(https://www.datocms-assets.com{{ item.bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
+      include(src='/includes/_header-dark.sgr')
+      .hero
+        p {{ item.description }}
+
+    section.feature
+
+      figure.feature-image
+        img(src='https://www.datocms-assets.com{{ item.feature[0].image.path }}')
+
+      .people-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#cl')
+        .wrapper
+          header
+            h2 {{ item.feature[0].peopleHeader }}
+          
+          p {{ item.feature[0].peopleDescription}}
+
+      .tech-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#clr')
+        .wrapper
+          header
+            h2 {{ item.feature[0].techHeader }}
+
+          p {{ item.feature[0].techDescription }}
+              
+    section.quote(style="background: url(https://www.datocms-assets.com{{ item.quote[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
+      blockquote {{ item.quote[0].quote }}
+      p {{ item.quote[0].author }} 
+
+    section.feature
+
+       figure.feature-image
+         img(src='https://www.datocms-assets.com{{ item.feature[1].image.path }}')
+
+      .people-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#cl')
+        .wrapper
+          header
+            h2 {{ item.feature[1].peopleHeader }}
+          
+          p {{ item.feature[1].peopleDescription}}
+
+      .tech-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#clr')
+        .wrapper
+          header
+            h2 {{ item.feature[1].techHeader }}
+
+          p {{ item.feature[1].techDescription }}
+
+    section.statistics(style="background: url(https://www.datocms-assets.com{{ item.statistics[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
+      div
+        p {{ item.statistics[0].statOne }}
+        p {{ item.statistics[0].statOneSupport }}
+      div
+        p {{ item.statistics[0].statTwo }}
+        p {{ item.statistics[0].statOneSupport }}
+
+    section.feature
+
+       figure.feature-image
+         img(src='https://www.datocms-assets.com{{ item.feature[2].image.path }}')
+
+      .people-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#cl')
+        .wrapper
+          header
+            h2 {{ item.feature[2].peopleHeader }}
+          
+          p {{ item.feature[2].peopleDescription}}
+
+      .tech-col
+        svg(viewBox='0 0 500 40')
+          use(xlink:href='#clr')
+        .wrapper
+          header
+            h2 {{ item.feature[2].techHeader }}
+
+          p {{ item.feature[2].techDescription }}
+
+    footer
+      include(src='/includes/_footer.sgr')
+
+    include(src='/includes/_icon-sprite.sgr')
+
+    block(name='javascript')
+      script(src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous")
+      script(src='/js/main.js' defer)

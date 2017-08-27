@@ -4,6 +4,7 @@ extends(src='layout.sgr')
     header
       include(src='/includes/_header-dark.sgr')
       .hero
+        h1 {{ dato.work[0].title}}
         p Semiotics pok pok venmo tacos lomo plaid microdosing literally blog bespoke skateboard tattooed umami air plant chillwave. Disrupt venmo humblebrag knausgaard polaroid.
 
     // .header
