@@ -10,12 +10,12 @@ extends(src='layout.sgr')
         h1 We are a design thinking and IT innovation company. 
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
 
-      each(loop='item in dato.work')
-        section.work(style='background-image: url(https://{{ dato._meta.imgixHost + item.bgImage.path }})' )
-          .content
-            h2 {{ item.title }}
-            p {{ item.description.split(' ').slice(0, 15).join(' ') }}...
-            a(href='/work/{{ item.slug }}') Learn More...
+    each(loop='item in dato.work')
+      section.work(style='background-image: url(https://{{ dato._meta.imgixHost + item.bgImage.path }})' )
+        .content
+          h2 {{ item.title }}
+          p {{ item.description.split(' ').slice(0, 15).join(' ') }}...
+          a(href='/work/{{ item.slug }}') Learn More...
 
     include(src='/includes/_risk.sgr')
 
