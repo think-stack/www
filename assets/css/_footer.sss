@@ -4,46 +4,59 @@ footer
   display: flex
   flex-direction: column
   justify-content: space-between
+  align-items: center
+  position: relative
+  padding-bottom: 1em
 
-  @media (min-width: 48em)
-    flex-direction: row
+  @media (min-width: 26em)
 
-  & a
-    color: currentColor
+    &:after
+      content: ''
+      border-top: 1px solid white
+      width: 3em
+      position: absolute
+      top: 69%
 
-  & p
-    padding: 0
-
-  & #footer-contact
-    margin: auto
-    padding-bottom: 1em
-    padding-top: 1em
+  & #logo
     flex: 1 1 auto
+    text-align: center 
+    margin: 3em auto 2em
 
-    @media (min-width: 48em)
-      margin: 1em 
-      padding-top: 1em
+    & img
+      width: 60%
 
-    & p
+  & #cta
+    max-width: 80%
+    margin: 0 auto 3em
+    text-align: center
+
+    @media (min-width: 30em)
+      max-width: 30em
+
+    & p 
+      margin-bottom: 1.5em
+
+      @media (max-width: 26em)
+        display: none
+
+    & .email
+      
+      @media (min-width: 26em)
+        display: none
+
+    & .button
+      background: var(--tsGreen)
+      padding: .3em 1.5em
+      border-radius: 1em
+      text-transform: uppercase
+
+      @media (max-width: 26em)
+        display: none
+
+  & #social
+    padding-bottom: 2em
+
+    & ul 
       display: flex
-      flex-direction: column
-      text-align: center
-
-      @media (min-width: 48em)
-        text-align: left
-
-  & #footer-terms
-    display: flex
-    flex-direction: column
-    flex: 1 1 auto
-    justify-content: center
-    margin: 1em
-    text-align: right
-
-    & a
-      text-align: center
-      font-size: 1.05em
-      margin: .25em 0 
-
-      @media (min-width: 48em)
-        text-align: right
+      justify-content: space-between
+      min-width: 10em

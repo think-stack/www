@@ -11,9 +11,7 @@ extends(src='layout.sgr')
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
       
       each(loop='item in dato.work')
-        section.work(style='background-image: url(https://{{ dato._meta.imgixHost + item.backgroundImage.path }})' )
-          .image
-            img(src='https://{{ dato._meta.imgixHost + item.logo.path }}')
+        section.work(style='background-image: url(https://{{ dato._meta.imgixHost + item.bgImage.path }})' )
           .content
             h2 {{ item.title }}
             p {{ item.description.split(' ').slice(0, 15).join(' ') }}...
@@ -29,8 +27,6 @@ extends(src='layout.sgr')
     include(src='/includes/_clients.sgr')
 
     include(src='/includes/_experts.sgr')
-
-    include(src='/includes/_cta.sgr')
 
     include(src='/includes/_relationships.sgr')
 
