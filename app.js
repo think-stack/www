@@ -42,9 +42,6 @@ module.exports = {
         {
           name: 'about',
           json: 'about.json'
-        }, {
-          name: 'post',
-          json: 'blog.json'
         },
         {
           name: 'work',
