@@ -1,5 +1,9 @@
 #index
 
+  & h1,
+  & h2
+    color: var(--tsGrey)
+
   & main
     display: flex
     flex-direction: column
@@ -33,58 +37,8 @@
 
         @media (min-width: 48em)
           max-width: 26em
-
-    & .work
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: 50%
-      max-height: 50vh
-      color: white
-      align-items: center 
-      justify-content: center
-      padding: 1em 3em
-      background-color: var(--tsGrey)
-      background-blend-mode: multiply
-
-      &:nth-of-type(odd)
-        & .content
-          & p
-            margin-right: 0
-
-      &:nth-of-type(even)
-        & .image
-          order: 2
-          text-align: right
-
-        & .content
-          text-align: left
-          
-          & p
-            margin-left: 0
-
-      & .image
-        flex: 0 1 auto
-
-        & img
-          max-width: 50%
-
-      & .content
-        flex: 0 1 100%
-        text-align: right
-        line-height: 2em
-
-        & p
-          margin-bottom: .5em
-
-        & a
-          font-style: italic
-          transition: all .2s ease-in-out
-
-          &:hover
-            font-size: 1.05em
-        
+       
   & section
-    height: 90vh
     display: flex
     flex-direction: column
 
@@ -95,7 +49,6 @@
       justify-content: space-around
 
     & h1
-      color: var(--tsGrey)
       margin: auto
       width: 90%
       text-align: center
@@ -103,12 +56,125 @@
       @media (min-width: 48em)
         max-width: 12em
 
-    & p
-      width: 90%
-      margin: auto
 
-      @media (min-width: 48em)
-        max-width: 24em
+  & .featured-work
+    flex-wrap: wrap
+    padding: 3em
+    justify-content: center
+    margin-bottom: 4em
+
+    & .case-study
+      position: relative
+      display: flex
+      margin: 0 auto 2em
+      align-items: center
+
+      & p
+        max-width: 20em
+
+      &:nth-of-type(odd)
+        flex: 2 1 50%
+        justify-content: space-around
+
+
+        & figure
+          flex: 1 1 30%
+          max-width: 14em
+        
+          & img
+            width: 100%  
+
+        & .wrapper
+          flex: 2 1 auto
+          max-width: 20em
+          align-self: center
+
+        & svg
+          position: absolute
+
+      &:nth-of-type(1)
+        text-align: left
+
+        & svg
+          transform: rotate(.5turn)
+          top: 32% 
+          left: 32%
+
+      &:nth-of-type(2)
+        flex-direction: column
+
+        & svg
+          order: 2
+          position: relative
+          transform: rotate(-.25turn)
+          left: -28%
+
+        & figure
+          order: 1
+
+        & .wrapper
+          order: 3
+          position: relative
+
+          & h2
+            position: relative
+            left: 16%
+
+          & p
+            margin: auto
+
+      &:nth-of-type(3)
+        text-align: right
+
+        & figure
+          order: 2
+
+        & svg
+          top: 19%
+          left: 54%
+
+        & p
+          margin-left: auto
+
+      &:nth-of-type(even)
+        flex: 1 1 35%
+
+      & svg
+        height: 3em
+        z-index: -1
+      
+    & .cta
+      display: flex
+      flex-direction: column
+      justify-content: center
+      flex: 1 1 40%
+      max-width: 50%
+      text-align: center
+      align-items: center
+
+      & p
+        max-width: 20em
+
+      & .button 
+        max-width: 12em
+
+  & #journey-map
+    min-height: 80vh
+    background: url('/img/journey-map.svg') no-repeat
+    background-size: cover
+    background-position-y: -20%
+    display: flex
+    justify-content: space-between
+    padding: 0 3em
+
+    & .wrapper
+      flex: 1 1 50%
+      max-width: 24em
+
+      &:nth-of-type(2)
+        align-self: flex-end
+        margin-bottom: 2em
+        text-align: right
 
   & blockquote
     font-family: var(--headerFont)
