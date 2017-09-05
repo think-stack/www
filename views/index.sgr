@@ -10,24 +10,57 @@ extends(src='layout.sgr')
         h1 We are a design thinking and IT innovation company. 
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
       
-      each(loop='item in dato.work')
-        section.work(style='background-image: url(https://{{ dato._meta.imgixHost + item.bgImage.path }})' )
-          .content
-            h2 {{ item.title }}
-            p {{ item.description.split(' ').slice(0, 15).join(' ') }}...
-            a(href='/work/{{{ slugify(item.title) }}}') Learn More...
+    section.featured-work
+      .case-study
+
+        svg(viewBox='0 0 250 105')
+          use(xlink:href='#icon-circ')
+
+        figure
+          img(src='/img/phone-demo.png')
+
+        .wrapper
+          h2 app project title
+          p Sed blandit convallis est, vel dictum justo molestie sit amet. Pellentesque purus magna, mattis eu pretuim vitae, suscipit tempus velit
 
 
-    include(src='/includes/_risk.sgr')
+      .case-study
+        svg(viewBox='0 0 250 105')
+          use(xlink:href='#icon-circ')
 
-    include(src='/includes/_testimonial.sgr')
+        figure
+          img(src='/img/coins.png')
 
-    include(src='/includes/_tech.sgr')
+        .wrapper
+          h2 bank project
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat elit condimentum orci condimentum, eu posuere est sollicitudin. Aliquam pretium rhoncus dui, id interdum metus.
 
-    include(src='/includes/_clients.sgr')
+      .case-study
 
-    include(src='/includes/_experts.sgr')
+        svg(viewBox='0 0 250 105')
+          use(xlink:href='#icon-circ')
 
-    include(src='/includes/_relationships.sgr')
+        figure
+          img(src='/img/yearup-notebook.png')
+        
+        .wrapper
+          h2 year up
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet odio ullamcorper metus scelerisque, vitae ultrices nibh rhoncus. Aenean nisi ex, tristique ultrices vestibulum id.
 
-    include(src='/includes/_modal.sgr')
+      .cta
+        h2 want to work together?
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia velit elit, eu aliquam eros varius non. Proin vel orci.
+        a.button(href='#') work with us
+
+    #journey-map
+      .wrapper
+        .people
+          h2 journey mapping people title
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis fermentum eros sed ornare. Sed tincidunt enim vitae turpis ullamcorper, eu dignissim velit pretium. Integer.
+
+      .wrapper
+        .tech
+          h2 journey mapping tech title
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis fermentum eros sed ornare. Sed tincidunt enim vitae turpis ullamcorper, eu dignissim velit pretium. Integer.
+
+      
