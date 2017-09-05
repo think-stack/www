@@ -41,7 +41,6 @@
   & section
     display: flex
     flex-direction: column
-
     width: 100%
 
     @media (min-width: 48em)
@@ -58,16 +57,34 @@
 
 
   & .featured-work
-    flex-wrap: wrap
+    flex-direction: column
     padding: 3em
-    justify-content: center
     margin-bottom: 4em
+
+    @media (min-width: 26em)
+      flex-direction: row
+
+    @media (min-width: 48em)
+      flex-wrap: wrap
 
     & .case-study
       position: relative
       display: flex
+      flex-direction: column
       margin: 0 auto 2em
       align-items: center
+
+      @media (min-width: 26em)
+        flex-direction: row
+
+      & svg 
+        height: 3em
+        z-index: -1
+        top: 63%
+        position: absolute
+
+      & figure
+        margin-bottom: 3em
 
       & p
         max-width: 20em
@@ -80,6 +97,7 @@
         & figure
           flex: 1 1 30%
           max-width: 14em
+          order: 1
         
           & img
             width: 100%  
@@ -88,29 +106,45 @@
           flex: 2 1 auto
           max-width: 20em
           align-self: center
+          order: 3
 
         & svg
-          position: absolute
+          order: 2
+
+      &:nth-of-type(even)
+        flex: 1 1 35%
 
       &:nth-of-type(1)
         text-align: left
 
         & svg
-          transform: rotate(.5turn)
-          top: 32% 
-          left: 32%
+          transform: rotate(-.25turn)
+
+          @media (min-width: 26em)
+            transform: rotate(.5turn)
+            top: 32% 
+            left: 32%
 
       &:nth-of-type(2)
         flex-direction: column
 
         & svg
           order: 2
-          position: relative
           transform: rotate(-.25turn)
-          top: -8%
+          top: 36%
+
+          @media (min-width: 26em)
+            top: -8%
 
         & figure
           order: 1
+          width: 80%
+
+          @media (min-width: 26em)
+            width: 60%
+
+          & img
+            max-width: 100%
 
         & .wrapper
           order: 3
@@ -123,33 +157,36 @@
             margin: auto
 
       &:nth-of-type(3)
-        text-align: right
+    
+        @media (min-width: 26em)
+          text-align: right
 
         & figure
           order: 2
 
         & svg
-          top: 19%
-          left: 54%
+          transform: rotate(-.25turn)
+          top: 52%
+        
+          @media (min-width: 26em)
+            top: 19%
+            left: 54%
 
         & p
           margin-left: auto
 
-      &:nth-of-type(even)
-        flex: 1 1 35%
 
-      & svg
-        height: 3em
-        z-index: -1
       
     & .cta
       display: flex
       flex-direction: column
       justify-content: center
       flex: 1 1 40%
-      max-width: 50%
       text-align: center
       align-items: center
+      
+      @media (min-width: 26em)
+        max-width: 50%
 
       & p
         max-width: 20em
@@ -159,21 +196,31 @@
 
   & #journey-map
     min-height: 80vh
-    background: url('/img/journey-map.svg') no-repeat
+    background: url('/img/journey-map.svg') no-repeat center
     background-size: cover
     background-position-y: -20%
     display: flex
+    flex-direction: column
     justify-content: space-between
     padding: 0 3em
+
+    @media (min-width: 26em)
+      flex-direction: row
+      background-position-y: -20%
 
     & .wrapper
       flex: 1 1 50%
       max-width: 24em
+      display: flex
+      flex-direction: column
 
       &:nth-of-type(2)
         align-self: flex-end
-        margin-bottom: 2em
         text-align: right
+        justify-content: flex-end
+
+        @media (min-width: 26em)
+          margin-bottom: 2em
 
   & blockquote
     font-family: var(--headerFont)
