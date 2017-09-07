@@ -32,19 +32,20 @@ header
           background: white
 
         &:checked ~span:first-of-type
-          transform: rotate(45deg) translate(7px, 5px)
+          transform: rotate(45deg) translate(3px, 8px)
 
         &:checked ~ span:nth-of-type(2)
-          display: none
+          opacity: 0
+          transform: scale(.02, .02)
 
         &:checked ~ span:last-of-type
-          transform: rotate(-45deg)
+          transform: rotate(-45deg) translate(2px, -7px) 
 
       & span
         display: block
         position: relative
-        width: 33px
-        height: 4px
+        width: 25px
+        height: 2px
         margin-bottom: 5px
         border-radius: .2em
         background: var(--tsBlue)
