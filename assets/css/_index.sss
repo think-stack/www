@@ -3,6 +3,7 @@
   & h1,
   & h2
     color: var(--tsGrey)
+    line-height: 100%
 
   & main
     display: flex
@@ -16,12 +17,13 @@
       display: flex
       flex-direction: column
       justify-content: center
+      align-items: center
+      text-align: center
       height: 80vh
 
       @media (min-width: 48em)
         width: 100%
         margin: auto 0
-        padding-left: 4em
 
       & h1
         padding-bottom: 1.5em
@@ -57,22 +59,34 @@
 
 
   & .featured-work
-    flex-direction: column
-    padding: 3em
     margin-bottom: 4em
+    flex-direction: column
 
-    @media (min-width: 26em)
-      flex-direction: row
-
-    @media (min-width: 48em)
+    @media (min-width: 64em)
       flex-wrap: wrap
+      flex-direction: row
+      max-width: 90%
+      margin: auto
+
+    @media (min-width: 78.75em)
+      margin: auto
+      max-width: 85%
+
+    @media (min-width: 90em)
+      margin: auto
+      max-width: 75%
+
+    @media (min-width: 100em)
+      margin: auto
+      max-width: 65%
 
     & .case-study
       position: relative
       display: flex
       flex-direction: column
-      margin: 0 auto 2em
+      margin: 2em auto 2em
       align-items: center
+      max-width: 90%
 
       @media (min-width: 26em)
         flex-direction: row
@@ -81,60 +95,81 @@
         height: 3em
         z-index: -1
         top: 63%
+        left: 50%
         position: absolute
+        transform: rotate(-.25turn)
+        
+        @media (max-width: 26em)
+          transform: rotate(-.25turn) translateY(-120%)
 
       & figure
         margin-bottom: 3em
+
+        @media (min-width: 78.75em)
+          margin-bottom: 0
 
       & p
         max-width: 20em
 
       &:nth-of-type(odd)
-        flex: 2 1 50%
+        flex: 1 0 auto
         justify-content: space-around
+
+        @media (min-width: 26em)
+          flex: 1 0 auto
+
+        @media (min-width: 48em)
+          flex: 2 1 50%
+
+        @media (min-width: 64em)
+          justify-content: center
+
+        @media (min-width: 78.75em)
+          justify-content: space-around
+          flex: 2 0 60%
 
 
         & figure
-          flex: 1 1 30%
+          flex: 1 0 auto
           max-width: 14em
           order: 1
+
+          @media (min-width: 35.5em)
+            flex: 1 0 45%
         
           & img
             width: 100%  
 
         & .wrapper
-          flex: 2 1 auto
+          flex: 1 0 auto
           max-width: 20em
           align-self: center
           order: 3
+
+          @media (min-width: 35.5em)
+            flex: 1 0 45%
+            text-align: right
 
         & svg
           order: 2
 
       &:nth-of-type(even)
-        flex: 1 1 35%
+        flex: 1 1 auto
 
-      &:nth-of-type(1)
-        text-align: left
+        @media (min-width: 26em)
+          flex: 1 0 auto
 
-        & svg
-          transform: rotate(-.25turn)
+        @media (min-width: 35.5em)
+          flex-direction: row
+    
+        @medai (min-width: 48em)
+          flex: 1 1 35%
 
-          @media (min-width: 26em)
-            transform: rotate(.5turn)
-            top: 32% 
-            left: 32%
+        @media (min-width: 64em)
+          justify-content: center
 
-      &:nth-of-type(2)
-        flex-direction: column
-
-        & svg
-          order: 2
-          transform: rotate(-.25turn)
-          top: 36%
-
-          @media (min-width: 26em)
-            top: -8%
+        @media (min-width: 78.75em)
+          flex: 1 0 40%
 
         & figure
           order: 1
@@ -143,12 +178,92 @@
           @media (min-width: 26em)
             width: 60%
 
+          @media (min-width: 35.5em)
+            order: 3
+
+          @media (min-width: 64em)
+            width: 50%
+            text-align: center        
+        
+          @media (min-width: 78.75em)
+            width: 70%
+            margin-bottom: 3em
+
+      &:nth-of-type(1)
+        text-align: left
+
+        & svg
+
+          @media (min-width: 26em)
+            transform: rotate(.5turn)
+            top: 32% 
+            left: 32%
+          
+          @media (min-width: 35.5em)
+            left: 30%
+
+          @media (min-width: 64em)
+            left: 40%
+
+          @media (min-width: 78.75em)
+            left: 36%
+
+        & .wrapper
+  
+          @media (min-width: 64em)
+            max-width: 40%
+
+          & p
+          
+            @media (min-width: 64em)
+              margin-left: auto
+
+      &:nth-of-type(2)
+
+        @media (min-width: 78.75em)
+          flex-direction: column-reverse
+
+        & svg
+          top: 28%
+
+          @media (min-width: 23em)
+            top: 38%
+
+          @media (min-width: 26em)
+            top: -8%
+
+          @media (min-width: 35.5em)
+            transform: rotate(0turn)
+            top: -2%
+            left: 38%
+
+          @media (min-width: 41.6em)
+            top: 6%
+            left: 34%
+
+          @media (min-width: 46em)
+            top: 15%
+
+          @media (min-width: 64em)
+            top: 20%
+            left: 36%
+
+          @media (min-width: 78.75em)
+            transform: rotate(-.25turn)
+            top: 42%
+
+        & figure
+
+
           & img
             max-width: 100%
 
         & .wrapper
           order: 3
           position: relative
+
+          @media (min-width: 35.5em)
+            order: 1
 
           & h2
             position: relative
@@ -161,16 +276,31 @@
         @media (min-width: 26em)
           text-align: right
 
+        @media (min-width: 78.75em)
+          flex-direction: row-reverse
+
         & figure
           order: 2
 
         & svg
-          transform: rotate(-.25turn)
           top: 52%
         
           @media (min-width: 26em)
             top: 19%
             left: 54%
+
+          @media (min-width: 35.5em)
+            transform: rotate(.5turn)
+            top: 23%
+            left: 40%
+
+          @media (min-width: 78.75em)
+            transform: rotate(.0turn)
+            top: 20%
+            left: 52%
+
+        & .wrapper
+          flex: 1 0 auto
 
         & p
           margin-left: auto
@@ -181,12 +311,19 @@
       display: flex
       flex-direction: column
       justify-content: center
-      flex: 1 1 40%
+      flex: 1 1 auto
       text-align: center
       align-items: center
+      margin: 3em auto 0
       
       @media (min-width: 26em)
-        max-width: 50%
+        flex: 1 1 100%
+
+      @media (min-width: 26em)
+        margin: 3em 0
+
+      @media (min-width: 78.75em)
+        flex: 1 0 40%
 
       & p
         max-width: 20em
@@ -195,18 +332,50 @@
         max-width: 12em
 
   & #journey-map
-    min-height: 80vh
+    min-height: 120vh
     background: url('/img/journey-map.svg') no-repeat center
     background-size: cover
-    background-position-y: -20%
+    background-position-y: 12.5em
     display: flex
     flex-direction: column
     justify-content: space-between
-    padding: 0 3em
+    padding: 0 1em
+    margin-top: 10em
 
-    @media (min-width: 26em)
-      flex-direction: row
-      background-position-y: -20%
+    @media (min-width: 23em)
+      min-height: 90vh
+      flex-direction: column
+      background-position-y: 10.5em
+      padding: 0 2em
+
+    @media (min-width: 35.5em)
+      min-height: 150vh
+      background-position-y: 8.5em
+
+    @media (min-width: 41.5em)
+      min-height: 120vh
+
+    @media (min-width: 46em)
+      min-height: 50vh
+      background-position-y: 6.5em
+
+    @media (min-width: 64em)
+      min-height: 70vh
+      padding: 5em 5em
+      margin-top: 0
+
+    @media (min-width: 78.75em)
+      background-position-y: 7.5em
+      min-height: 50vh
+
+    @media (min-width: 100em)
+      padding: 2em 12em
+      min-height: 50vh
+      background-position-y: 3.5em
+
+    @media (min-width: 120em)
+      padding: 2em 12em
+      min-height: 70vh
 
     & .wrapper
       flex: 1 1 50%
@@ -214,13 +383,22 @@
       display: flex
       flex-direction: column
 
+      & h2
+        margin-rigth: auto
+  
+        @media (min-width: 35.5em)
+          max-width: 10em
+
       &:nth-of-type(2)
         align-self: flex-end
         text-align: right
         justify-content: flex-end
+        margin-bottom: 2em
 
-        @media (min-width: 26em)
-          margin-bottom: 2em
+        & h2
+    
+          @media (min-width: 35.5em)
+            margin-left: auto
 
   & blockquote
     font-family: var(--headerFont)
@@ -306,19 +484,3 @@
 
         &:nth-of-type(3)
           width: 20em
-      
-  & #experts
-    background-color: #fff
-
-  & #relationships
-
-    & .body
-      display: flex
-      flex-direction: column
-      margin: auto
-
-      & a
-        padding: 1em
-        text-transform: capitalize
-        font-size: 1.25em
-        font-style: italic
