@@ -3,8 +3,8 @@
   & main
     display: flex
     flex-direction: column
-    min-height: 97vh
     text-align: left
+    min-height: 95vh
 
     & #hero
       width: 90%
@@ -33,55 +33,55 @@
         @media (min-width: 48em)
           max-width: 26em
 
-    & .work
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: 50%
-      max-height: 50vh
-      color: white
-      align-items: center 
-      justify-content: center
-      padding: 1em 3em
-      background-color: var(--tsGrey)
-      background-blend-mode: multiply
+  & .work
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50%
+    max-height: 50vh
+    color: white
+    align-items: center 
+    justify-content: center
+    padding: 1em 3em
+    background-color: var(--tsGrey)
+    background-blend-mode: multiply
 
-      &:nth-of-type(odd)
-        & .content
-          & p
-            margin-right: 0
+    &:nth-of-type(odd)
+      & .content
+        & p
+          margin-right: 0
 
-      &:nth-of-type(even)
-        & .image
-          order: 2
-          text-align: right
-
-        & .content
-          text-align: left
-          
-          & p
-            margin-left: 0
-
+    &:nth-of-type(even)
       & .image
-        flex: 0 1 auto
-
-        & img
-          max-width: 50%
+        order: 2
+        text-align: right
 
       & .content
-        flex: 0 1 100%
-        text-align: right
-        line-height: 2em
-
-        & p
-          margin-bottom: .5em
-
-        & a
-          font-style: italic
-          transition: all .2s ease-in-out
-
-          &:hover
-            font-size: 1.05em
+        text-align: left
         
+        & p
+          margin-left: 0
+
+    & .image
+      flex: 0 1 auto
+
+      & img
+        max-width: 50%
+
+    & .content
+      flex: 0 1 100%
+      text-align: right
+      line-height: 2em
+
+      & p
+        margin-bottom: .5em
+
+      & a
+        font-style: italic
+        transition: all .2s ease-in-out
+
+        &:hover
+          font-size: 1.05em
+          
   & section
     height: 90vh
     display: flex
