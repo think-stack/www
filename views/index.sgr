@@ -22,7 +22,7 @@ extends(src='layout.sgr')
         .wrapper
           h2 app project title
           p Sed blandit convallis est, vel dictum justo molestie sit amet. Pellentesque purus magna, mattis eu pretuim vitae, suscipit tempus velit
-
+          a(href='#' class='button') learn more
 
       .case-study
         svg(viewBox='0 0 250 105')
@@ -34,6 +34,7 @@ extends(src='layout.sgr')
         .wrapper
           h2 bank project
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat elit condimentum orci condimentum, eu posuere est sollicitudin. Aliquam pretium rhoncus dui, id interdum metus.
+          a(href='#' class='button') learn more
 
       .case-study
 
@@ -46,6 +47,7 @@ extends(src='layout.sgr')
         .wrapper
           h2 year up
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet odio ullamcorper metus scelerisque, vitae ultrices nibh rhoncus. Aenean nisi ex, tristique ultrices vestibulum id.
+          a(href='#' class='button') learn more
 
       .cta
         h2 want to work together?
