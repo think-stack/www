@@ -8,15 +8,15 @@
 
 #social
   ul
-    li: a(href='#')
+    li: a(href='https://www.linkedin.com/company/11195699/')
       |
         svg(viewBox='0 0 56 56' class='icon icon-linkedin-circ')
           use(xlink:href='#icon-linkedin-circ')
-    li: a(href='#')
+    li: a(href='https://www.facebook.com/thinkstacktech/')
       |
         svg(viewBox='0 0 56 56' class='icon icon-facebook-circle')
           use(xlink:href='#icon-facebook-circle')
-    li: a(href='#')
+    li: a(href='https://twitter.com/thinkstacktech')
       |
         svg(viewBox='0 0 56 56' class='icon icon-twitter-circ')
           use(xlink:href='#icon-twitter-circ')
