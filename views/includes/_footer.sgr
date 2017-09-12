@@ -3,8 +3,8 @@
 
 #cta
   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tortor quis erat ultrices dapibus a quis massa.
-  a.email(href='#') collaborating@thinkstack.co
-  a.button(href='#') work with us
+  a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.com
+  a.button(href='mailto:sales@thinkstack.co') work with us
 
 #social
   ul
