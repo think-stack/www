@@ -11,43 +11,22 @@ extends(src='layout.sgr')
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
       
     section.featured-work
-      .case-study
-
-        svg(viewBox='0 0 250 105')
-          use(xlink:href='#icon-circ')
-
-        figure
-          img(src='/img/phone-demo.png')
-
-        .wrapper
-          h2 app project title
-          p Sed blandit convallis est, vel dictum justo molestie sit amet. Pellentesque purus magna, mattis eu pretuim vitae, suscipit tempus velit
-          a(href='#' class='button') learn more
-
-      .case-study
-        svg(viewBox='0 0 250 105')
-          use(xlink:href='#icon-circ')
-
-        figure
-          img(src='/img/coins.png')
-
-        .wrapper
-          h2 bank project
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat elit condimentum orci condimentum, eu posuere est sollicitudin. Aliquam pretium rhoncus dui, id interdum metus.
-          a(href='#' class='button') learn more
-
-      .case-study
-
-        svg(viewBox='0 0 250 105')
-          use(xlink:href='#icon-circ')
-
-        figure
-          img(src='/img/yearup-notebook.png')
+      each(loop='item of dato.work')
+        if(condition='item.featuredWork')
         
-        .wrapper
-          h2 year up
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet odio ullamcorper metus scelerisque, vitae ultrices nibh rhoncus. Aenean nisi ex, tristique ultrices vestibulum id.
-          a(href='#' class='button') learn more
+          .case-study
+
+            svg(viewBox='0 0 250 105')
+              use(xlink:href='#icon-circ')
+
+            figure
+              img(src='//{{ dato._meta.imgixHost + item.featImage.path }}')
+
+            .wrapper
+              h2 {{ item.title }}
+              p {{ item.hero }} 
+              a.button(href='/{{ item.slug }}') learn more
+      
 
       .cta
         h2 want to work together?
