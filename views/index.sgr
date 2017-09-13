@@ -29,19 +29,19 @@ extends(src='layout.sgr')
       
 
       .cta
-        h2 want to work together?
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia velit elit, eu aliquam eros varius non. Proin vel orci.
-        a.button(href='#') work with us
+        h2 {{ dato.index[0].ctaButton[0].title }}
+        p {{ dato.index[0].ctaButton[0].ctaContent }}
+        a.button(href='#') {{ dato.index[0].ctaButton[0].buttonText }}
 
     #journey-map
       .wrapper
         .people
-          h2 journey mapping people title
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis fermentum eros sed ornare. Sed tincidunt enim vitae turpis ullamcorper, eu dignissim velit pretium. Integer.
+          h2 {{ dato.index[0].journeyMap[0].peopleTitle }}
+          p {{ dato.index[0].journeyMap[0].peopleContent }}
 
       .wrapper
         .tech
-          h2 journey mapping tech title
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis fermentum eros sed ornare. Sed tincidunt enim vitae turpis ullamcorper, eu dignissim velit pretium. Integer.
+          h2 {{ dato.index[0].journeyMap[0].techTitle }}
+          p {{ dato.index[0].journeyMap[0].techContent }}
 
       
