@@ -1,4 +1,8 @@
 #about
+  transition: background-color .5s ease-in
+
+  &.bg-color
+    background-color: var(--tsLightGreen)
 
   & h1,
   & h2
@@ -6,7 +10,7 @@
 
   & p
     text-align: center
-    max-width: 38em
+    max-width: 36rem
     padding-bottom: .5em
 
   & main
@@ -14,7 +18,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    height: 80vh
+    height: 70vh
 
   & section
     display: flex
@@ -25,10 +29,7 @@
 
   & .tech
     transition: background-color .5s ease-in
-    height: 100vh
-
-    &.bg-color
-      background-color: var(--tsGreen)
+    height: 60vh
 
   & .about
     justify-content: center

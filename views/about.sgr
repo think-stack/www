@@ -17,8 +17,7 @@ extends(src='layout.sgr')
       p(md) {{ dato.about[0].aboutUsHero }}
 
     section#team
-
-      each(loop='person in dato.team')
+      each(loop='person in dato.team.sort((a, b) => a.position < b.position ? -1 : 1)')
         figure
           img(src='//{{ dato._meta.imgixHost + person.image.path }}')
           figcaption
