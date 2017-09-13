@@ -51,17 +51,18 @@ function debounce (func, wait = 20, immediate = true) {
 const techSection = document.querySelector('#about .tech')
 
 function bgColorChange (e) {
+  const aboutBody = document.getElementById('about')
   //1/4 through div
   const addClassAt = (window.scrollY + window.innerHeight) - techSection.clientHeight  / 4
   //bottom of div
-  const divBottom = techSection.offsetTop + techSection.clientHeight
+  const divBottom = techSection.offsetTop + techSection.clientHeight / 6
   const partialShow = addClassAt > techSection.offsetTop
   const isNotScrolledPast = window.scrollY < divBottom
 
     if (partialShow && isNotScrolledPast) {
-      techSection.classList.add('bg-color')
+      aboutBody.classList.add('bg-color')
     } else {
-      techSection.classList.remove('bg-color')
+      aboutBody.classList.remove('bg-color')
     }
   
 }
