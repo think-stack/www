@@ -10,7 +10,7 @@ nav
     span
 
   ul#nav-panel
-    each(loop='item in ["index", "work", "process", "who we are", "contact"]')
+    each(loop='item in ["index", "who we are"]')
       if(condition='item === "index"')
         li: a(href='/') home
       elseif(condition='item === "who we are"')
