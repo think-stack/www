@@ -31,7 +31,7 @@ extends(src='layout.sgr')
       .cta
         h2 {{ dato.index[0].ctaButton[0].title }}
         p {{ dato.index[0].ctaButton[0].ctaContent }}
-        a.button(href='#') {{ dato.index[0].ctaButton[0].buttonText }}
+        a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}
 
     #journey-map
       .wrapper
