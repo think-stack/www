@@ -11,7 +11,7 @@ extends(src='layout.sgr')
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
       
     section.featured-work
-      each(loop='item of dato.work')
+      each(loop='item of dato.work.sort((a, b) => a.position < b.position ? -1 : 1)')
         if(condition='item.featuredWork')
         
           .case-study
