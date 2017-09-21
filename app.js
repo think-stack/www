@@ -40,8 +40,12 @@ module.exports = {
       token: 'e26304f1b7f2c4d86a9a',
       models: [
         {
+          name: 'index',
+          json: 'index.json'
+        },
+        {
           name: 'about',
-          json: 'about.json'          
+          json: 'about.json'
         },
         {
           name: 'team',
