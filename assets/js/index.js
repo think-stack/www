@@ -33,6 +33,32 @@ function removeClass (e) {
 }
 
 
+// show nav menu when hamburger is clicked
+
+const hamburger = document.querySelector('#nav-toggle input')
+const navPanel = document.getElementById('nav-panel')
+const body = document.querySelector('body')
+
+hamburger.addEventListener('change', function () {
+  if (hamburger.checked === true) {
+    navPanel.style.opacity = 1
+    navPanel.style.transition = 'opacity .5s ease-out'
+    navPanel.style.visibility = 'visible'
+    body.style.overflow = 'hidden'
+  } else {
+    navPanel.style.opacity = 0
+    navPanel.style.transition = 'opacity .5s ease-in-out'
+    body.style.removeProperty('overflow') 
+    setTimeout(function () {
+      navPanel.style.visibility = 'hidden'
+    }, 450)
+  }
+}, false)
+
+function test () {
+  console.log(hamburger)
+}
+
 // display modal on first visit
 
 let visited = localStorage.getItem('visited')

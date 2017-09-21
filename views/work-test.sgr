@@ -14,7 +14,7 @@ extends(src='layout.sgr')
 
       .people-col
         svg(viewBox='0 0 500 40')
-          use(xlink:href='#cl')
+          use(xlink:href='#clr')
         .wrapper
           header
             h2 people header
