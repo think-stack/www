@@ -2,7 +2,6 @@ console.log('you can use ES6 here')
 
 var child = document.querySelectorAll('svg')
 
-
 document.addEventListener('touchstart', addClass, false)
 document.addEventListener('touchstart', removeClass, false)
 
@@ -32,6 +31,66 @@ function removeClass (e) {
   console.log(parentNode)
 }
 
+// debounce
+
+function debounce (func, wait = 20, immediate = true) {
+  var timeout
+  return function () {
+    var context = this, args = arguments
+    var later = function () {
+      timeout = null
+      if(!immediate) func.apply(context, args)
+    }
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
+}
+
+const techSection = document.querySelector('#about .tech')
+
+function bgColorChange (e) {
+  const aboutBody = document.getElementById('about')
+  //1/4 through div
+  const addClassAt = (window.scrollY + window.innerHeight) - techSection.clientHeight  / 4
+  //bottom of div
+  const divBottom = techSection.offsetTop + techSection.clientHeight / 6
+  const partialShow = addClassAt > techSection.offsetTop
+  const isNotScrolledPast = window.scrollY < divBottom
+
+    if (partialShow && isNotScrolledPast) {
+      aboutBody.classList.add('bg-color')
+    } else {
+      aboutBody.classList.remove('bg-color')
+    }
+  
+}
+
+window.addEventListener('scroll', debounce(bgColorChange))
+
+function checkSlide (e) {
+  //get all images
+  const images = document.querySelectorAll('#about #team img')  
+
+    images.forEach(function(image) {
+      //scroll onto image
+    const startSlide = (window.scrollY + window.innerHeight) - image.height / 2
+    //bottom of image
+    const imgBottom = image.offsetTop + image.clientHeight
+    const partialShow = startSlide > image.offsetTop
+    const isNotScrolledPast = window.scrollY < imgBottom
+
+      if(startSlide && isNotScrolledPast) {
+        image.classList.add('slide')
+      } else {
+        image.classList.remove('slide')
+      }
+
+  })
+}
+
+window.addEventListener('scroll', debounce(checkSlide))
 
 // show nav menu when hamburger is clicked
 
@@ -82,7 +141,7 @@ window.onload = function modalDisplay () {
 
 // close modal
 
-const modalButton = document.getElementById('button')
+const modalButton = document.querySelector('#modal #button')
 
 modalButton.addEventListener('click', closeModal, false)
 overlay.addEventListener('click', closeModal, false)
@@ -93,3 +152,4 @@ function closeModal () {
   overlay.classList.remove('open')
   overlay.classList.add('closed')
 }
+

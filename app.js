@@ -48,13 +48,17 @@ module.exports = {
           json: 'about.json'
         },
         {
+          name: 'team',
+          json: 'team.json'
+        },
+        {
           name: 'work',
           template: {
             path: 'views/work.sgr',
             output: (work) => { return `work/${work.slug}.html`}
           },
           json: 'work.json'
-        }
+        },
       ],
       json: 'data.json'
     })
