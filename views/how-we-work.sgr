@@ -1,0 +1,104 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    #hero
+      
+      h2 Our process is rooted in relationships from day one. Every project begins with a goal mapping session to uncover true clients needs. 
+
+    section.block
+      
+      img.bg(src='/img/prs.svg')
+
+      h1 our project lenses
+
+    #process
+
+      header
+
+        h1 3 step immersion process
+
+      .flex-row.slide
+
+        figure
+
+          h2 serve
+          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+
+        figure
+
+          h2 ask
+          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+
+        figure
+
+          h2 research
+          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+
+      .icon-row
+
+        header
+          img(src='/img/deliv-connect.svg')
+
+        .flex-row
+
+          figure
+
+            h2 epics
+            img(src='/img/epic.svg')
+
+          figure
+
+            h2 users
+            img(src='/img/users.svg')
+
+          figure
+
+            h2 journey map
+            img(src='/img/journey.svg')
+
+      .connect
+
+        img.connector(src='/img/connector.svg')
+
+      section#design
+
+        header
+          h2 product design
+
+        ul
+          li define approach
+          li create project charter
+          li develop schedule
+
+      .connect
+
+        img.connector(src='/img/connector.svg')
+
+      section#deployment.block.invert
+
+        img.bg(src='/img/cont-dep-loop.svg')
+        h1 continuous deployment loop
+
+      .connect
+
+        img.connector(src='/img/connector.svg')
+
+      .flex-row.slide
+
+        figure
+
+          h2 training
+          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+
+        figure
+
+          h2 implementation
+          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+
+        figure
+
+          h2 management
+          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.

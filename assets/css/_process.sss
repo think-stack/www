@@ -1,0 +1,99 @@
+#how-we-work
+
+  & h1,
+  & h2,
+  & h3
+    color: var(--tsGrey)
+    line-height: 1em
+
+  & .connector
+    width: 2em
+    margin: 1em auto
+
+  & #hero
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto 
+    height: 65vh
+    text-align: center  
+  
+    & h2
+      max-width: 90%
+      line-height: 1em
+
+      @media (--laptop)
+        max-width: 20em
+
+  & .block
+    display: flex
+    position: relative
+    height: 75vh
+    justify-content: center
+    align-items: center
+    margin-bottom: 5em
+
+    & img
+      width: 25em
+      position: absolute
+      left: 50%
+      right: 50%
+      transform: translateX(-50%)
+
+    & h1
+      max-width: 8em
+      text-align: center
+      margin: 0
+
+  & #process
+
+    & header
+      margin: 5em auto
+      text-align: center
+
+    & .flex-row
+      display: flex
+      margin-bottom: 4em
+      text-align: center
+
+  & .icon-row
+    text-align: center
+    
+    & header
+
+      & img
+        width: 60%
+
+    & .flex-row
+      width: 85%
+      margin: 1em auto 4em
+
+      & figure
+        flex: 1 1 33%
+
+        & img
+          width: 50%
+
+  & #design
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & ul
+      list-style: disc
+      margin-bottom: 1em
+
+  & #deployment
+    margin-bottom: 0
+    height: 55vh
+
+    & .bg
+      width: 18em
+      z-index: -1
+
+    & h1 
+      max-width: 16em
+
+  & .connect
+    text-align: center
+    margin: 1em auto
