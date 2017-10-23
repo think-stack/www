@@ -6,7 +6,7 @@ extends(src='layout.sgr')
 
     #hero
       
-      h2 Our process is rooted in relationships from day one. Every project begins with a goal mapping session to uncover true clients needs. 
+      h2 Our process is rooted in relationships from day one. Every project begins with a goal mapping session to uncover true client's needs. 
 
     section.block
       
@@ -27,17 +27,14 @@ extends(src='layout.sgr')
         .flex-slider
 
           figure
-            h2 serve
-            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
-
-          figure
             h2 ask
-            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
-
+            p We want to help you optimize your business. We’ll ask you questions about how you use technology to see if we fix any redundant processes.
+          figure
+            h2 observe
+            p To understand the way you use technology, we’ll observe your team’s interactions with the platforms you use to brainstorm ways we can improve efficiency.
           figure
             h2 research
-            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
-
+            p We’ll research different platforms that will optimize your business's efficiency and explain all technical solutions so you understand how we’ll improve your system.
       .connect.sm-scrn
 
         img.connector(src='/img/connector.svg')
@@ -101,14 +98,12 @@ extends(src='layout.sgr')
           figure
 
             h2 training
-            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
-
+            p After the new technical process we implement is in place, we’ll train your team to ensure a smooth transition into new roles and platform utilization.
           figure
 
             h2 implementation
-            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
-
+            p What makes us different from other design thinking companies is that we work with you to implement the changes we’ve made to your operational process.
           figure
 
             h2 management
-            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+            p We’ll manage the entire project from start to finish, even working with any third-party vendors your company currently works with.
