@@ -10,6 +10,14 @@
     width: 2em
     margin: 1em auto
 
+  & .connect
+
+    &.sm-scrn
+      
+      @media (min-width: 48em)
+        display: none
+        
+
   & #hero
     display: flex
     justify-content: center
@@ -29,16 +37,26 @@
     display: flex
     position: relative
     height: 75vh
+    max-width: 90%
     justify-content: center
     align-items: center
-    margin-bottom: 5em
+    margin: 0 auto 5em
+
+    @media (--tablet)
+      width: 100%
 
     & img
-      width: 25em
+      width: 100%
       position: absolute
       left: 50%
       right: 50%
       transform: translateX(-50%)
+
+      @media (--mob-lnd)
+        width: 60%
+
+      @media (--tablet)
+        width: 25em
 
     & h1
       max-width: 8em
@@ -51,15 +69,63 @@
       margin: 5em auto
       text-align: center
 
-    & .flex-row
+    & .flex-container
       display: flex
-      margin-bottom: 4em
-      text-align: center
+      width: 100%
+      overflow: hidden
+      position: relative
+
+      & .prev,
+      & .next
+        height: 2em
+        width: 2em
+        position: absolute
+        border-bottom: 2px solid var(--tsGreen)
+        border-left: 2px solid var(--tsGreen)
+        z-index: 1
+
+        &:hover
+          cursor: pointer
+
+      & .prev
+        top: 50%
+        left: 5%
+        transform: rotate(45deg)
+
+        @media (--laptop) 
+          left: 25%
+
+      & .next
+        top: 50%
+        right: 5%
+        transform: rotate(-135deg)
+
+        @media (--laptop) 
+          right: 25%
+
+      & .flex-slider
+        display: flex
+        width: 100%
+
+        & figure
+          min-width: 100%
+          text-align: center
+          transform: translateX(0)
+          transition: transform .25s ease-in
+    
+          & h2,
+          & p
+            max-width: 20em
+            margin: auto
 
   & .icon-row
     text-align: center
     
     & header
+      display: none
+
+      @media (--laptop)
+        display: inline
 
       & img
         width: 60%
@@ -67,6 +133,9 @@
     & .flex-row
       width: 85%
       margin: 1em auto 4em
+
+      @media (--laptop)
+        display: flex
 
       & figure
         flex: 1 1 33%
@@ -78,6 +147,9 @@
     display: flex
     flex-direction: column
     align-items: center
+
+    & header
+      margin: 2em auto 1em
 
     & ul
       list-style: disc
@@ -97,3 +169,6 @@
   & .connect
     text-align: center
     margin: 1em auto
+
+  & .deployment
+    margin-bottom: 5em

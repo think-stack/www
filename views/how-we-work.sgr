@@ -20,27 +20,33 @@ extends(src='layout.sgr')
 
         h1 3 step immersion process
 
-      .flex-row.slide
+      .flex-container.process
+        span.prev
+        span.next
 
-        figure
+        .flex-slider
 
-          h2 serve
-          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+          figure
+            h2 serve
+            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
 
-        figure
+          figure
+            h2 ask
+            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
 
-          h2 ask
-          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+          figure
+            h2 research
+            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
 
-        figure
+      .connect.sm-scrn
 
-          h2 research
-          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+        img.connector(src='/img/connector.svg')
 
       .icon-row
 
         header
-          img(src='/img/deliv-connect.svg')
+
+          img#lg(src='/img/deliv-connect.svg')
 
         .flex-row
 
@@ -86,19 +92,23 @@ extends(src='layout.sgr')
 
         img.connector(src='/img/connector.svg')
 
-      .flex-row.slide
+      .flex-container.deployment
+        span.prev
+        span.next
 
-        figure
+        .flex-slider
 
-          h2 training
-          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+          figure
 
-        figure
+            h2 training
+            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
 
-          h2 implementation
-          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+          figure
 
-        figure
+            h2 implementation
+            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
 
-          h2 management
-          p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.
+          figure
+
+            h2 management
+            p Mauris posuere malesuada eros, in euismod nisi varius eget. Donec tincidunt, nunc vitae lobortis accumsan, augue eros faucibus nisi, nec bibendum est dolor id lectus.

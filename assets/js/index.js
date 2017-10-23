@@ -5,6 +5,110 @@ var child = document.querySelectorAll('svg')
 document.addEventListener('touchstart', addClass, false)
 document.addEventListener('touchstart', removeClass, false)
 
+// show nav menu when hamburger is clicked
+
+const nav = function () {
+
+  const hamburger = document.querySelector('#nav-toggle input')
+  const navPanel = document.getElementById('nav-panel')
+  const body = document.querySelector('body')
+
+  hamburger.addEventListener('change', function () {
+    if (hamburger.checked === true) {
+      navPanel.style.opacity = 1
+      navPanel.style.transition = 'opacity .5s ease-out'
+      navPanel.style.visibility = 'visible'
+      body.style.overflow = 'hidden'
+    } else {
+      navPanel.style.opacity = 0
+      navPanel.style.transition = 'opacity .5s ease-in-out'
+      body.style.removeProperty('overflow') 
+      setTimeout(function () {
+        navPanel.style.visibility = 'hidden'
+      }, 450)
+    }
+  }, false)
+
+  function test () {
+    console.log(hamburger)
+  }
+}
+
+nav()
+
+
+const processSlide = function () {
+  
+  const prPrevButton = document.querySelector('.process .prev')
+  const prNextButton = document.querySelector('.process .next')
+
+  prPrevButton.addEventListener('click', slideLeft, false)
+  prNextButton.addEventListener('click', slideRight, false)
+
+
+  function slideLeft () {
+    const slides = document.querySelectorAll('.process .flex-slider figure')
+
+      for (let i = 0; i < slides.length; i++) {
+        if (slides[i].style.transform === '') {
+          slides[i].style.transform = 'translateX(-100%)'
+        } else if (slides[i].style.transform === 'translateX(-100%)') {
+          slides[i].style.transform = 'translateX(-200%)'
+        }
+      }
+  }
+
+  function slideRight () {
+    const slides = document.querySelectorAll('.flex-slider figure')
+
+      for (let i = 0; i < slides.length; i++) {
+        if (slides[i].style.transform === 'translateX(-200%)') {
+          slides[i].style.transform = 'translateX(-100%)'
+        } else if (slides[i].style.transform === 'translateX(-100%)') {
+          slides[i].style.transform = ''
+        }
+      }
+  }
+}
+
+processSlide()
+
+const depSlide = function () {
+  
+  const depPrevButton = document.querySelector('.deployment .prev')
+  const depNextButton = document.querySelector('.deployment .next')
+
+  depPrevButton.addEventListener('click', slideLeft, false)
+  depNextButton.addEventListener('click', slideRight, false)
+
+
+  function slideLeft () {
+    const slides = document.querySelectorAll('.deployment .flex-slider figure')
+
+      for (let i = 0; i < slides.length; i++) {
+        if (slides[i].style.transform === '') {
+          slides[i].style.transform = 'translateX(-100%)'
+        } else if (slides[i].style.transform === 'translateX(-100%)') {
+          slides[i].style.transform = 'translateX(-200%)'
+        }
+      }
+  }
+
+  function slideRight () {
+    const slides = document.querySelectorAll('.deployment .flex-slider figure')
+
+      for (let i = 0; i < slides.length; i++) {
+        if (slides[i].style.transform === 'translateX(-200%)') {
+          slides[i].style.transform = 'translateX(-100%)'
+        } else if (slides[i].style.transform === 'translateX(-100%)') {
+          slides[i].style.transform = ''
+        }
+      }
+  }
+}
+
+depSlide()
+
 //better way to add and remove classes from siblings?
 //get parent node and then for loop through child nodes checking for class?
 
@@ -50,6 +154,7 @@ function debounce (func, wait = 20, immediate = true) {
 
 const techSection = document.querySelector('#about .tech')
 
+/*
 function bgColorChange (e) {
   const aboutBody = document.getElementById('about')
   //1/4 through div
@@ -67,7 +172,10 @@ function bgColorChange (e) {
   
 }
 
-window.addEventListener('scroll', debounce(bgColorChange))
+*/
+
+
+//window.addEventListener('scroll', debounce(bgColorChange))
 
 function checkSlide (e) {
   //get all images
@@ -92,31 +200,7 @@ function checkSlide (e) {
 
 window.addEventListener('scroll', debounce(checkSlide))
 
-// show nav menu when hamburger is clicked
 
-const hamburger = document.querySelector('#nav-toggle input')
-const navPanel = document.getElementById('nav-panel')
-const body = document.querySelector('body')
-
-hamburger.addEventListener('change', function () {
-  if (hamburger.checked === true) {
-    navPanel.style.opacity = 1
-    navPanel.style.transition = 'opacity .5s ease-out'
-    navPanel.style.visibility = 'visible'
-    body.style.overflow = 'hidden'
-  } else {
-    navPanel.style.opacity = 0
-    navPanel.style.transition = 'opacity .5s ease-in-out'
-    body.style.removeProperty('overflow') 
-    setTimeout(function () {
-      navPanel.style.visibility = 'hidden'
-    }, 450)
-  }
-}, false)
-
-function test () {
-  console.log(hamburger)
-}
 
 // display modal on first visit
 
@@ -152,4 +236,6 @@ function closeModal () {
   overlay.classList.remove('open')
   overlay.classList.add('closed')
 }
+
+// process page slider
 
