@@ -39,11 +39,11 @@ nav()
 
 const processSlide = function () {
   
-  const prPrevButton = document.querySelector('.process .prev')
-  const prNextButton = document.querySelector('.process .next')
+  const slideL = document.querySelector('.process .slide-l')
+  const slideR = document.querySelector('.process .slide-r')
 
-  prPrevButton.addEventListener('click', slideLeft, false)
-  prNextButton.addEventListener('click', slideRight, false)
+  slideL.addEventListener('click', slideRight, false)
+  slideR.addEventListener('click', slideLeft, false)
 
 
   function slideLeft () {
@@ -75,11 +75,11 @@ processSlide()
 
 const depSlide = function () {
   
-  const depPrevButton = document.querySelector('.deployment .prev')
-  const depNextButton = document.querySelector('.deployment .next')
+  const depPrevButton = document.querySelector('.deployment .slide-l')
+  const depNextButton = document.querySelector('.deployment .slide-r')
 
-  depPrevButton.addEventListener('click', slideLeft, false)
-  depNextButton.addEventListener('click', slideRight, false)
+  depPrevButton.addEventListener('click', slideRight, false)
+  depNextButton.addEventListener('click', slideLeft, false)
 
 
   function slideLeft () {

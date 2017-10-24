@@ -76,8 +76,8 @@
       overflow: hidden
       position: relative
 
-      & .prev,
-      & .next
+      & .slide-l,
+      & .slide-r
         height: 2em
         width: 2em
         position: absolute
@@ -88,7 +88,7 @@
         &:hover
           cursor: pointer
 
-      & .prev
+      & .slide-l
         top: 50%
         left: 5%
         transform: rotate(45deg)
@@ -96,7 +96,7 @@
         @media (--laptop) 
           left: 25%
 
-      & .next
+      & .slide-r
         top: 50%
         right: 5%
         transform: rotate(-135deg)

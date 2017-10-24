@@ -21,8 +21,8 @@ extends(src='layout.sgr')
         h1 3 Step Immersion Process
 
       .flex-container.process
-        span.prev
-        span.next
+        span.slide-l
+        span.slide-r
 
         .flex-slider
 
@@ -90,8 +90,8 @@ extends(src='layout.sgr')
         img.connector(src='/img/connector.svg')
 
       .flex-container.deployment
-        span.prev
-        span.next
+        span.slide-l
+        span.slide-r
 
         .flex-slider
 
