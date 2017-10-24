@@ -12,13 +12,13 @@ extends(src='layout.sgr')
       
       img.bg(src='/img/prs.svg')
 
-      h1 our project lenses
+      h1 Our Project Lenses
 
     #process
 
       header
 
-        h1 3 step immersion process
+        h1 3 Step Immersion Process
 
       .flex-container.process
         span.prev
@@ -27,13 +27,13 @@ extends(src='layout.sgr')
         .flex-slider
 
           figure
-            h2 ask
+            h2 Ask
             p We want to help you optimize your business. We’ll ask you questions about how you use technology to see if we fix any redundant processes.
           figure
-            h2 observe
+            h2 Observe
             p To understand the way you use technology, we’ll observe your team’s interactions with the platforms you use to brainstorm ways we can improve efficiency.
           figure
-            h2 research
+            h2 Research
             p We’ll research different platforms that will optimize your business's efficiency and explain all technical solutions so you understand how we’ll improve your system.
       .connect.sm-scrn
 
@@ -49,17 +49,17 @@ extends(src='layout.sgr')
 
           figure
 
-            h2 epics
+            h2 Epics
             img(src='/img/epic.svg')
 
           figure
 
-            h2 users
+            h2 Users
             img(src='/img/users.svg')
 
           figure
 
-            h2 journey map
+            h2 Journey Map
             img(src='/img/journey.svg')
 
       .connect
@@ -69,21 +69,21 @@ extends(src='layout.sgr')
       section#design
 
         header
-          h2 product design
+          h2 Product Design
 
         ul
-          li define approach
-          li create project charter
-          li develop schedule
+          li Define Approach
+          li Create Project Charter
+          li Develop Schedule
 
       .connect
 
         img.connector(src='/img/connector.svg')
 
-      section#deployment.block.invert
+      section#deployment.block
 
         img.bg(src='/img/cont-dep-loop.svg')
-        h1 continuous deployment loop
+        h1 Continuous Deployment Loop
 
       .connect
 
@@ -97,13 +97,15 @@ extends(src='layout.sgr')
 
           figure
 
-            h2 training
+            h2 Training
             p After the new technical process we implement is in place, we’ll train your team to ensure a smooth transition into new roles and platform utilization.
+
           figure
 
-            h2 implementation
+            h2 Implementation
             p What makes us different from other design thinking companies is that we work with you to implement the changes we’ve made to your operational process.
+
           figure
 
-            h2 management
+            h2 Management
             p We’ll manage the entire project from start to finish, even working with any third-party vendors your company currently works with.

@@ -5,6 +5,7 @@
   & h3
     color: var(--tsGrey)
     line-height: 1em
+    text-transform: none
 
   & .connector
     width: 2em
@@ -139,6 +140,10 @@
 
       & figure
         flex: 1 1 33%
+        margin-bottom: 5em
+
+        @media (--laptop)
+          margin-bottom: 1em
 
         & img
           width: 50%
@@ -159,12 +164,21 @@
     margin-bottom: 0
     height: 55vh
 
+    @media (--laptop)
+      height: 75vh
+
     & .bg
-      width: 18em
+      width: 100%
       z-index: -1
 
+      @media (--tablet)
+        width: 70%
+
+      @media (--laptop)
+        width: 25em
+
     & h1 
-      max-width: 16em
+      max-width: 7em
 
   & .connect
     text-align: center
