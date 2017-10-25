@@ -70,6 +70,10 @@
       margin: 5em auto
       text-align: center
 
+      & h2 
+        max-width: 90%
+        margin: auto
+
     & .flex-container
       display: flex
       width: 100%
@@ -81,8 +85,8 @@
         height: 2em
         width: 2em
         position: absolute
-        border-bottom: 2px solid var(--tsGreen)
-        border-left: 2px solid var(--tsGreen)
+        border-bottom: 2px solid var(--tsGrey)
+        border-left: 2px solid var(--tsGrey)
         z-index: 1
         transition: all .75s
 
@@ -183,6 +187,9 @@
 
       @media (--tablet)
         width: 70%
+
+      @media (--tablet-lnd)
+        width: 40%
 
       @media (--laptop)
         width: 25em
