@@ -52,8 +52,11 @@ const processSlide = function () {
       for (let i = 0; i < slides.length; i++) {
         if (slides[i].style.transform === '') {
           slides[i].style.transform = 'translateX(-100%)'
+          slideL.classList.remove('hide')
+          slideR.classList.remove('hide')
         } else if (slides[i].style.transform === 'translateX(-100%)') {
           slides[i].style.transform = 'translateX(-200%)'
+          slideR.classList.add('hide')
         }
       }
   }
@@ -64,8 +67,11 @@ const processSlide = function () {
       for (let i = 0; i < slides.length; i++) {
         if (slides[i].style.transform === 'translateX(-200%)') {
           slides[i].style.transform = 'translateX(-100%)'
+          slideL.classList.remove('hide')
+          slideR.classList.remove('hide')
         } else if (slides[i].style.transform === 'translateX(-100%)') {
           slides[i].style.transform = ''
+          slideL.classList.add('hide')
         }
       }
   }
@@ -75,11 +81,11 @@ processSlide()
 
 const depSlide = function () {
   
-  const depPrevButton = document.querySelector('.deployment .slide-l')
-  const depNextButton = document.querySelector('.deployment .slide-r')
+  const slideL = document.querySelector('.deployment .slide-l')
+  const slideR = document.querySelector('.deployment .slide-r')
 
-  depPrevButton.addEventListener('click', slideRight, false)
-  depNextButton.addEventListener('click', slideLeft, false)
+  slideL.addEventListener('click', slideRight, false)
+  slideR.addEventListener('click', slideLeft, false)
 
 
   function slideLeft () {
@@ -88,8 +94,11 @@ const depSlide = function () {
       for (let i = 0; i < slides.length; i++) {
         if (slides[i].style.transform === '') {
           slides[i].style.transform = 'translateX(-100%)'
+          slideL.classList.remove('hide')
+          slideR.classList.remove('hide')
         } else if (slides[i].style.transform === 'translateX(-100%)') {
           slides[i].style.transform = 'translateX(-200%)'
+          slideR.classList.add('hide')
         }
       }
   }
@@ -100,8 +109,11 @@ const depSlide = function () {
       for (let i = 0; i < slides.length; i++) {
         if (slides[i].style.transform === 'translateX(-200%)') {
           slides[i].style.transform = 'translateX(-100%)'
+          slideL.classList.remove('hide')
+          slideR.classList.remove('hide')
         } else if (slides[i].style.transform === 'translateX(-100%)') {
           slides[i].style.transform = ''
+          slideL.classList.add('hide')
         }
       }
   }

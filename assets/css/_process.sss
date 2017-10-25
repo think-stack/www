@@ -84,9 +84,15 @@
         border-bottom: 2px solid var(--tsGreen)
         border-left: 2px solid var(--tsGreen)
         z-index: 1
+        transition: all .75s
 
         &:hover
           cursor: pointer
+
+        &.hide
+          border-bottom: 2px solid var(--tsGreenHide)
+          border-left: 2px solid var(--tsGreenHide)
+          cursor: default
 
       & .slide-l
         top: 50%
@@ -125,7 +131,7 @@
     & header
       display: none
 
-      @media (--laptop)
+      @media (--tablet)
         display: inline
 
       & img
@@ -135,8 +141,9 @@
       width: 85%
       margin: 1em auto 4em
 
-      @media (--laptop)
+      @media (--tablet)
         display: flex
+        margin-bottom: 1em
 
       & figure
         flex: 1 1 33%
