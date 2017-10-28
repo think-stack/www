@@ -1,0 +1,208 @@
+#how-we-work
+
+  & h1,
+  & h2,
+  & h3
+    color: var(--tsGrey)
+    line-height: 1em
+    text-transform: none
+
+  & .connector
+    width: 2em
+    margin: 1em auto
+
+  & .connect
+
+    &.sm-scrn
+      
+      @media (min-width: 48em)
+        display: none
+        
+
+  & #hero
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto 
+    height: 65vh
+    text-align: center  
+  
+    & h2
+      max-width: 90%
+      line-height: 1em
+
+      @media (--laptop)
+        max-width: 20em
+
+  & .block
+    display: flex
+    position: relative
+    height: 75vh
+    max-width: 98%
+    justify-content: center
+    align-items: center
+    margin: 0 auto 5em
+
+    @media (--tablet)
+      width: 100%
+
+    & img
+      width: 100%
+      position: absolute
+      left: 50%
+      right: 50%
+      transform: translateX(-50%)
+
+      @media (--mob-lnd)
+        width: 60%
+
+      @media (--tablet)
+        width: 25em
+
+    & h1
+      max-width: 8em
+      text-align: center
+      margin: 0
+
+  & #process
+
+    & header
+      margin: 5em auto
+      text-align: center
+
+      & h2 
+        max-width: 90%
+        margin: auto
+
+    & .flex-container
+      display: flex
+      width: 100%
+      overflow: hidden
+      position: relative
+
+      & .slide-l,
+      & .slide-r
+        height: 2em
+        width: 2em
+        position: absolute
+        border-bottom: 2px solid var(--tsGrey)
+        border-left: 2px solid var(--tsGrey)
+        z-index: 1
+        transition: all .75s
+
+        &:hover
+          cursor: pointer
+
+        &.hide
+          border-bottom: 2px solid var(--tsGreenHide)
+          border-left: 2px solid var(--tsGreenHide)
+          cursor: default
+
+      & .slide-l
+        top: 50%
+        left: 5%
+        transform: rotate(45deg)
+
+        @media (--laptop) 
+          left: 25%
+
+      & .slide-r
+        top: 50%
+        right: 5%
+        transform: rotate(-135deg)
+
+        @media (--laptop) 
+          right: 25%
+
+      & .flex-slider
+        display: flex
+        width: 100%
+
+        & figure
+          min-width: 100%
+          text-align: center
+          transform: translateX(0)
+          transition: transform .25s ease-in
+    
+          & h2,
+          & p
+            max-width: 70%
+            margin: 0 auto .5em
+
+            @media (--tablet)
+              max-width: 20em
+
+  & .icon-row
+    text-align: center
+    
+    & header
+      display: none
+
+      @media (--tablet)
+        display: inline
+
+      & img
+        width: 60%
+
+    & .flex-row
+      width: 85%
+      margin: 1em auto 4em
+
+      @media (--tablet)
+        display: flex
+        margin-bottom: 1em
+
+      & figure
+        flex: 1 1 33%
+        margin-bottom: 5em
+
+        @media (--laptop)
+          margin-bottom: 1em
+
+        & img
+          width: 50%
+
+  & #design
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & header
+      margin: 2em auto 1em
+
+    & ul
+      list-style: disc
+      margin-bottom: 1em
+
+  & #deployment
+    margin-bottom: 0
+    height: 55vh
+
+    @media (--laptop)
+      height: 75vh
+
+    & .bg
+      width: 100%
+      z-index: -1
+
+      @media (--tablet)
+        width: 70%
+
+      @media (--tablet-lnd)
+        width: 40%
+
+      @media (--laptop)
+        width: 25em
+
+    & h1 
+      max-width: 7em
+
+      @media (max-width: 20em)
+        font-size: 2.2em
+
+  & .connect
+    text-align: center
+    margin: 1em auto
+
+  & .deployment
+    margin-bottom: 5em
