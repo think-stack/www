@@ -4,7 +4,7 @@ extends(src='layout.sgr')
     header.test
       include(src='/includes/_header.sgr')
 
-    #hero
+    #hero.test
       
       h2 Our process is rooted in relationships from day one. Every project begins with a goal mapping session to uncover true client's needs. 
 
