@@ -3,7 +3,7 @@
 
 #cta
   p Experience design thinking with a free journey exploration session.
-  a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.com
+  a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.co
   a.button(href='mailto:sales@thinkstack.co') work with us
 
 #social
