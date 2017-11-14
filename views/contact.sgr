@@ -14,13 +14,13 @@ extends(src='layout.sgr')
           input(type='text' name='name' placeholder='name')
           input(type='email' name='email' placeholder='email')
           input(type='text' name='subject' placeholder='subject')
-          textarea(name='textarea' rows='10' cols='50') message
+          textarea(name='textarea' rows='10' cols='50' placeholder='message') 
           button.button submit
 
         .google-map
 
           header
-            h2 sweet contact header
+            h2 Want To Get In Touch?
             p Sweet contcat language ut lorem molestie, blandit luctus lectus. Pellentesque libero sem, pellentesque tincidunt nisl eget, lacinia vehicula ex. Pellentesque rhoncus nisl sit amet turpis consequat, malesuada faucibus dolor mollis.
 
 
