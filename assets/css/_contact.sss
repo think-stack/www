@@ -1,59 +1,78 @@
 #contact
-  & main
-    height: 80vh
-    width: 100%
-    background: url('/img/thinkstack-travis.jpg')  no-repeat center center
-    background-size: cover 
 
-  & section
-    margin: 0 0 0 4em
-    height: 50vh
+  & .flex-wrapper
     display: flex
     flex-direction: column
 
-  & #address
-    & h2
-      font-size: 2em
-    & p
-      font-size: 1.75em
-      line-height: 1.5em
-    & li
-      font-size: 1.75em
-      line-height: 1.5em
+    @media(--laptop)
+      flex-direction: row-reverse
+      height: 100vh
+      width: 90%
+      margin: 4em auto auto
 
-    & .wrapper
-      margin: auto 0
-
-  & #general
-    & h2
-    & p
-      font-size: 1.75em
-      line-height: 1.5em
-      font-size: 2em
-    & li
-      font-size: 1.75em
-      line-height: 1.5em
-    & a:hover
-      color: #A9A9A9
-
-    & .wrapper
-      margin: auto 0
-
-  & #social
-    & h2
-      font-size: 2em
-    & p
-      font-size: 1.75em
-      line-height: 1.5em
-    & li
-      font-size: 1.75em
-      line-height: 1.5em
-
-    & ul
+    & form.contact
       display: flex
+      flex-direction: column
+      flex: 1 1 auto
+      max-width: 75%
+      margin: auto
 
-      & li
-        padding: 1em
+      @media (--laptop)
+        flex: 1 1 40%
+        margin-top: 0
 
-        &:first-of-type
-          padding-left: 0
+      & input,
+      & textarea
+        font-family: var(--headerFont)
+        font-size: 1.25em
+        border: 4px solid var(--tsGreen)
+        padding: .25em
+        margin-bottom: 1em
+        color: var(--tsGreen)
+      
+    & .google-map
+      display: flex
+      flex-direction: column
+
+      @media (--laptop)
+        flex: 1 1 50%
+    
+      & header
+        width: 80%
+        margin: 0 auto 1em
+
+        @media (--laptop)
+          margin-left: 0
+
+        & h2
+          text-align: center
+          line-height: 1em
+          color: var(--tsGrey)
+
+          @media (--laptop)
+            text-align: left
+
+      & iframe
+        max-width: 100%
+        margin: 0 auto 1em
+        align-self: center
+
+        @media (--laptop)
+          max-width: 80%
+          height: 50vh
+          margin-left: 0
+
+      & .address
+        margin-bottom: 1em
+        color: var(--tsGrey)
+        text-align: center
+    
+        @media (--laptop)
+          text-align: left
+
+        & p
+          text-transform: capitalize
+          line-height: 1em
+
+        & a
+          color: var(--tsGrey)
