@@ -15,6 +15,7 @@ extends(src='layout.sgr')
           input(type='email' name='email' placeholder='email')
           input(type='text' name='subject' placeholder='subject')
           textarea(name='textarea' rows='10' cols='50') message
+          button.button submit
 
         .google-map
 
