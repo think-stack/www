@@ -8,21 +8,7 @@ extends(src='layout.sgr')
 
       .flex-wrapper
 
-
-
-        form.contact
-          input(type='text' name='name' placeholder='name')
-          input(type='email' name='email' placeholder='email')
-          input(type='text' name='subject' placeholder='subject')
-          textarea(name='textarea' rows='10' cols='50' placeholder='message') 
-          button.button submit
-
         .google-map
-
-          header
-            h2 Want To Get In Touch?
-            p Sweet contcat language ut lorem molestie, blandit luctus lectus. Pellentesque libero sem, pellentesque tincidunt nisl eget, lacinia vehicula ex. Pellentesque rhoncus nisl sit amet turpis consequat, malesuada faucibus dolor mollis.
-
 
           iframe(height='500' width='750' frameborder='0' style='border: 0' src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJAdwx2xdp-XRnl0EVNl5G3qNYk6EPfbA&q=1300+thames+st+baltimore+md&zoom=14")
 
@@ -31,3 +17,19 @@ extends(src='layout.sgr')
             p ground suite #20
             p baltimore, MD 21231
             a(href='tel:+14105605601') 410 560-5601
+        section#form
+
+          header
+            h2 Want To Get In Touch?
+
+          form.contact(netlify netlify-honeypot='bot-field')
+            input(type='text' name='name' placeholder='name')
+            input(type='email' name='email' placeholder='email')
+            input(type='text' name='subject' placeholder='subject')
+            textarea(name='textarea' rows='10' cols='50' placeholder='message') 
+            input(name='bot-fieldl' type='hidden')
+            button.button(type='submit') submit
+
+// submit form to sales@thinkstack.co
+
+
