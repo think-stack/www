@@ -22,7 +22,7 @@ extends(src='layout.sgr')
           header
             h2 Want To Get In Touch?
 
-          form.contact(netlify netlify-honeypot='bot-field')
+          form.contact(name='contact' netlify netlify-honeypot='bot-field')
             input(type='text' name='name' placeholder='name')
             input(type='email' name='email' placeholder='email')
             input(type='text' name='subject' placeholder='subject')
