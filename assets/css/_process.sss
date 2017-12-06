@@ -41,28 +41,33 @@
     max-width: 98%
     justify-content: center
     align-items: center
-    margin: 0 auto 5em
+    margin: 5em auto 5em
 
     @media (--tablet)
-      width: 100%
+      width: 50%
+      height: 55vh
+
+    @media (--laptop)
+      width: 40%
 
     & img
       width: 100%
       position: absolute
-      left: 50%
-      right: 50%
-      transform: translateX(-50%)
+      animation: rotate 15s infinite linear
+      max-width: 90%
+      margin: 0 auto
 
       @media (--mob-lnd)
         width: 60%
 
       @media (--tablet)
-        width: 25em
+        width: 100%
 
     & h1
       max-width: 8em
       text-align: center
       margin: 0
+
 
   & #process
 
@@ -175,24 +180,6 @@
       margin-bottom: 1em
 
   & #deployment
-    margin-bottom: 0
-    height: 55vh
-
-    @media (--laptop)
-      height: 75vh
-
-    & .bg
-      width: 100%
-      z-index: -1
-
-      @media (--tablet)
-        width: 70%
-
-      @media (--tablet-lnd)
-        width: 40%
-
-      @media (--laptop)
-        width: 25em
 
     & h1 
       max-width: 7em
@@ -204,5 +191,10 @@
     text-align: center
     margin: 1em auto
 
+    @media  (orientation: landscape)
+      margin: 5em auto
+
   & .deployment
     margin-bottom: 5em
+
+
