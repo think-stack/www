@@ -1,5 +1,5 @@
 #logo
-  img(src='img/logo-full-lockup-white.png')
+  img(src='/img/logo-full-lockup-white.png')
 
 #cta
   p Experience design thinking with a free journey exploration session.
