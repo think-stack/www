@@ -40,16 +40,25 @@ module.exports = {
       token: 'e26304f1b7f2c4d86a9a',
       models: [
         {
+          name: 'index',
+          json: 'index.json'
+        },
+        {
           name: 'about',
           json: 'about.json'
-        }, {
-          name: 'post',
-          json: 'blog.json'
+        },
+        {
+          name: 'team',
+          json: 'team.json'
         },
         {
           name: 'work',
+          template: {
+            path: 'views/work.sgr',
+            output: (work) => { return `work/${work.slug}.html`}
+          },
           json: 'work.json'
-        }
+        },
       ],
       json: 'data.json'
     })

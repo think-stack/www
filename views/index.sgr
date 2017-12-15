@@ -10,28 +10,38 @@ extends(src='layout.sgr')
         h1 We are a design thinking and IT innovation company. 
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
       
-      each(loop='item in dato.work')
-        section.work(style='background-image: url(https://{{ dato._meta.imgixHost + item.backgroundImage.path }})' )
-          .image
-            img(src='https://{{ dato._meta.imgixHost + item.logo.path }}')
-          .content
-            h2 {{ item.title }}
-            p {{ item.description.split(' ').slice(0, 15).join(' ') }}...
-            a(href='/work/{{{ slugify(item.title) }}}') Learn More...
+    section.featured-work
+      each(loop='item of dato.work.sort((a, b) => a.position < b.position ? -1 : 1)')
+        if(condition='item.featuredWork')
+        
+          .case-study
 
+            svg(viewBox='0 0 250 105')
+              use(xlink:href='#icon-circ')
 
-    include(src='/includes/_risk.sgr')
+            figure
+              img(src='//{{ dato._meta.imgixHost + item.featImage.path }}')
 
-    include(src='/includes/_testimonial.sgr')
+            .wrapper
+              h2 {{ item.title }}
+              p {{ item.hero }} 
+              a.button(href='/work/{{ item.slug }}') learn more
+      
 
-    include(src='/includes/_tech.sgr')
+      .cta
+        h2 {{ dato.index[0].ctaButton[0].title }}
+        p {{ dato.index[0].ctaButton[0].ctaContent }}
+        a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}
 
-    include(src='/includes/_clients.sgr')
+    #journey-map
+      .wrapper
+        .people
+          h2 {{ dato.index[0].journeyMap[0].peopleTitle }}
+          p {{ dato.index[0].journeyMap[0].peopleContent }}
 
-    include(src='/includes/_experts.sgr')
+      .wrapper
+        .tech
+          h2 {{ dato.index[0].journeyMap[0].techTitle }}
+          p {{ dato.index[0].journeyMap[0].techContent }}
 
-    include(src='/includes/_cta.sgr')
-
-    include(src='/includes/_relationships.sgr')
-
-    include(src='/includes/_modal.sgr')
+      

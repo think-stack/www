@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/asasmith/spike-test/issues",
   "dependencies": {
+    "interactive": "^0.1.9",
     "reshape-standard": "^3.1.0",
     "spike": "^2.0.2",
     "spike-css-standards": "^3.0.0",

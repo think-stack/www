@@ -1,12 +1,25 @@
-#footer-contact
-  p 1300 Thames Street, Ground Floor, Suite 20
-  p Baltimore, MD 21231 
-  p
-    a(href='tel:1-410-560-5601') 410-560-5601
-      | &#10070
-    a(href='mailto:info@thinkstack.co') info@thinkstack.co
+#logo
+  img(src='/img/logo-full-lockup-white.png')
 
-#footer-terms
-  a(href='/standard-msa-terms') Standard Managed Services Terms
-  a(href='/mss-terms') Managed Services Supplemental Terms
-  a(href='/rss-terms') Retainer Services Supplemental Terms
+#cta
+  p Experience design thinking with a free journey exploration session.
+  a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.co
+  a.button(href='mailto:sales@thinkstack.co') work with us
+
+#social
+  ul
+    li: a(href='https://www.linkedin.com/company/11195699/' target='_blank')
+      |
+        svg(viewBox='0 0 56 56' class='icon icon-linkedin-circ')
+          use(xlink:href='#icon-linkedin-circ')
+    li: a(href='https://www.facebook.com/thinkstacktech/' target='_blank')
+      |
+        svg(viewBox='0 0 56 56' class='icon icon-facebook-circle')
+          use(xlink:href='#icon-facebook-circle')
+    li: a(href='https://twitter.com/thinkstacktech' target='_blank')
+      |
+        svg(viewBox='0 0 56 56' class='icon icon-twitter-circ')
+          use(xlink:href='#icon-twitter-circ' target='_blank')
+ 
+#copyright
+  small &copy 2017 think|stack

@@ -5,38 +5,21 @@ extends(src='layout.sgr')
       include(src='/includes/_header.sgr')
 
     main
-      #hero
-        h1 {{ dato.about[0].heroStatement }}
-        p {{ dato.about[0].introParagraph}}
-    #team
-      h1 Leadership
+      h1 {{ dato.about[0].heroStatement }}
+      p(md) {{ dato.about[0].introParagraph}}
+    
+    section.tech
+      h2 {{ dato.about[0].techTitle }}
+      p(md) {{ dato.about[0].techAbout}}
 
-      #bio
+    section.about
+      h2 {{ dato.about[0].aboutUsTitle }}
+      p(md) {{ dato.about[0].aboutUsHero }}
 
-        .bio-wrapper
-          .bio-content
-            h2 Chris Sachse
-            h3 CEO & Co-founder
-            p Chris has been founding companies since his sophomore year in college. His early success in marketing and entrepreneurship empowered him to build a strategy-fueled IT service offering from the ground up. Originally piloted in highly regulated organizations, Chris has applied the experience of innovating in resource-restrictive organizations to everyone from early stage startups to global organizations. 
-            p Chris has a Bachelor’s Degree in Business Finance and completed his Master’s in Leadership. He recently completed the CUES Innovation Institute held at MIT and he works closely with Filene on many projects. He serves on various non-profit boards and is an active advocate of the YearUp program. 
-          figure
-            img(src="./img/team/chris-sachse.jpg")
-            ul.social
-              li: a(href='https://www.linkedin.com/in/chris-sachse-4223409')
-                |
-                  svg(viewBox='0 0 19.2 19.2' class='icon icon-linkedin')
-                    use(xlink:href='#icon-linkedin')
-
-        .bio-wrapper
-          .bio-content
-            h2 Mark Berman
-            h3 Principal & Co-founder
-            p Mark provides leadership, technical focus and product refinement for the systems that fuel Think|sStack's mission. He previously worked as President of Mary Sue Candies and later as COO of Ruxton Chocolates. In 2009, he began work as CTO and COO for Berman McAleer, Inc., a wealth management firm managing $425MM in assets. He brings his experience in production operations, sales, marketing and most importantly applied technology and computer science to Think|Stack.
-            p Mark graduated with a degree in Computer Science from the College of William and Mary in Virginia. During his undergraduate career he completed extensive graduate training at NASA’s Langley Air Force base and then moved on to Loyola College in Baltimore where he received his MBA. Mark serves on the Executive Committee of the Greenspring Montessori school and the Shohola Scholarship Foundation, which provides a summer camp experience to those who cannot otherwise afford it.
-          figure
-            img(src="./img/team/mark-berman.jpg")
-            ul.social
-              li: a(href='https://www.linkedin.com/in/mark-berman-1963842a')
-                |
-                  svg(viewBox='0 0 19.2 19.2' class='icon icon-linkedin')
-                    use(xlink:href='#icon-linkedin')
+    section#team
+      each(loop='person in dato.team.sort((a, b) => a.position < b.position ? -1 : 1)')
+        figure
+          img(src='//{{ dato._meta.imgixHost + person.image.path }}')
+          figcaption
+            h3 {{ person.name }}
+            p {{ person.jobTitle }}

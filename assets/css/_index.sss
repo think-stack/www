@@ -1,9 +1,13 @@
 #index
 
+  & h1,
+  & h2
+    color: var(--tsGrey)
+    line-height: 100%
+
   & main
     display: flex
     flex-direction: column
-    min-height: 97vh
     text-align: left
 
     & #hero
@@ -12,11 +16,13 @@
       display: flex
       flex-direction: column
       justify-content: center
-      height: 80vh
+      align-items: center
+      text-align: center
+      height: 75vh
 
       @media (min-width: 48em)
         width: 100%
-        margin: auto 4em
+        margin: auto 0
 
       & h1
         padding-bottom: 1.5em
@@ -32,61 +38,10 @@
 
         @media (min-width: 48em)
           max-width: 26em
-
-    & .work
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: 50%
-      max-height: 50vh
-      color: white
-      align-items: center 
-      justify-content: center
-      padding: 1em 3em
-      background-color: var(--tsGrey)
-      background-blend-mode: multiply
-
-      &:nth-of-type(odd)
-        & .content
-          & p
-            margin-right: 0
-
-      &:nth-of-type(even)
-        & .image
-          order: 2
-          text-align: right
-
-        & .content
-          text-align: left
-          
-          & p
-            margin-left: 0
-
-      & .image
-        flex: 0 1 auto
-
-        & img
-          max-width: 50%
-
-      & .content
-        flex: 0 1 100%
-        text-align: right
-        line-height: 2em
-
-        & p
-          margin-bottom: .5em
-
-        & a
-          font-style: italic
-          transition: all .2s ease-in-out
-
-          &:hover
-            font-size: 1.05em
-        
+       
   & section
-    height: 90vh
     display: flex
     flex-direction: column
-
     width: 100%
 
     @media (min-width: 48em)
@@ -94,7 +49,6 @@
       justify-content: space-around
 
     & h1
-      color: var(--tsGrey)
       margin: auto
       width: 90%
       text-align: center
@@ -102,12 +56,358 @@
       @media (min-width: 48em)
         max-width: 12em
 
-    & p
-      width: 90%
+
+  & .featured-work
+    margin-bottom: 4em
+    flex-direction: column
+
+    @media (min-width: 64em)
+      flex-wrap: wrap
+      flex-direction: row
+      max-width: 90%
       margin: auto
 
-      @media (min-width: 48em)
-        max-width: 24em
+    @media (min-width: 78.75em)
+      margin: auto
+      max-width: 85%
+
+    @media (min-width: 80em)
+      max-width: 71em
+      
+    @media (min-width: 90em)
+      margin: auto
+      max-width: 75%
+
+    @media (min-width: 100em)
+      margin: auto
+      max-width: 65%
+
+    & .case-study
+      position: relative
+      display: flex
+      flex-direction: column
+      margin: 2em auto 2em
+      align-items: center
+      max-width: 90%
+
+      @media (min-width: 26em)
+        flex-direction: row
+
+      & svg 
+        height: 3em
+        z-index: -1
+        top: 63%
+        left: 50%
+        position: absolute
+        transform: rotate(-.25turn)
+        
+        @media (max-width: 26em)
+          transform: rotate(-.25turn) translateY(-120%)
+
+      & figure
+        margin-bottom: 3em
+
+        @media (min-width: 78.75em)
+          margin-bottom: 0
+
+      & p
+        max-width: 20em
+
+      &:nth-of-type(odd)
+        flex: 1 0 auto
+        justify-content: space-around
+
+        @media (min-width: 26em)
+          flex: 1 0 auto
+
+        @media (min-width: 48em)
+          flex: 2 1 50%
+
+        @media (min-width: 64em)
+          justify-content: center
+
+        @media (min-width: 78.75em)
+          justify-content: space-around
+          flex: 2 0 60%
+
+
+        & figure
+          flex: 1 0 auto
+          max-width: 14em
+          order: 1
+
+          @media (min-width: 35.5em)
+            flex: 1 0 45%
+        
+          & img
+            width: 100%  
+
+        & .wrapper
+          flex: 1 0 auto
+          max-width: 20em
+          align-self: center
+          order: 3
+
+          @media (min-width: 35.5em)
+            flex: 1 0 45%
+            text-align: right
+
+        & svg
+          order: 2
+
+      &:nth-of-type(even)
+        flex: 1 1 auto
+
+        @media (min-width: 26em)
+          flex: 1 0 auto
+
+        @media (min-width: 35.5em)
+          flex-direction: row
+    
+        @medai (min-width: 48em)
+          flex: 1 1 35%
+
+        @media (min-width: 64em)
+          justify-content: center
+
+        @media (min-width: 78.75em)
+          flex: 1 0 40%
+
+        & figure
+          order: 1
+          width: 80%
+
+          @media (min-width: 26em)
+            width: 60%
+
+          @media (min-width: 35.5em)
+            order: 3
+
+          @media (min-width: 64em)
+            width: 50%
+            text-align: center        
+        
+          @media (min-width: 78.75em)
+            width: 70%
+            margin-bottom: 3em
+
+      &:nth-of-type(1)
+        text-align: left
+
+        & svg
+          top: 60%
+
+          @media (min-width: 26em)
+            transform: rotate(.5turn)
+            top: 29% 
+            left: 32%
+          
+          @media (min-width: 35.5em)
+            left: 30%
+
+          @media (min-width: 64em)
+            left: 38%
+            top: 31.5%
+
+          @media (min-width: 78.75em)
+            left: 36%
+            top: 24.5%
+
+        & .wrapper
+  
+          @media (min-width: 64em)
+            max-width: 40%
+
+          & p
+          
+            @media (min-width: 64em)
+              margin-left: auto
+
+      &:nth-of-type(2)
+
+        @media (min-width: 78.75em)
+          flex-direction: column-reverse
+
+        & svg
+          top: 28%
+
+          @media (min-width: 23em)
+            top: 35%
+
+          @media (min-width: 26em)
+            top: -8%
+
+          @media (min-width: 35.5em)
+            transform: rotate(0turn)
+            top: -2%
+            left: 38%
+
+          @media (min-width: 41.6em)
+            top: 6%
+            left: 34%
+
+          @media (min-width: 46em)
+            top: 14%
+
+          @media (min-width: 64em)
+            top: 23%
+            left: 39%
+
+          @media (min-width: 78.75em)
+            transform: rotate(-.25turn)
+            top: 38%
+
+        & figure
+
+
+          & img
+            max-width: 100%
+
+        & .wrapper
+          order: 3
+          position: relative
+
+          @media (min-width: 35.5em)
+            order: 1
+
+          & h2
+            position: relative
+
+          & p
+            margin: 0 auto .5em
+
+      &:nth-of-type(3)
+    
+        @media (min-width: 26em)
+          text-align: right
+
+        @media (min-width: 78.75em)
+          flex-direction: row-reverse
+
+        & figure
+          order: 2
+
+        & svg
+          top: 50%
+        
+          @media (min-width: 26em)
+            top: 19%
+            left: 54%
+
+          @media (min-width: 35.5em)
+            transform: rotate(.5turn)
+            top: 19%
+            left: 36%
+
+          @media (min-width: 64em)
+            left: 40%
+
+
+          @media (min-width: 78.75em)
+            transform: rotate(.0turn)
+            top: 18%
+            left: 54%
+
+        & .wrapper
+          flex: 1 0 auto
+
+        & p
+          margin-left: auto
+
+
+      
+    & .cta
+      display: flex
+      flex-direction: column
+      justify-content: center
+      flex: 1 1 auto
+      text-align: center
+      align-items: center
+      margin: 3em auto 0
+      
+      @media (min-width: 26em)
+        flex: 1 1 100%
+
+      @media (min-width: 26em)
+        margin: 3em 0
+
+      @media (min-width: 78.75em)
+        flex: 1 0 40%
+
+      & p
+        max-width: 20em
+
+      & .button 
+        max-width: 12em
+
+  & #journey-map
+    min-height: 120vh
+    background: url('/img/journey-map.svg') no-repeat center
+    background-size: cover
+    background-position-y: 12.5em
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 0 1em
+    margin-top: 10em
+
+    @media (min-width: 23em)
+      min-height: 90vh
+      flex-direction: column
+      background-position-y: 10.5em
+      padding: 0 2em
+
+    @media (min-width: 35.5em)
+      min-height: 150vh
+      background-position-y: 8.5em
+
+    @media (min-width: 41.5em)
+      min-height: 120vh
+
+    @media (min-width: 46em)
+      min-height: 50vh
+      background-position-y: 6.5em
+
+    @media (min-width: 64em)
+      min-height: 70vh
+      padding: 5em 5em
+      margin-top: 0
+
+    @media (min-width: 78.75em)
+      background-position-y: 7.5em
+      min-height: 50vh
+
+    @media (min-width: 100em)
+      padding: 2em 12em
+      min-height: 50vh
+      background-position-y: 3.5em
+
+    @media (min-width: 120em)
+      padding: 2em 12em
+      min-height: 70vh
+
+    & .wrapper
+      flex: 1 1 50%
+      max-width: 24em
+      display: flex
+      flex-direction: column
+
+      & h2
+        margin-rigth: auto
+  
+        @media (min-width: 35.5em)
+          max-width: 10em
+
+      &:nth-of-type(2)
+        align-self: flex-end
+        text-align: right
+        justify-content: flex-end
+        margin-bottom: 2em
+
+        & h2
+    
+          @media (min-width: 35.5em)
+            margin-left: auto
 
   & blockquote
     font-family: var(--headerFont)
@@ -193,61 +493,3 @@
 
         &:nth-of-type(3)
           width: 20em
-      
-  & #experts
-    background-color: #fff
-
-  & #cta
-    max-height: 60vh
-    flex-direction: column
-    align-items: center
-    // background-color: var(--tsBlue)
-    justify-content: space-around
-
-    & h1
-      color: var(--tsGrey)
-      margin: auto .5em
-      max-width: 20em
-      text-align: left
-
-    & a
-      width: 17.5em
-      margin: auto
-      padding: .5em 1em
-      color: #fff
-      background-color: var(--tsRed)
-      border-bottom: 3px solid color(var(--tsRed) blackness(50%))
-      border-radius: 10px
-      font-weight: bold
-      font-size: 1.15em
-      text-transform: uppercase
-      cursor: pointer
-      text-align: center
-
-      @media (min-width: 48em)
-        margin: auto 1em
-
-      &:hover
-        background-color: color(var(--tsRed) saturation(+100%))
-        transition: background-color .4s ease-out
-
-      &:active
-        box-shadow: 1px 1px 1px #212121
-        border-bottom: 2px solid color(var(--tsRed) blackness(50%))
-        transform: translateY(3px)
-
-      &:focus
-        outline: 0
-
-  & #relationships
-
-    & .body
-      display: flex
-      flex-direction: column
-      margin: auto
-
-      & a
-        padding: 1em
-        text-transform: capitalize
-        font-size: 1.25em
-        font-style: italic

@@ -1,0 +1,111 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    #hero.test
+      
+      h2 Our process is rooted in relationships from day one. Every project begins with a goal mapping session to uncover true client's needs. 
+
+    section.block
+      
+      img.bg(src='/img/prs.svg')
+
+      h1 Our Project Lenses
+
+    #process
+
+      header
+
+        h1 3 Step Immersion Process
+
+      .flex-container.process
+        span.slide-l.hide
+        span.slide-r
+
+        .flex-slider
+
+          figure
+            h2 Ask
+            p We want to help you optimize your business. We’ll ask you questions about how you use technology to see if we fix any redundant processes.
+          figure
+            h2 Observe
+            p To understand the way you use technology, we’ll observe your team’s interactions with the platforms you use to brainstorm ways we can improve efficiency.
+          figure
+            h2 Research
+            p We’ll research different platforms that will optimize your business's efficiency and explain all technical solutions so you understand how we’ll improve your system.
+      .connect.sm-scrn
+
+        img.connector(src='/img/connector.svg')
+
+      .icon-row
+
+        header
+
+          img#lg(src='/img/deliv-connect.svg')
+
+        .flex-row
+
+          figure
+
+            h2 Epics
+            img(src='/img/epic.svg')
+
+          figure
+
+            h2 Users
+            img(src='/img/users.svg')
+
+          figure
+
+            h2 Journey Map
+            img(src='/img/journey.svg')
+
+      .connect
+
+        img.connector(src='/img/connector.svg')
+
+      section#design
+
+        header
+          h2 Product Design
+
+        ul
+          li Define Approach
+          li Create Project Charter
+          li Develop Schedule
+
+      .connect
+
+        img.connector(src='/img/connector.svg')
+
+      section#deployment.block
+
+        img.bg(src='/img/cont-dep-loop.svg')
+        h1 Continuous Deployment Loop
+
+      .connect
+
+        img.connector(src='/img/connector.svg')
+
+      .flex-container.deployment
+        span.slide-l.hide
+        span.slide-r
+
+        .flex-slider
+
+          figure
+
+            h2 Training
+            p After the new technical process we implement is in place, we’ll train your team to ensure a smooth transition into new roles and platform utilization.
+
+          figure
+
+            h2 Implementation
+            p What makes us different from other design thinking companies is that we work with you to implement the changes we’ve made to your operational process.
+
+          figure
+
+            h2 Management
+            p We’ll manage the entire project from start to finish, even working with any third-party vendors your company currently works with.
