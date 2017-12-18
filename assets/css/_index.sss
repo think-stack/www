@@ -406,6 +406,22 @@
       max-width: 24em
       display: flex
       flex-direction: column
+      opacity: 0
+      transition: opacity 600ms ease, transform 1200ms ease
+
+      &:nth-of-type(1)
+        transform: translateX(-50%) 
+
+        &.active
+          transform: translateX(0)
+          opacity: 1
+
+      &:nth-of-type(2)
+        transform: translateX(50%) 
+
+        &.active
+          transform: translateX(0)
+          opacity: 1
 
       & h2
         margin-rigth: auto

@@ -34,12 +34,12 @@ extends(src='layout.sgr')
         a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}
 
     #journey-map
-      .wrapper
+      .wrapper.slide
         .people
           h2 {{ dato.index[0].journeyMap[0].peopleTitle }}
           p {{ dato.index[0].journeyMap[0].peopleContent }}
 
-      .wrapper
+      .wrapper.slide
         .tech
           h2 {{ dato.index[0].journeyMap[0].techTitle }}
           p {{ dato.index[0].journeyMap[0].techContent }}
