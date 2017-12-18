@@ -1,5 +1,7 @@
 console.log('you can use ES6 here')
 
+const body = document.getElementsByTagName('body')
+
 var child = document.querySelectorAll('svg')
 
 document.addEventListener('touchstart', addClass, false)
@@ -77,7 +79,9 @@ const processSlide = function () {
   }
 }
 
-processSlide()
+if (body[0].id === 'how-we-work'){
+  processSlide()
+}
 
 const depSlide = function () {
   
@@ -119,7 +123,9 @@ const depSlide = function () {
   }
 }
 
-depSlide()
+if(body[0].id === 'how-we-work') {
+  depSlide()
+}
 
 //better way to add and remove classes from siblings?
 //get parent node and then for loop through child nodes checking for class?
@@ -149,7 +155,7 @@ function removeClass (e) {
 
 // debounce
 
-function debounce (func, wait = 20, immediate = true) {
+function debounce (func, wait = 10, immediate = true) {
   var timeout
   return function () {
     var context = this, args = arguments
@@ -164,8 +170,28 @@ function debounce (func, wait = 20, immediate = true) {
   }
 }
 
-const techSection = document.querySelector('#about .tech')
+//const techSection = document.querySelector('#about .tech')
 
+const slideEls = document.querySelectorAll('.slide')
+  console.log(slideEls)
+
+function slideUp (e) {
+  slideEls.forEach(el => {
+    const scroll =  window.scrollY + window.innerHeight
+    const elHeight = el.clientHeight
+    const elOffsetTop = el.offsetTop
+    const parentOffsetTop = el.offsetParent.offsetTop
+    const addClassAt = elHeight + elOffsetTop + parentOffsetTop
+
+
+    if(scroll > addClassAt) {
+      el.classList.add('active')
+    }
+  })
+}
+
+
+window.addEventListener('scroll', debounce(slideUp))
 /*
 function bgColorChange (e) {
   const aboutBody = document.getElementById('about')
@@ -237,17 +263,16 @@ window.onload = function modalDisplay () {
 
 // close modal
 
-const modalButton = document.querySelector('#modal #button')
+if(body[0].id === 'index'){
+  const modalButton = document.querySelector('#modal #button')
 
-modalButton.addEventListener('click', closeModal, false)
-overlay.addEventListener('click', closeModal, false)
+  modalButton.addEventListener('click', closeModal, false)
+  overlay.addEventListener('click', closeModal, false)
 
-function closeModal () {
-  modal.classList.remove('open')
-  modal.classList.add('closed')
-  overlay.classList.remove('open')
-  overlay.classList.add('closed')
+  function closeModal () {
+    modal.classList.remove('open')
+    modal.classList.add('closed')
+    overlay.classList.remove('open')
+    overlay.classList.add('closed')
+  }
 }
-
-// process page slider
-

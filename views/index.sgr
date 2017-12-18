@@ -22,13 +22,13 @@ extends(src='layout.sgr')
             figure
               img(src='//{{ dato._meta.imgixHost + item.featImage.path }}')
 
-            .wrapper
+            .wrapper.slide
               h2 {{ item.title }}
               p {{ item.hero }} 
               a.button(href='/work/{{ item.slug }}') learn more
       
 
-      .cta
+      .cta.slide
         h2 {{ dato.index[0].ctaButton[0].title }}
         p {{ dato.index[0].ctaButton[0].ctaContent }}
         a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}

@@ -113,6 +113,15 @@
       & p
         max-width: 20em
 
+      & .wrapper
+        opacity: 0
+        transform: translateY(50%)
+        transition: opacity 600ms ease, transform 1200ms ease
+
+        &.active
+          transform: translateY(0)
+          opacity: 1
+
       &:nth-of-type(odd)
         flex: 1 0 auto
         justify-content: space-around
@@ -324,6 +333,13 @@
       text-align: center
       align-items: center
       margin: 3em auto 0
+      opacity: 0
+      transform: translateY(50%)
+      transition: opacity 600ms ease, transform 1200ms ease
+    
+      &.active
+        transform: translateY(0)
+        opacity: 1
       
       @media (min-width: 26em)
         flex: 1 1 100%
