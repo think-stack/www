@@ -111,6 +111,7 @@
 
       & p
         max-width: 20em
+        margin-bottom: 1.5em  
 
       & .wrapper
         opacity: 0
@@ -120,6 +121,12 @@
         &.active
           transform: translateY(0)
           opacity: 1
+
+        & .button
+
+          &:hover
+            background: var(--tsBlue)
+            box-shadow: 0 1px 4px var(--tsGrey) 
 
       &:nth-of-type(odd)
         flex: 1 0 auto
@@ -227,7 +234,7 @@
             max-width: 40%
 
           & p
-          
+
             @media (min-width: 64em)
               margin-left: auto
 
@@ -272,17 +279,12 @@
             max-width: 100%
 
         & .wrapper
-          order: 3
-          position: relative
 
           @media (min-width: 35.5em)
             order: 1
 
           & h2
             position: relative
-
-          & p
-            margin: 0 auto .5em
 
       &:nth-of-type(3)
     
@@ -354,6 +356,10 @@
 
       & .button 
         max-width: 12em
+
+        &:hover
+          background: var(--tsBlue)
+          box-shadow: 0 1px 4px var(--tsGrey) 
 
   & #journey-map
     min-height: 120vh
