@@ -192,28 +192,31 @@ function slideUp (e) {
 
 
 window.addEventListener('scroll', debounce(slideUp))
-/*
+
+const colorShiftSection= document.querySelectorAll('.color-shift')
+
 function bgColorChange (e) {
-  const aboutBody = document.getElementById('about')
+  const body = document.getElementById('about')
+  colorShiftSection.forEach(el => {
+  //const aboutBody = document.getElementById('about')
   //1/4 through div
-  const addClassAt = (window.scrollY + window.innerHeight) - techSection.clientHeight  / 4
+  console.log(el.offsetTop)
+  const addClassAt = (window.scrollY + window.innerHeight) - el.clientHeight / 5
   //bottom of div
-  const divBottom = techSection.offsetTop + techSection.clientHeight / 6
-  const partialShow = addClassAt > techSection.offsetTop
-  const isNotScrolledPast = window.scrollY < divBottom
+  const divBottom = el.offsetTop + el.clientHeight
+  const partialShow = addClassAt > el.offsetTop
+  const isNotScrolledPast = window.scrollY < (divBottom - 200)
 
     if (partialShow && isNotScrolledPast) {
-      aboutBody.classList.add('bg-color')
+      body.classList.add('active')
     } else {
-      aboutBody.classList.remove('bg-color')
+      body.classList.remove('active')
     }
-  
+ 
+  })
 }
 
-*/
-
-
-//window.addEventListener('scroll', debounce(bgColorChange))
+window.addEventListener('scroll', debounce(bgColorChange))
 
 function checkSlide (e) {
   //get all images
