@@ -31,12 +31,12 @@
     & h2,
     & div 
       opacity: 0
-      transform: translateY(20px)
+      transform: translateY(10%)
       transition: opacity 400ms ease, transform 800ms ease
 
       &.active
         opacity: 1
-        transform: translateY(0)
+        transform: translateY(-10%)
 
   & .tech
     transition: background-color .5s ease-in
@@ -59,6 +59,15 @@
       flex: 1 1 auto
       max-width: 22rem
       padding: 1em
+
+      &.slide
+        opacity: 0
+        transform: translateY(5%)
+        transition: transform 800ms ease, opacity 1200ms ease
+
+      &.active
+        opacity: 1
+        transform: translateY(0)
 
       & img
         max-width: 100%

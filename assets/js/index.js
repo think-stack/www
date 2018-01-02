@@ -181,7 +181,7 @@ function slideUp (e) {
     const elHeight = el.clientHeight
     const elOffsetTop = el.offsetTop
     const parentOffsetTop = el.offsetParent.offsetTop
-    const addClassAt = elHeight + elOffsetTop + parentOffsetTop
+    const addClassAt = (elHeight / 2) + elOffsetTop + parentOffsetTop
 
 
     if(scroll > addClassAt) {
