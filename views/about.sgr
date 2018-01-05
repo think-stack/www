@@ -5,20 +5,20 @@ extends(src='layout.sgr')
       include(src='/includes/_header.sgr')
 
     main
-      h1 {{ dato.about[0].heroStatement }}
-      p(md) {{ dato.about[0].introParagraph}}
+      h1.slide {{ dato.about[0].heroStatement }}
+      div.slide(md) {{ dato.about[0].introParagraph}}
     
-    section.tech
-      h2 {{ dato.about[0].techTitle }}
-      p(md) {{ dato.about[0].techAbout}}
+    section.tech.color-shift
+      h2.slide {{ dato.about[0].techTitle }}
+      div.slide(md) {{ dato.about[0].techAbout}}
 
     section.about
-      h2 {{ dato.about[0].aboutUsTitle }}
-      p(md) {{ dato.about[0].aboutUsHero }}
+      h2.slide {{ dato.about[0].aboutUsTitle }}
+      div.slide(md) {{ dato.about[0].aboutUsHero }}
 
     section#team
       each(loop='person in dato.team.sort((a, b) => a.position < b.position ? -1 : 1)')
-        figure
+        figure.slide
           img(src='//{{ dato._meta.imgixHost + person.image.path }}?fit=crop&amp;h=600&amp;w=600')
           figcaption
             h3 {{ person.name }}
