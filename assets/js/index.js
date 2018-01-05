@@ -244,7 +244,7 @@ window.addEventListener('scroll', debounce(checkSlide))
 
 
 // display modal on first visit
-
+/*
 let visited = localStorage.getItem('visited')
 let modal = document.getElementById('modal')
 const overlay = document.getElementById('modal-overlay')
@@ -279,3 +279,4 @@ if(body[0].id === 'index'){
     overlay.classList.add('closed')
   }
 }
+*/
