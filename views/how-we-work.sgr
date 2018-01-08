@@ -10,9 +10,7 @@ extends(src='layout.sgr')
 
     section.block
       
-      img.bg(src='/img/prs.svg')
-
-      h1 Our Project Lenses
+      img.bg(src='/img/project-lenses.svg')
 
     #process
 
