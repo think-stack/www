@@ -8,13 +8,13 @@ extends(src='layout.sgr')
       h1.slide {{ dato.about[0].heroStatement }}
       div.slide(md) {{ dato.about[0].introParagraph}}
     
-    section.tech.color-shift
-      h2.slide {{ dato.about[0].techTitle }}
-      div.slide(md) {{ dato.about[0].techAbout}}
+    section.tech.color-shift.slide
+      h2 {{ dato.about[0].techTitle }}
+      div(md) {{ dato.about[0].techAbout}}
 
-    section.about
-      h2.slide {{ dato.about[0].aboutUsTitle }}
-      div.slide(md) {{ dato.about[0].aboutUsHero }}
+    section.about.slide
+      h2 {{ dato.about[0].aboutUsTitle }}
+      div(md) {{ dato.about[0].aboutUsHero }}
 
     section#team
       each(loop='person in dato.team.sort((a, b) => a.position < b.position ? -1 : 1)')

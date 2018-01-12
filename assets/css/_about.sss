@@ -27,12 +27,10 @@
     align-items: center
     height: 100vh
 
-    & h1,
-    & h2,
-    & div 
+    &.slide
       opacity: 0
       transform: translateY(10%)
-      transition: opacity 400ms ease, transform 800ms ease
+      transition: opacity 1600ms ease, transform 1600ms ease
 
       &.active
         opacity: 1
@@ -55,10 +53,19 @@
     height: auto
     margin: 0 auto
 
+    @media(--laptop)
+      max-width: 95%
+
     & figure 
       flex: 1 1 auto
       max-width: 22rem
       padding: 1em
+
+      @media (--laptop)
+        max-width: 24rem
+
+      @media (--laptop-md)
+        max-width: 32rem
 
       &.slide
         opacity: 0
