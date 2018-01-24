@@ -1,0 +1,63 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header#main
+      include(src='/includes/_header-dark.sgr')
+
+      h1 Reducing cyber risk is closer than you think.
+
+      #hero
+
+        form(name='design-toolkit' action='/thank-you' netlify)
+          p We'll help you get there by exploring and diagnosing your risk level together, and and creating an action plan that actually makes sense. 
+
+          div
+            label() name
+            input(type='text' name='name')
+
+          div
+            label() email
+            input(type='email' name='email')
+          button(type='submit') send my design tool kit  
+
+        figure
+          img(src='/img/marketing-campaigns/design-toolkit.jpg')
+
+    section
+      p Think|Stack's Design Toolkit is the only IT process that looks at the entire organizational landscape to define and eliminate risk. Through a series of exploratory sessions, we'll work with you to map out your business processes, data, and infrastructure to identify areas of weakness. These maps make up your unique Design Toolkit: a roadmap for every technology related decision you'll ever make again. 
+
+      .columns
+
+        .col-1-3
+          header
+            h3 business process maps
+          p People and technology go hand in hand. We'll define the journey they take together, identify redundancies, and close related risk gaps.
+
+        .col-1-3
+          header
+            h3 data maps
+          p Scale, analytics, content serving, and machine learning are just a few factors that make data needs uniqure and hard to predict. We'll discover what environment your data needs to perform well and stay safe. 
+
+        .col-1-3
+          header
+            h3 infrastructure maps
+          p Make sense out of your cloud based, legacy, on-site, and all the applications that rely on your IT infrastructure and get a clear view of what's working, and what's not. 
+
+    section#contact
+      form#contact(name='contact' action='/thank-you' netlify)
+        h2 let's talk
+        
+        div
+          label name
+          input(type='text' name='name' required)
+
+        div
+          label email
+          input(type='email' name='email' required)
+
+        div
+          label message
+          textarea(name='message' rows='10' cols='50')
+    
+
+        button(type='submit') submit
