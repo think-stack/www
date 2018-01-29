@@ -12,19 +12,20 @@ extends(src='layout.sgr')
           p We'll help you get there by exploring and diagnosing your risk level together, and and creating an action plan that actually makes sense. 
 
           div
+            input(type='text' name='name' required)
             label() name
-            input(type='text' name='name')
 
           div
+            input(type='email' name='email' required)
             label() email
-            input(type='email' name='email')
-          button(type='submit') send my design tool kit  
+
+          button(type='submit') download the free guide
 
         figure
           img(src='/img/marketing-campaigns/design-toolkit.jpg')
 
-    section
-      p Think|Stack's Design Toolkit is the only IT process that looks at the entire organizational landscape to define and eliminate risk. Through a series of exploratory sessions, we'll work with you to map out your business processes, data, and infrastructure to identify areas of weakness. These maps make up your unique Design Toolkit: a roadmap for every technology related decision you'll ever make again. 
+    section#toolkit
+      p.hero Think|Stack's Design Toolkit is the only IT process that looks at the entire organizational landscape to define and eliminate risk. Through a series of exploratory sessions, we'll work with you to map out your business processes, data, and infrastructure to identify areas of weakness. These maps make up your unique Design Toolkit: a roadmap for every technology related decision you'll ever make again. 
 
       .columns
 
@@ -48,16 +49,15 @@ extends(src='layout.sgr')
         h2 let's talk
         
         div
-          label name
           input(type='text' name='name' required)
+          label name
 
         div
-          label email
           input(type='email' name='email' required)
+          label email
 
         div
-          label message
           textarea(name='message' rows='10' cols='50')
-    
+          label message
 
         button(type='submit') submit

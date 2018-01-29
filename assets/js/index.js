@@ -38,6 +38,7 @@ const nav = function () {
 
 nav()
 
+// add opacity to label when it has value
 
 const processSlide = function () {
   
