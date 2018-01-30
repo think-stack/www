@@ -11,12 +11,12 @@ extends(src='layout.sgr')
         form(name='design-toolkit' action='/thank-you' netlify)
           p We'll help you get there by exploring and diagnosing your risk level together, and and creating an action plan that actually makes sense. 
 
-          div
-            input(type='text' name='name' required)
+          div.input
+            input.js-input(type='text' name='name' required)
             label() name
 
-          div
-            input(type='email' name='email' required)
+          div.input
+            input.js-input(type='email' name='email' required)
             label() email
 
           button(type='submit') download the free guide
@@ -45,7 +45,7 @@ extends(src='layout.sgr')
           p Make sense out of your cloud based, legacy, on-site, and all the applications that rely on your IT infrastructure and get a clear view of what's working, and what's not. 
 
     section#contact
-      form#contact(name='contact' action='/thank-you' netlify)
+      form(name='contact' action='/thank-you' netlify)
         h2 let's talk
         
         div
@@ -57,7 +57,7 @@ extends(src='layout.sgr')
           label email
 
         div
-          textarea(name='message' rows='10' cols='50')
+          textarea.textarea(name='message' rows='10' cols='50')
           label message
 
         button(type='submit') submit

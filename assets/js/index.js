@@ -38,7 +38,6 @@ const nav = function () {
 
 nav()
 
-// add opacity to label when it has value
 
 const processSlide = function () {
   
@@ -151,8 +150,43 @@ function removeClass (e) {
   if (parentNode.classList.contains('slide')) {
     parentNode.classList.remove('slide')
   }
-  console.log(parentNode)
 }
+
+// check form inputs for value and display/hide label 
+
+const inputFields = document.getElementsByClassName('js-input')
+const textArea = document.querySelector('form textarea')
+
+textArea.addEventListener('blur', function() {
+  let label = this.nextElementSibling
+
+  if(textArea.value !== '') {
+    label.classList.add('transform')
+  } else {
+    label.classList.remove('transform')
+  }
+})
+
+function addListener(arr, type, fn) {
+  for(let i = 0; i < arr.length; i++) {
+    arr[i].addEventListener(type, fn, false)
+  }
+}
+
+function inputFieldCheck () {
+  let label = this.nextElementSibling
+
+  if(this.value !== '') {
+    label.style.opacity = '0'
+  } else {
+    label.style.opacity = '1'
+  }
+}
+
+addListener(inputFields, 'blur', inputFieldCheck)
+
+// nameInput.addEventListener('blur', inputFieldCheck, false)
+//inputArr.addEventListener('click', formInputCheck, false)
 
 // debounce
 

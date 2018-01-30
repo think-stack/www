@@ -87,6 +87,7 @@
             border-radius: .25em
             font-family: var(--bodyFont)
             color: var(--tsBlue)
+            padding-left: .5em
 
             &:focus~label
               opacity: 0
@@ -202,12 +203,15 @@
 
         &:focus~label,
         &:valid~label
-          transform: translateY(1.3em) translateX(-1em) scale(.8)
+          transform: translateY(-1.7em) translateX(-.5em) scale(.8)
 
       & textarea
-        
+
         &:focus~label
-          opacity: 0
+          transform: translateY(-1.7em) translateX(-.5em) scale(.8)
+
+      & label.transform
+        transform: translateY(-1.7em) translateX(-.5em) scale(.8)
 
       & button
         line-height: 150%
