@@ -40,8 +40,8 @@
 
     & #hero
       position: relative
-      
-      @media screen and (--laptop)
+
+      @media screen and (--tablet-lnd)
         display: flex
         width: 80%
         margin: auto
@@ -130,15 +130,25 @@
 
     & .hero
 
+      @media screen and (--tablet-lnd)
+        width: 75%
+        margin: auto
+
       @media screen and (--laptop)
         width: 50%
+        margin-left: 0
 
     & .columns
 
+      @media screen and (--tablet-lnd)
+        width: 50%
+        margin: 4em auto
+
       @media screen and (--laptop)
+        width: 100%
         display: flex
         justify-content: space-around
-        margin-top: 2em
+        margin-top: 4em
 
       & .col-1-3
         width: 90%
@@ -160,7 +170,10 @@
       margin: auto
       margin-bottom: 2em
 
-      @media screen and (--laptop)
+      @media screen and (--tablet)
+        width: 75%
+
+      @media screen and (--tablet-lnd)
         width: 40%
     
       & h2

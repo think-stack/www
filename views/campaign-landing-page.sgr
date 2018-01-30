@@ -9,7 +9,7 @@ extends(src='layout.sgr')
       #hero
 
         form(name='design-toolkit' action='/thank-you' netlify)
-          p We'll help you get there by exploring and diagnosing your risk level together, and and creating an action plan that actually makes sense. 
+          p We'll help you get there by exploring and diagnosing your risk level together, and creating an action plan that actually makes sense. 
 
           div.input
             input.js-input(type='text' name='name' required)
