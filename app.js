@@ -25,7 +25,7 @@ function slugify (text) {
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*', '**/_*'],
+  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*'],
   reshape: htmlStandards({
     parser: sugarml,
     root: './views',
