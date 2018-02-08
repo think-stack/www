@@ -1,0 +1,15 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+// add rel canonical if statement for duplicate content on blog page
+    header
+      include(src='/includes/_header.sgr')
+
+    main#featured-post
+      figure
+        h3 post title
+        p
+          | author name
+          span |
+          | date
+        p snippet
