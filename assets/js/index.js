@@ -1,5 +1,3 @@
-console.log('you can use ES6 here')
-
 const body = document.getElementsByTagName('body')
 
 var child = document.querySelectorAll('svg')
@@ -24,23 +22,20 @@ const nav = function () {
     } else {
       navPanel.style.opacity = 0
       navPanel.style.transition = 'opacity .5s ease-in-out'
-      body.style.removeProperty('overflow') 
+      body.style.removeProperty('overflow')
       setTimeout(function () {
         navPanel.style.visibility = 'hidden'
       }, 450)
     }
   }, false)
 
-  function test () {
-    console.log(hamburger)
-  }
 }
 
 nav()
 
 
 const processSlide = function () {
-  
+
   const slideL = document.querySelector('.process .slide-l')
   const slideR = document.querySelector('.process .slide-r')
 
@@ -84,7 +79,7 @@ if (body[0].id === 'how-we-work'){
 }
 
 const depSlide = function () {
-  
+
   const slideL = document.querySelector('.deployment .slide-l')
   const slideR = document.querySelector('.deployment .slide-r')
 
@@ -131,7 +126,7 @@ if(body[0].id === 'how-we-work') {
 //get parent node and then for loop through child nodes checking for class?
 
 function addClass (e) {
-  let target = e.target 
+  let target = e.target
   let parentNode = target.parentElement
   let siblingNode = parentNode.nextElementSibling
 
@@ -140,7 +135,6 @@ function addClass (e) {
   } else {
     return false
   }
-  console.log(target)
 }
 
 function removeClass (e) {
@@ -150,7 +144,6 @@ function removeClass (e) {
   if (parentNode.classList.contains('slide')) {
     parentNode.classList.remove('slide')
   }
-  console.log(parentNode)
 }
 
 // debounce
@@ -173,7 +166,6 @@ function debounce (func, wait = 10, immediate = true) {
 //const techSection = document.querySelector('#about .tech')
 
 const slideEls = document.querySelectorAll('.slide')
-  console.log(slideEls)
 
 function slideUp (e) {
   slideEls.forEach(el => {
@@ -200,7 +192,6 @@ function bgColorChange (e) {
   colorShiftSection.forEach(el => {
   //const aboutBody = document.getElementById('about')
   //1/4 through div
-  console.log(el.offsetTop)
   const addClassAt = (window.scrollY + window.innerHeight) - el.clientHeight / 5
   //bottom of div
   const divBottom = el.offsetTop + el.clientHeight
@@ -212,7 +203,7 @@ function bgColorChange (e) {
     } else {
       body.classList.remove('active')
     }
- 
+
   })
 }
 
@@ -220,7 +211,7 @@ window.addEventListener('scroll', debounce(bgColorChange))
 
 function checkSlide (e) {
   //get all images
-  const images = document.querySelectorAll('#about #team img')  
+  const images = document.querySelectorAll('#about #team img')
 
     images.forEach(function(image) {
       //scroll onto image
