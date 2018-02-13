@@ -1,0 +1,58 @@
+#blog
+
+  & h3
+    color: var(--tsGrey)
+    font-weight: bold
+
+  & p
+
+    &:first-of-type
+      color: var(--tsGreen)
+
+  & main
+    width: 90%
+    min-height: 70vh
+    margin: 5em auto 10em
+    background-color: #d8d8d8
+    display: flex
+
+    @media screen and (--laptop-lg)
+      max-width: 70%
+      margin: 5em auto 10em
+
+    & header
+      padding: 1em
+      align-self: flex-end
+      max-width: 75%
+
+  & #blog-list
+
+    @media screen and (--tablet)
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+
+    @media screen and (--laptop-lg)
+      max-width: 70%
+      margin: auto
+
+    & figure
+      width: 80%
+      margin: 0 auto 2em
+
+      @media screen and (--tablet)
+        flex: 1 1 auto
+        padding: 1em
+        max-width: 25em
+
+      & .temp-div
+        height: 250px
+        background-color: #d8d8d8
+        margin-bottom: 2em
+
+      & figcaption
+
+        & p
+
+          &:first-of-type
+            color: var(--tsGreen)
