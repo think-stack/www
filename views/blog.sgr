@@ -6,59 +6,71 @@ extends(src='layout.sgr')
 
     main
       header
-        h3 post title
-        p
-          | author name
-          span |
-          | date
-        p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus blandit euismod. Aliquam enim purus, malesuada ut tortor sed, blandit rutrum diam. Curabitur tempor arcu dictum facilisis tristique...
+        a(href='#')
+          h3 post title
+          p
+            | author name
+            span |
+            | date
+          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus blandit euismod. Aliquam enim purus, malesuada ut tortor sed, blandit rutrum diam. Curabitur tempor arcu dictum facilisis tristique...
 
     #blog-list
-      figure
-        .temp-div
-        figcaption
-          h3 blog title
-          p
-            | author name |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-      figure
-        .temp-div
-        figcaption
-          h3 blog title
-          p
-            | author name |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-      figure
-        .temp-div
-        figcaption
-          h3 blog title
-          p
-            | author name |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-      figure
-        .temp-div
-        figcaption
-          h3 blog title
-          p
-            | author name |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-      figure
-        .temp-div
-        figcaption
-          h3 blog title
-          p
-            | author name |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-      figure
-        .temp-div
-        figcaption
-          h3 blog title
-          p
-            | author name |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+      a(href='#')
+        figure
+          .temp-div
+          figcaption
+            h3 blog title
+            p
+              | author name |
+              | date
+            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+
+      a(href='#')
+        figure
+          .temp-div
+          figcaption
+            h3 blog title
+            p
+              | author name |
+              | date
+            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+
+      a(href='#')
+        figure
+          .temp-div
+          figcaption
+            h3 blog title
+            p
+              | author name |
+              | date
+            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+
+      a(href='#')
+        figure
+          .temp-div
+          figcaption
+            h3 blog title
+            p
+              | author name |
+              | date
+            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+
+      a(href='#')
+        figure
+          .temp-div
+          figcaption
+            h3 blog title
+            p
+              | author name |
+              | date
+            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+
+      a(href='#')
+        figure
+          .temp-div
+          figcaption
+            h3 blog title
+            p
+              | author name |
+              | date
+            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...

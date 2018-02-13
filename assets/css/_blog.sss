@@ -5,6 +5,7 @@
     font-weight: bold
 
   & p
+    color: #000
 
     &:first-of-type
       color: var(--tsGreen)
@@ -36,7 +37,7 @@
       max-width: 70%
       margin: auto
 
-    & figure
+    & a
       width: 80%
       margin: 0 auto 2em
 
@@ -45,14 +46,17 @@
         padding: 1em
         max-width: 25em
 
-      & .temp-div
-        height: 250px
-        background-color: #d8d8d8
-        margin-bottom: 2em
+      & figure
+        max-width: 25em
 
-      & figcaption
+        & .temp-div
+          height: 250px
+          background-color: #d8d8d8
+          margin-bottom: 2em
 
-        & p
+        & figcaption
 
-          &:first-of-type
-            color: var(--tsGreen)
+          & p
+
+            &:first-of-type
+              color: var(--tsGreen)
