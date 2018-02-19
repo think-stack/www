@@ -16,7 +16,7 @@ extends(src='layout.sgr')
               p {{ post.excerpt.split(' ').slice(0, 40).join(' ') }}...
     #blog-list
       each(loop='post in dato.blog_post.sort((a, b) => a.position < b.position ? -1 : 1)')
-        if(condition='!post.featuredPost')
+        if(condition='!post.featuredPost && post.position !== 1')
           a(href='{{ post.mediumUrl}}')
             figure
               if(condition='post.image !== null')
