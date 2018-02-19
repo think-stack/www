@@ -9,11 +9,11 @@ extends(src='layout.sgr')
         main(style='background: url(https://www.datocms-assets.com{{ post.image.path }}) no-repeat center center; background-size: cover; background-color: #244c5a')
           header
             a(href='{{ post.mediumUrl }}')
-            h3 {{ post.title }}
-            p
-              | {{ post.author }} |
-              | {{ post.date }}
-            p {{ post.excerpt.split(' ').slice(0, 40).join(' ') }}...
+              h3 {{ post.title }}
+              p
+                | {{ post.author }} |
+                | {{ post.date }}
+              p {{ post.excerpt.split(' ').slice(0, 40).join(' ') }}...
     #blog-list
       each(loop='post in dato.blog_post.sort((a, b) => a.position < b.position ? -1 : 1)')
         if(condition='!post.featuredPost')
