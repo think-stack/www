@@ -5,7 +5,7 @@ extends(src='layout.sgr')
       include(src='/includes/_header.sgr')
 
     each(loop='post in dato.blog_post')
-      if(condition='post.featuredPost')
+      if(condition='post.featuredPost || post.position === 1')
         main(style='background: url(https://www.datocms-assets.com{{ post.image.path }}) no-repeat center center; background-size: cover; background-color: #244c5a')
           header
             a(href='{{ post.mediumUrl }}')
