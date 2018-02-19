@@ -4,73 +4,28 @@ extends(src='layout.sgr')
     header
       include(src='/includes/_header.sgr')
 
-    main
-      header
-        a(href='#')
-          h3 post title
-          p
-            | author name
-            span |
-            | date
-          p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus blandit euismod. Aliquam enim purus, malesuada ut tortor sed, blandit rutrum diam. Curabitur tempor arcu dictum facilisis tristique...
-
+    each(loop='post in dato.blog_post')
+      if(condition='post.featuredPost')
+        main(style='background: url(https://www.datocms-assets.com{{ post.image.path }}) no-repeat center center; background-size: cover; background-color: #244c5a')
+          header
+            a(href='{{ post.mediumUrl }}')
+            h3 {{ post.title }}
+            p
+              | {{ post.author }} |
+              | {{ post.date }}
+            p {{ post.excerpt.split(' ').slice(0, 40).join(' ') }}...
     #blog-list
-      a(href='#')
-        figure
-          .temp-div
-          figcaption
-            h3 blog title
-            p
-              | author name |
-              | date
-            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-
-      a(href='#')
-        figure
-          .temp-div
-          figcaption
-            h3 blog title
-            p
-              | author name |
-              | date
-            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-
-      a(href='#')
-        figure
-          .temp-div
-          figcaption
-            h3 blog title
-            p
-              | author name |
-              | date
-            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-
-      a(href='#')
-        figure
-          .temp-div
-          figcaption
-            h3 blog title
-            p
-              | author name |
-              | date
-            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-
-      a(href='#')
-        figure
-          .temp-div
-          figcaption
-            h3 blog title
-            p
-              | author name |
-              | date
-            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
-
-      a(href='#')
-        figure
-          .temp-div
-          figcaption
-            h3 blog title
-            p
-              | author name |
-              | date
-            p Nullam eget viverra dolor. Praesent maximus fermentum volutpat. Morbi scelerisque magna quis lacus...
+      each(loop='post in dato.blog_post.sort((a, b) => a.position < b.position ? -1 : 1)')
+        if(condition='!post.featuredPost')
+          a(href='{{ post.mediumUrl}}')
+            figure
+              if(condition='post.image !== null')
+                img(src='//{{ dato._meta.imgixHost + post.image.path }}?fit=crop&amp;h=250&amp;w=384')
+              else
+                img.no-img(src='/img/ts-monogram.png')
+              figcaption
+                h3 {{ post.title }}
+                p
+                  | {{ post.author }} |
+                  | {{ post.date }}
+                p {{ post.excerpt.split(' ').slice(0, 13).join(' ') }}...

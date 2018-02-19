@@ -14,8 +14,8 @@
     width: 90%
     min-height: 70vh
     margin: 5em auto 10em
-    background-color: #d8d8d8
     display: flex
+    background-blend-mode: multiply
 
     @media screen and (--laptop-lg)
       max-width: 70%
@@ -25,6 +25,10 @@
       padding: 1em
       align-self: flex-end
       max-width: 75%
+
+      & h3,
+      & p
+        color: #fff
 
   & #blog-list
 
@@ -38,7 +42,6 @@
       margin: auto
 
     & a
-      width: 80%
       margin: 0 auto 2em
 
       @media screen and (--tablet)
@@ -48,11 +51,18 @@
 
       & figure
         max-width: 25em
+        margin: 0 auto 8em
 
-        & .temp-div
-          height: 250px
-          background-color: #d8d8d8
+        @media screen and (--laptop)
+          margin-bottom: 4em
+
+        & img
           margin-bottom: 2em
+          max-width: 100%
+
+        & .no-img
+          height: 250px
+          width: 384px
 
         & figcaption
 
