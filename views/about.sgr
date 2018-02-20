@@ -7,7 +7,7 @@ extends(src='layout.sgr')
     main
       h1.slide {{ dato.about[0].heroStatement }}
       div.slide(md) {{ dato.about[0].introParagraph}}
-    
+
     section.tech.color-shift.slide
       h2 {{ dato.about[0].techTitle }}
       div(md) {{ dato.about[0].techAbout}}
