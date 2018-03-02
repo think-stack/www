@@ -1,4 +1,14 @@
 console.log('you can use ES6 here')
+console.log('form submission js')
+$("#design-toolkit").submit(function(e) {
+  e.preventDefault();
+
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
+});
+
 
 const body = document.getElementsByTagName('body')
 
@@ -24,7 +34,7 @@ const nav = function () {
     } else {
       navPanel.style.opacity = 0
       navPanel.style.transition = 'opacity .5s ease-in-out'
-      body.style.removeProperty('overflow') 
+      body.style.removeProperty('overflow')
       setTimeout(function () {
         navPanel.style.visibility = 'hidden'
       }, 450)
@@ -40,7 +50,7 @@ nav()
 
 
 const processSlide = function () {
-  
+
   const slideL = document.querySelector('.process .slide-l')
   const slideR = document.querySelector('.process .slide-r')
 
@@ -84,7 +94,7 @@ if (body[0].id === 'how-we-work'){
 }
 
 const depSlide = function () {
-  
+
   const slideL = document.querySelector('.deployment .slide-l')
   const slideR = document.querySelector('.deployment .slide-r')
 
@@ -131,7 +141,7 @@ if(body[0].id === 'how-we-work') {
 //get parent node and then for loop through child nodes checking for class?
 
 function addClass (e) {
-  let target = e.target 
+  let target = e.target
   let parentNode = target.parentElement
   let siblingNode = parentNode.nextElementSibling
 
@@ -152,12 +162,13 @@ function removeClass (e) {
   }
 }
 
-// check form inputs for value and display/hide label 
+// check form inputs for value and display/hide label
 
 const inputFields = document.getElementsByClassName('js-input')
 const textArea = document.querySelector('form textarea')
 
 textArea.addEventListener('blur', function() {
+  console.log('blurred')
   let label = this.nextElementSibling
 
   if(textArea.value !== '') {
@@ -167,8 +178,8 @@ textArea.addEventListener('blur', function() {
   }
 })
 
-function addListener(arr, type, fn) {
-  for(let i = 0; i < arr.length; i++) {
+function addListener (arr, type, fn) {
+  for (let i = 0; i < arr.length; i++) {
     arr[i].addEventListener(type, fn, false)
   }
 }
@@ -190,7 +201,7 @@ addListener(inputFields, 'blur', inputFieldCheck)
 
 // debounce
 
-function debounce (func, wait = 10, immediate = true) {
+function debounce (func, wait = 5, immediate = true) {
   var timeout
   return function () {
     var context = this, args = arguments
@@ -247,7 +258,7 @@ function bgColorChange (e) {
     } else {
       body.classList.remove('active')
     }
- 
+
   })
 }
 
@@ -255,7 +266,7 @@ window.addEventListener('scroll', debounce(bgColorChange))
 
 function checkSlide (e) {
   //get all images
-  const images = document.querySelectorAll('#about #team img')  
+  const images = document.querySelectorAll('#about #team img')
 
     images.forEach(function(image) {
       //scroll onto image

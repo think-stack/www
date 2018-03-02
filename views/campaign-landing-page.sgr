@@ -8,56 +8,55 @@ extends(src='layout.sgr')
 
       #hero
 
-        form(name='design-toolkit' action='/thank-you' netlify)
-          p We'll help you get there by exploring and diagnosing your risk level together, and creating an action plan that actually makes sense. 
+        form(id='design-toolkit' name='design-toolkit' action='thank-you')
+          p Take inventory of the tools and systems in your organization to understand your level of risk. Our free Risk Score Calculator is designed to do it on your own, but we’re here to help if you have questions. We’ve included a guide with tips for getting started, and will email you a creative exercise each week to keep you going.
 
           div.input
-            input.js-input(type='text' name='name' required)
-            label() name
+            input.js-input(type='text' name='name' placeholder='name' required)
+            label(for='name')
 
           div.input
-            input.js-input(type='email' name='email' required)
-            label() email
+            input.js-input(type='email' name='email' placeholder='email' required)
+            label()
 
-          button(type='submit') download the free guide
+          button(type='submit' onclick="window.open('ThinkStack-DesignToolkit.zip')") Download your free Risk Score Calculator
 
         figure
-          img(src='/img/marketing-campaigns/design-toolkit.jpg')
+          img(src='/img/marketing-campaigns/risk-score-calculator.png')
 
     section#toolkit
-      p.hero Think|Stack's Design Toolkit is the only IT process that looks at the entire organizational landscape to define and eliminate risk. Through a series of exploratory sessions, we'll work with you to map out your business processes, data, and infrastructure to identify areas of weakness. These maps make up your unique Design Toolkit: a roadmap for every technology related decision you'll ever make again. 
+      h3 How does it work?
+      p.hero The Risk Score Calculator is the first step in building your Design Toolkit—the only IT method that looks at your entire organizational landscape to understand and eliminate risk. Your unique Design Toolkit is made up of a mapping system of your business processes, data, and infrastructure: your roadmap for every technology-related decision you’ll ever make.
 
       .columns
 
         .col-1-3
           header
-            h3 business process maps
-          p People and technology go hand in hand. We'll define the journey they take together, identify redundancies, and close related risk gaps.
+            h3 Risk Score Calculator
+          p The first step to developing your design toolkit is to inventory every tool and application in your organization through our free Risk Score Calculator. You can use this data to analyze with your team, or use our algorithm to get an instant risk score.
 
         .col-1-3
           header
-            h3 data maps
-          p Scale, analytics, content serving, and machine learning are just a few factors that make data needs uniqure and hard to predict. We'll discover what environment your data needs to perform well and stay safe. 
+            h3 Systems Maps
+          p Make sense of your risk profile through a series of visual maps custom to your organization. Business processes, data, and infrastructure are viewed through a 360º lens to give you the full picture of your risk landscape.
 
         .col-1-3
           header
-            h3 infrastructure maps
-          p Make sense out of your cloud based, legacy, on-site, and all the applications that rely on your IT infrastructure and get a clear view of what's working, and what's not. 
+            h3 Execution Plan
+          p Risk elimination is a process, not a one time project, and security measures affect other goals in your organization. We'll develop a multi-phased plan right by your side to help you achieve realistic goals that create positive impact and get you where you're headed
 
     section#contact
       form(name='contact' action='/thank-you' netlify)
-        h2 let's talk
-        
-        div
-          input(type='text' name='name' required)
-          label name
+        h2 Want some help? We’ve got you.
+        p Send us your questions and a risk expert will be in touch to help you out.
 
         div
-          input(type='email' name='email' required)
-          label email
+          input(type='text' name='name' placeholder='Name' required)
 
         div
-          textarea.textarea(name='message' rows='10' cols='50')
-          label message
+          input(type='email' name='email' placeholder='Email' required)
+
+        div
+          textarea.textarea(name='message' placeholder='Message' rows='10' cols='50')
 
         button(type='submit') submit

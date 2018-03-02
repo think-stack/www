@@ -19,7 +19,7 @@
     margin-bottom: 10em
 
     @media screen and (--laptop)
-      max-height: 110vh
+      max-height: 125vh
       margin-bottom: 4em
 
     & #nav-toggle
@@ -27,7 +27,7 @@
       & span
         background-color: var(--white)
 
-    & h1 
+    & h1
       color: var(--white)
       max-width: 90%
       margin: 0 auto 1em
@@ -53,19 +53,22 @@
         margin: 0 auto 2em
         position: relative
 
+        @media screen and (--laptop)
+          max-width: 60%
+
         & p
           max-width: 80%
           margin: 0 auto 1.5em
-      
+
           @media screen and (--laptop)
             margin-left: 0
 
         & div
           position: relative
           text-align: center
-          width: 80%  
+          width: 80%
           margin: auto
-      
+
           @media screen and (--laptop)
             margin-left: 0
 
@@ -94,18 +97,19 @@
 
               //todo use js to make input label opacity: 0
 
-        & button 
+        & button
           display: block
           margin: auto
           color: var(--white)
-          font-size: 1.4em
+          font-size: 1.2em
           border: 2px solid var(--white)
           padding: .25em .5em 0
           background-color: transparent
 
           @media screen and (--laptop)
-            padding: .25em 1em 0 
-          
+            padding: .25em 1em 0
+            margin-left: 0
+
 
       & figure
         position: relative
@@ -113,7 +117,7 @@
         margin: auto
 
         @media screen and (--laptop)
-          width: 70%
+          width: 90%
 
         & img
           width: 100%
@@ -124,6 +128,10 @@
 
     @media screen and (--laptop)
       width: 80%
+
+    & h3
+      color: var(--tsBlue)
+      margin-bottom: .5em
 
     & p
       margin-bottom: 5em
@@ -154,7 +162,7 @@
         width: 90%
         margin: auto
         text-align: center
-      
+
         @media screen and (--laptop)
           margin: 0
           width: 30%
@@ -175,7 +183,7 @@
 
       @media screen and (--tablet-lnd)
         width: 40%
-    
+
       & h2
         color: var(--tsBlue)
         text-align: center
