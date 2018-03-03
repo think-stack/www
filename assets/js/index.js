@@ -1,5 +1,6 @@
-console.log('you can use ES6 here')
-console.log('form submission js')
+const body = document.getElementsByTagName('body')
+
+// check os
 
 function returnOS () {
   let OS
@@ -10,9 +11,18 @@ function returnOS () {
   console.log(OS)
   return OS
 }
-returnOS()
 
-const body = document.getElementsByTagName('body')
+if (body[0].id === 'campaign-landing-page') {
+  let button = document.getElementById('rc')
+  let OS = returnOS()
+  console.log(button)
+
+  if (OS === 'MacOS') {
+    button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
+  } else {
+    button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
+  }
+}
 
 var child = document.querySelectorAll('svg')
 

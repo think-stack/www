@@ -19,7 +19,7 @@ extends(src='layout.sgr')
             input.js-input(type='email' name='email' placeholder='email' required)
             label()
 
-          button(type='submit' onclick="window.open('ThinkStack-DesignToolkit.zip')") Download your free Risk Score Calculator
+          button(type='submit' id='rc' action='/thank-you') Download your free Risk Score Calculator
 
         figure
           img(src='/img/marketing-campaigns/risk-score-calculator.png')
