@@ -1,5 +1,5 @@
 // todo add drop shadow
-#campaign-landing-page
+#risk-calculator
 
   & input,
   & textarea
@@ -15,11 +15,15 @@
   & #main
     background: url(/img/marketing-campaigns/ts-landing-page-bg-img.jpg) no-repeat center center
     background-size: cover
-    max-height: 100vh
-    margin-bottom: 10em
+    max-height: 115vh
+    margin-bottom: 15em
+
+    @media screen and (--tablet)
+      max-height: 90vh
 
     @media screen and (--laptop)
       max-height: 125vh
+      min-height: 55rem
       margin-bottom: 4em
 
     & #nav-toggle
