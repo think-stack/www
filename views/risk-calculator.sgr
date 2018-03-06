@@ -8,7 +8,7 @@ extends(src='layout.sgr')
 
       #hero
 
-        form(id='design-toolkit' name='design-toolkit' action='thank-you')
+        form(id='design-toolkit' name='design-toolkit' action='/risk-calculator')
           p Take inventory of the tools and systems in your organization to understand your level of risk. Our free Risk Score Calculator is designed to do it on your own, but we’re here to help if you have questions. We’ve included a guide with tips for getting started, and will email you a creative exercise each week to keep you going.
 
           div.input
