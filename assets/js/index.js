@@ -24,7 +24,7 @@ if (body[0].id === 'risk-calculator') {
 
     $.ajax({
       type: 'POST',
-      url: '/risk-calculator',
+      url: form.attr('action'),
       data: data
     })
   })
