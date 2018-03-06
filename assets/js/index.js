@@ -35,6 +35,7 @@ if (body[0].id === 'risk-calculator') {
         } else {
           window.open('risk-calculator-win.zip')
         }
+        form.reset()
       }
     })
   })
