@@ -12,16 +12,59 @@ function returnOS () {
   return OS
 }
 
-if (body[0].id === 'campaign-landing-page') {
-  let button = document.getElementById('rc')
-  let OS = returnOS()
-  console.log(button)
+if (body[0].id === 'risk-calculator') {
 
+  $('#design-toolkit').submit(function(e) {
+    e.preventDefault();
+
+    var $form = $(this);
+    $.post($form.attr('action'), $form.serialize()).then(function() {
+      alert('Thank you!');
+    });
+  });
+
+/*  let form = document.getElementById('design-toolkit')
+  let nameInput = document.querySelector('#design-toolkit input[name="name"')
+  let emailInput = document.querySelector('#design-toolkit input[name="email"')
+  let button = document.getElementById('rc')
+  console.log(form)
+  console.log(emailInput)
+
+  let OS;
+
+  // check form fields have value
+  // set button onclick attribute
+  function checkValidity () {
+    console.log(nameInput.value !== '')
+    console.log(emailInput.validity.valid)
+    if (nameInput.value !== '' && emailInput.validity.valid) {
+//      OS = returnOS()
+      button.onclick = 'something'
+    } else {
+      button.onlick = ''
+    }
+  }
+
+  function click () {
+    console.log('clicked')
+  }
+
+  form.addEventListener('click', function () {
+    console.log('clicked')
+  })
+  nameInput.addEventListener('blur', checkValidity, false)
+  emailInput.addEventListener('blur', checkValidity, false)
+  form.addEventListener('submit', checkValidity, false)
+
+  // wrap download in setTimeout to delay download
   if (OS === 'MacOS') {
     button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
-  } else {
+  } else if (OS === 'Windows') {
     button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
+  } else {
+    button.setAttribute('onclick', '')
   }
+  */
 }
 
 var child = document.querySelectorAll('svg')
