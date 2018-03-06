@@ -28,6 +28,7 @@ if (body[0].id === 'risk-calculator') {
       data: data
     }).done(function () {
       console.log('done')
+      window.open('risk-calculator-mac.zip')
     })
   })
 
