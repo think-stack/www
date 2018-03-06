@@ -26,6 +26,8 @@ if (body[0].id === 'risk-calculator') {
       type: 'POST',
       url: form.attr('action'),
       data: data
+    }).done(function () {
+      window.open('risk-calculator-mac.zip')
     })
   })
 
