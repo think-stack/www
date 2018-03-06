@@ -17,11 +17,17 @@ if (body[0].id === 'risk-calculator') {
   $('#design-toolkit').submit(function(e) {
     e.preventDefault();
 
-    var $form = $(this);
-    $.post($form.attr('action'), $form.serialize()).then(function() {
-      alert('Thank you!');
-    });
-  });
+    let form = $(this)
+    let data = form.serialize()
+    console.log(form)
+    console.log(data)
+
+    $.ajax({
+      type: 'POST',
+      url: '/risk-calculator',
+      data: data
+    })
+  })
 
 /*  let form = document.getElementById('design-toolkit')
   let nameInput = document.querySelector('#design-toolkit input[name="name"')
