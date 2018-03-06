@@ -8,7 +8,6 @@ function returnOS () {
   if (navigator.appVersion.indexOf('Mac') !== -1) OS = 'MacOS'
   if (navigator.appVersion.indexOf('X11') !== -1) OS = 'UNIX'
   if (navigator.appVersion.indexOf('Linux') !==-1) OS = 'Linux'
-  console.log(OS)
   return OS
 }
 
@@ -16,6 +15,9 @@ if (body[0].id === 'risk-calculator') {
 
   $('#design-toolkit').submit(function(e) {
     e.preventDefault();
+
+    let OS = returnOS()
+    console.log(OS)
 
     let form = $(this)
     let data = form.serialize()
@@ -28,7 +30,11 @@ if (body[0].id === 'risk-calculator') {
       data: data,
       async: false,
       success: function () {
-        window.open('risk-calculator-mac.zip')
+        if (OS === 'MacOS') {
+          window.open('risk-calculator-mac.zip')
+        } else {
+          window.open('risk-calculator-win.zip')
+        }
       }
     })
   })
