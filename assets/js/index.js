@@ -1,3 +1,121 @@
+const client = algoliasearch('NDZKXKRSA7', 'e4dde62d4e2f8323b8f46d3825bbd8fc')
+const helper = algoliasearchHelper(client, 'test_thinkstack')
+
+helper.on('result', function (content) {
+  renderHits(content)
+})
+
+function renderHits (content) {
+  // assign search results to variable
+  let results = content.hits
+  console.log(results)
+
+  let team = []
+  let blog = []
+
+  // define container
+  let resultsContainer = document.getElementById('search-results')
+
+  // create ul for blog results
+  let blogList = document.createElement('ul')
+  blogList.id = 'blog'
+  resultsContainer.appendChild(blogList)
+
+  if (results !== undefined) {
+    results.forEach(function (result) {
+      if (result.hasOwnProperty('name')) {
+        team.push(result)
+      } else {
+        blog.push(result)
+      }
+    })
+  }
+
+  if (team.length) {
+    // create div for team results
+    let teamList = document.createElement('div')
+    teamList.id = 'team'
+
+    let header = document.createElement('h4')
+    header.innerHTML = 'Team Members'
+    teamList.appendChild(header)
+
+    let ul = document.createElement('ul')
+    teamList.appendChild(ul)
+
+    resultsContainer.appendChild(teamList)
+
+    // clear old search results
+    // might not need to clear
+    // ul.innerHTML = ''
+
+    // add search results to list
+    team.forEach(function (i) {
+      let li = document.createElement('li')
+      let anchor = document.createElement('a')
+      anchor.innerHTML = i.name
+      anchor.href = '/about'
+      li.appendChild(anchor)
+      ul.appendChild(li)
+    })
+  }
+
+  if (blog.length) {
+    // create div for blog search results
+    let blogList = document.createElement('div')
+    blogList.id = 'blog'
+
+    let header = document.createElement('h4')
+    header.innerHTML = 'Articles'
+    blogList.appendChild(header)
+
+    let ul = document.createElement('ul')
+    blogList.appendChild(ul)
+
+    resultsContainer.appendChild(blogList)
+
+    // add search results to list
+    blog.slice(0, 5).forEach(function (i) {
+      let li = document.createElement('li')
+      let anchor = document.createElement('a')
+      anchor.innerHTML = i.title
+      anchor.href = i.mediumUrl
+      li.appendChild(anchor)
+      ul.appendChild(li)
+    })
+  }
+}
+
+const searchIcon = document.getElementById('search-icon')
+
+searchIcon.addEventListener('click', function () {
+  let searchPanel = document.getElementById('search-panel')
+  if (searchPanel.classList.contains('active')) {
+    searchPanel.classList.remove('active')
+  } else {
+    searchPanel.classList.add('active')
+  }
+})
+
+const searchPanel = document.getElementById('search-panel')
+
+searchPanel.addEventListener('click', function () {
+  searchPanel.classList.remove('active')
+})
+
+const searchInput = document.getElementById('search-input')
+
+searchInput.addEventListener('keyup', function () {
+  let ul = document.getElementById('search-results')
+  ul.innerHTML = ''
+  if (this.value === '') {
+    ul.innerHTML = ''
+  } else {
+    helper.setQuery(this.value).search()
+  }
+})
+
+
 const body = document.getElementsByTagName('body')
 
 var child = document.querySelectorAll('svg')
