@@ -12,31 +12,81 @@ function renderHits (content) {
 
   let team = []
   let blog = []
+  let page = []
 
   // define container
-  let resultsContainer = document.getElementById('search-results')
+  let searchPanel = document.getElementById('search-panel')
+  let resultsContainer = document.createElement('section')
+  resultsContainer.id = 'results-container'
+  searchPanel.appendChild(resultsContainer)
 
-  // create ul for blog results
-  let blogList = document.createElement('ul')
-  blogList.id = 'blog'
-  resultsContainer.appendChild(blogList)
-
+  // sort data into team, blog, and page arrays
+  // todo: add case studies
   if (results !== undefined) {
     results.forEach(function (result) {
       if (result.hasOwnProperty('name')) {
         team.push(result)
-      } else {
+      } else if (result.hasOwnProperty('title')) {
         blog.push(result)
+      } else if (result.hasOwnProperty('pageTitle')) {
+        page.push(result)
       }
     })
   }
 
+  if (page.length) {
+    // create div for page search results
+    let pageList = document.createElement('div')
+    pageList.id = 'page'
+
+    let header = document.createElement('h3')
+    header.innerHTML = 'Pages'
+    pageList.appendChild(header)
+
+    let ul = document.createElement('ul')
+    pageList.appendChild(ul)
+
+    resultsContainer.appendChild(pageList)
+
+    page.slice(0, 5).forEach(function (i) {
+      let li = document.createElement('li')
+      let anchor = document.createElement('a')
+      anchor.innerHTML = i.pageTitle
+      li.appendChild(anchor)
+      ul.appendChild(li)
+    })
+  }
+  if (blog.length) {
+    // create div for blog search results
+    let blogList = document.createElement('div')
+    blogList.id = 'blog'
+
+    let header = document.createElement('h3')
+    header.innerHTML = 'Articles'
+    blogList.appendChild(header)
+
+    let ul = document.createElement('ul')
+    blogList.appendChild(ul)
+
+    resultsContainer.appendChild(blogList)
+
+    // add search results to list
+    blog.slice(0, 5).forEach(function (i) {
+      let li = document.createElement('li')
+      let anchor = document.createElement('a')
+      anchor.innerHTML = i.title
+      anchor.href = i.mediumUrl
+      anchor.target = '_blank'
+      li.appendChild(anchor)
+      ul.appendChild(li)
+    })
+  }
   if (team.length) {
     // create div for team results
     let teamList = document.createElement('div')
     teamList.id = 'team'
 
-    let header = document.createElement('h4')
+    let header = document.createElement('h3')
     header.innerHTML = 'Team Members'
     teamList.appendChild(header)
 
@@ -55,58 +105,37 @@ function renderHits (content) {
       let anchor = document.createElement('a')
       anchor.innerHTML = i.name
       anchor.href = '/about'
-      li.appendChild(anchor)
-      ul.appendChild(li)
-    })
-  }
-
-  if (blog.length) {
-    // create div for blog search results
-    let blogList = document.createElement('div')
-    blogList.id = 'blog'
-
-    let header = document.createElement('h4')
-    header.innerHTML = 'Articles'
-    blogList.appendChild(header)
-
-    let ul = document.createElement('ul')
-    blogList.appendChild(ul)
-
-    resultsContainer.appendChild(blogList)
-
-    // add search results to list
-    blog.slice(0, 5).forEach(function (i) {
-      let li = document.createElement('li')
-      let anchor = document.createElement('a')
-      anchor.innerHTML = i.title
-      anchor.href = i.mediumUrl
+      anchor.target = '_blank'
       li.appendChild(anchor)
       ul.appendChild(li)
     })
   }
 }
 
+function addActiveClass (element) {
+  let target = document.getElementById(element)
+
+  if (target.classList.contains('active')) {
+    target.classList.remove('active')
+  } else {
+    target.classList.add('active')
+  }
+}
+
 const searchIcon = document.getElementById('search-icon')
 
 searchIcon.addEventListener('click', function () {
-  let searchPanel = document.getElementById('search-panel')
-  if (searchPanel.classList.contains('active')) {
-    searchPanel.classList.remove('active')
-  } else {
-    searchPanel.classList.add('active')
-  }
+  addActiveClass('toggle-wrap')
+  addActiveClass('search-panel')
+  addActiveClass('search-input')
 })
 
 const searchPanel = document.getElementById('search-panel')
 
-searchPanel.addEventListener('click', function () {
-  searchPanel.classList.remove('active')
-})
-
 const searchInput = document.getElementById('search-input')
 
 searchInput.addEventListener('keyup', function () {
-  let ul = document.getElementById('search-results')
+  let ul = document.getElementById('search-panel')
   ul.innerHTML = ''
   if (this.value === '') {
     ul.innerHTML = ''
