@@ -38,6 +38,7 @@ header
 
         & svg
           fill: currentColor
+          width: 1.25rem
 
         & #search-input
           color: var(--white)
@@ -195,6 +196,13 @@ header
       & #page
         position: relative
         margin-bottom: 2rem
+
+      & #page,
+      & #team
+        flex: 1 1 25%
+
+      & #blog
+        flex: 2 1 auto
 
         @media screen and (--tablet)
           padding: 0 1rem
