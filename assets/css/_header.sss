@@ -40,6 +40,21 @@ header
           fill: currentColor
           width: 1.25rem
 
+          &.hide
+            opacity: 0
+            display: none
+
+          &.show
+            opacity: 1
+            display: inline
+
+          &#close-icon
+            stroke-width: 2px
+            width: 2rem
+            right: 0
+            top: 0
+            stroke: var(--white)
+
         & #search-input
           color: var(--white)
           background: transparent
@@ -122,7 +137,7 @@ header
     font-size: 1.5em
     opacity: 0
     visibility: hidden
-    z-index: 1
+    z-index: 2
 
     & a
       color: #fff
@@ -196,6 +211,8 @@ header
       & #page
         position: relative
         margin-bottom: 2rem
+        z-index: 2
+        cursor: pointer
 
       & #page,
       & #team

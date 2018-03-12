@@ -105,7 +105,6 @@ function renderHits (content) {
       let anchor = document.createElement('a')
       anchor.innerHTML = i.name
       anchor.href = '/about'
-      anchor.target = '_blank'
       li.appendChild(anchor)
       ul.appendChild(li)
     })
@@ -139,8 +138,55 @@ function clearSearch (element) {
 const searchIcon = document.getElementById('search-icon')
 
 searchIcon.addEventListener('click', function () {
+  let closeX = document.getElementById('close-icon')
+  if (searchIcon.display !== 'none') {
+    searchIcon.display = 'none'
+    closeX.display = 'block'
+  }
+})
+
+// close search panel
+// const searchPanel = document.getElementById('search-panel')
+
+// searchPanel.addEventListener('click', function () {
+//   toggleActiveClass('toggle-wrap')
+//   toggleActiveClass('search-panel')
+//   toggleActiveClass('search-input')
+//   toggleActiveClass('algolia-logo')
+//   clearSearch('search-input')
+
+//   closeIcon.classList.remove('show')
+//   closeIcon.classList.add('hide')
+//   searchIcon.classList.remove('hide')
+//   searchIcon.classList.add('show')
+
+// })
+
+// close search icon
+const closeIcon = document.getElementById('close-icon')
+
+closeIcon.addEventListener('click', function () {
+  closeIcon.classList.remove('show')
+  closeIcon.classList.add('hide')
+  searchIcon.classList.remove('hide')
+  searchIcon.classList.add('show')
+
+  toggleActiveClass('toggle-wrap')
+  toggleActiveClass('search-panel')
+  toggleActiveClass('search-input')
+  toggleActiveClass('algolia-logo')
+  clearSearch('search-input')
+})
+
+searchIcon.addEventListener('click', function () {
   let navPanel = document.getElementById('nav-panel')
   let hamburger = document.querySelector('#nav-toggle input[type="checkbox"]')
+  let closeX = document.getElementById('close-icon')
+
+  searchIcon.classList.add('hide')
+  searchIcon.classList.remove('show')
+  closeX.classList.add('show')
+
 
   if (navPanel.classList.contains('active')) {
     toggleActiveClass('search-input')
@@ -155,7 +201,6 @@ searchIcon.addEventListener('click', function () {
   }
 })
 
-const searchPanel = document.getElementById('search-panel')
 
 const searchInput = document.getElementById('search-input')
 
