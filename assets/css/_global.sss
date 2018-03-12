@@ -60,8 +60,14 @@ ul
   text-transform: uppercase
   transition: all 400ms ease
 
-/* Icons */
+/* Inputs and textareas */
 
+input,
+textarea
+  &:focus
+    outline: none
+
+/* Icons */
 svg.icon
   display: inline-block
   fill: currentColor
