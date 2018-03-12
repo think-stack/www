@@ -7,7 +7,7 @@ nav
 
     #search
       svg#search-icon(viewBox='0 0 60 60' class='icon search' width="100%" height="100%")
-        use(xlink:href='#mag')
+        use(xlink:href='#mag-2')
 
       input#search-input(autocomplete='off')
       img#algolia-logo(src='/img/search-by-algolia-white.png')
