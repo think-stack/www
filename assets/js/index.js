@@ -112,7 +112,8 @@ function renderHits (content) {
   }
 }
 
-function addActiveClass (element) {
+// toggle active class
+function toggleActiveClass (element) {
   let target = document.getElementById(element)
 
   if (target.classList.contains('active')) {
@@ -122,18 +123,43 @@ function addActiveClass (element) {
   }
 }
 
+// add active class
+function addClass (element) {
+  let target = document.getElementById(element)
+
+  target.classList.add('active')
+}
+
+function clearSearch (element) {
+  let input = document.getElementById(element)
+  input.value = ''
+  searchPanel.innerHTML = ''
+}
+
 const searchIcon = document.getElementById('search-icon')
 
 searchIcon.addEventListener('click', function () {
-  addActiveClass('toggle-wrap')
-  addActiveClass('search-panel')
-  addActiveClass('search-input')
+  let navPanel = document.getElementById('nav-panel')
+  let hamburger = document.querySelector('#nav-toggle input[type="checkbox"]')
+
+  if (navPanel.classList.contains('active')) {
+    toggleActiveClass('search-input')
+    toggleActiveClass('search-panel')
+    toggleActiveClass('algolia-logo')
+  } else {
+    toggleActiveClass('toggle-wrap')
+    toggleActiveClass('search-panel')
+    toggleActiveClass('search-input')
+    toggleActiveClass('algolia-logo')
+    clearSearch('search-input')
+  }
 })
 
 const searchPanel = document.getElementById('search-panel')
 
 const searchInput = document.getElementById('search-input')
 
+// search listener
 searchInput.addEventListener('keyup', function () {
   let ul = document.getElementById('search-panel')
   ul.innerHTML = ''
@@ -143,7 +169,6 @@ searchInput.addEventListener('keyup', function () {
     helper.setQuery(this.value).search()
   }
 })
-
 
 const body = document.getElementsByTagName('body')
 
@@ -165,8 +190,12 @@ const nav = function () {
       navPanel.style.opacity = 1
       navPanel.style.transition = 'opacity .5s ease-out'
       navPanel.style.visibility = 'visible'
+      navPanel.classList.add('active')
       body.style.overflow = 'hidden'
+      toggleActiveClass('toggle-wrap')
     } else {
+      navPanel.classList.remove('active')
+      toggleActiveClass('toggle-wrap')
       navPanel.style.opacity = 0
       navPanel.style.transition = 'opacity .5s ease-in-out'
       body.style.removeProperty('overflow')
@@ -175,7 +204,6 @@ const nav = function () {
       }, 450)
     }
   }, false)
-
 }
 
 nav()
