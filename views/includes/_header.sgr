@@ -10,6 +10,7 @@ nav
         use(xlink:href='#mag')
 
       input#search-input(autocomplete='off')
+      img#algolia-logo(src='/img/search-by-algolia-white.png')
 
     #nav-toggle
       input(type='checkbox')

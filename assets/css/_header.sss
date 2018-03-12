@@ -20,13 +20,21 @@ header
 
       &.active
         color: var(--white)
-        z-index: 15
+        z-index: 10
 
       & #search
-        position: relative
-        top: 2.25rem
-        right: 3rem
+        position: absolute
+        top: 1.75rem
+        right: 4rem
         color: currentColor
+
+        @media screen and (--tablet)
+          top: 2rem
+
+        @media screen and (--laptop)
+          position:  relative
+          top: 2.25rem
+          right: 3rem
 
         & svg
           fill: currentColor
@@ -42,6 +50,16 @@ header
           &.active
             border-bottom: 2px solid var(--tsGreen)
             width: 10rem
+
+        & img
+          width: 6rem
+          position: absolute
+          top: 2.5rem
+          right: 0
+          display: none
+
+          &.active
+            display: inline
 
       & #nav-toggle
         position: absolute
@@ -157,25 +175,33 @@ header
       position: absolute
       top: 0
       right: 0
-      height: 100vh
+      min-height: 100vh
       width: 100%
       background-color: var(--tsGrey)
-      z-index: 14
+      z-index: 1
 
     & #results-container
       display: flex
       justify-content: space-around
-      width: 80%
+      width: 90%
       margin: 10rem auto
       color: var(--white)
 
+      @media screen and (--laptop)
+        width: 70%
+
       & #blog,
-      & #team
+      & #team,
+      & #page
         position: relative
+        margin-bottom: 2rem
+
+        @media screen and (--tablet)
+          padding: 0 1rem
 
       & h3
         color: currentColor
-        margin-bottom: 1.5rem
+        margin-bottom: 1rem
         width: max-content
         position: relative
 
