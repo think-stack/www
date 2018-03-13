@@ -1,4 +1,5 @@
-# Horsetail Tech
+# Think|Stack
+A Design Thinking And IT Innovation Company
 
 
 

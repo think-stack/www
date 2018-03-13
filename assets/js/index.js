@@ -113,9 +113,6 @@ const nav = function () {
     }
   }, false)
 
-  function test () {
-    console.log(hamburger)
-  }
 }
 
 nav()
@@ -219,7 +216,6 @@ function addClass (e) {
   } else {
     return false
   }
-  console.log(target)
 }
 
 function removeClass (e) {
@@ -289,7 +285,6 @@ function debounce (func, wait = 5, immediate = true) {
 // const techSection = document.querySelector('#about .tech')
 
 const slideEls = document.querySelectorAll('.slide')
-console.log(slideEls)
 
 function slideUp (e) {
   slideEls.forEach(el => {
@@ -320,6 +315,13 @@ function bgColorChange (e) {
     const divBottom = el.offsetTop + el.clientHeight
     const partialShow = addClassAt > el.offsetTop
     const isNotScrolledPast = window.scrollY < (divBottom - 200)
+  //const aboutBody = document.getElementById('about')
+  //1/4 through div
+  const addClassAt = (window.scrollY + window.innerHeight) - el.clientHeight / 5
+  //bottom of div
+  const divBottom = el.offsetTop + el.clientHeight
+  const partialShow = addClassAt > el.offsetTop
+  const isNotScrolledPast = window.scrollY < (divBottom - 200)
 
     if (partialShow && isNotScrolledPast) {
       body.classList.add('active')
