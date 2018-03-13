@@ -1,0 +1,255 @@
+// todo add drop shadow
+#risk-calculator
+
+  & input,
+  & textarea
+
+    &:focus
+      outline: none
+
+  & button
+    font-family: var(--headerFont)
+    text-transform: uppercase
+    border-radius: 2em
+
+  & #main
+    background: url(/img/marketing-campaigns/ts-landing-page-bg-img.jpg) no-repeat center center
+    background-size: cover
+    max-height: 115vh
+    margin-bottom: 15em
+
+    @media screen and (--tablet)
+      max-height: 90vh
+
+    @media screen and (--laptop)
+      max-height: 125vh
+      min-height: 55rem
+      margin-bottom: 4em
+
+    & #nav-toggle
+
+      & span
+        background-color: var(--white)
+
+    & h1
+      color: var(--white)
+      max-width: 90%
+      margin: 0 auto 1em
+      text-align: center
+
+      @media screen and (--laptop)
+        max-width: 15em
+        font-size: 2.5em
+        margin: 3em auto
+
+    & #hero
+      position: relative
+
+      @media screen and (--tablet-lnd)
+        display: flex
+        width: 80%
+        margin: auto
+
+      // todo margin-left: 0 on larger screens
+      & form
+        color: var(--white)
+        max-width: 90%
+        margin: 0 auto 2em
+        position: relative
+
+        @media screen and (--laptop)
+          max-width: 60%
+
+        & p
+          max-width: 80%
+          margin: 0 auto 1.5em
+
+          @media screen and (--laptop)
+            margin-left: 0
+
+        & div
+          position: relative
+          text-align: center
+          width: 80%
+          margin: auto
+
+          @media screen and (--laptop)
+            margin-left: 0
+
+          & label
+            position: absolute
+            color: var(--tsBlue)
+            font-size: 1.5em
+            text-transform: capitalize
+            top: .25em
+            left: .25em
+            pointer-events: none
+
+          & input
+            width: 100%
+            font-size: 1.5em
+            margin: 0 auto 1.5em
+            padding: 0
+            border: 0
+            border-radius: .25em
+            font-family: var(--bodyFont)
+            color: var(--tsBlue)
+            padding-left: .5em
+
+            &:focus~label
+              opacity: 0
+
+              //todo use js to make input label opacity: 0
+
+        & button
+          display: block
+          margin: auto
+          color: var(--white)
+          font-size: 1.2em
+          border: 2px solid var(--white)
+          padding: .25em .5em 0
+          background-color: transparent
+
+          @media screen and (--laptop)
+            padding: .25em 1em 0
+            margin-left: 0
+
+
+      & figure
+        position: relative
+        width: 60%
+        margin: auto
+
+        @media screen and (--laptop)
+          width: 80%
+
+        & img
+          width: 100%
+          box-shadow: 0 4px 6px 0 color(#000 a(10%))
+
+  & #toolkit
+    width: 90%
+    margin: auto
+
+    @media screen and (--laptop)
+      width: 80%
+
+    & h3
+      color: var(--tsBlue)
+      margin-bottom: .5em
+
+    & p
+      margin-bottom: 5em
+
+    & .hero
+
+      @media screen and (--tablet-lnd)
+        width: 75%
+        margin: auto
+
+      @media screen and (--laptop)
+        width: 50%
+        margin-left: 0
+
+    & .columns
+
+      @media screen and (--tablet-lnd)
+        width: 50%
+        margin: 4em auto
+
+      @media screen and (--laptop)
+        width: 100%
+        display: flex
+        justify-content: space-around
+        margin-top: 4em
+
+      & .col-1-3
+        width: 90%
+        margin: auto
+        text-align: center
+
+        @media screen and (--laptop)
+          margin: 0
+          width: 30%
+      & h3
+        color: var(--tsBlue)
+        text-align: center
+        margin-bottom: .5em
+
+  & #contact
+
+    & form
+      width: 90%
+      margin: auto
+      margin-bottom: 2em
+
+      @media screen and (--tablet)
+        width: 75%
+
+      @media screen and (--tablet-lnd)
+        width: 40%
+
+      & h2
+        color: var(--tsBlue)
+        text-align: center
+
+      & div
+        position: relative
+
+        & label
+          position: absolute
+          top: .5em
+          left: 3%
+          color: var(--tsGreen)
+          font-size: 150%
+          text-transform: capitalize
+          transition: transform 600ms ease
+          pointer-events: none
+
+          @media screen and (--laptop)
+            font-size: 100%
+            top: .3em
+            left: .3em
+
+      & input,
+      & textarea
+        border: 2px solid var(--tsGreen)
+        border-radius: .25em
+        margin-bottom: 1.3em
+        width: 100%
+        font-size: 150%
+        padding-left: .5em
+        color: var(--tsGreen)
+
+        @media screen and (--laptop)
+          font-size: 100%
+
+      & input
+        line-height: 1.5em
+
+        &:focus~label,
+        &:valid~label
+          transform: translateY(-1.7em) translateX(-.5em) scale(.8)
+
+      & textarea
+
+        &:focus~label
+          transform: translateY(-1.7em) translateX(-.5em) scale(.8)
+
+      & label.transform
+        transform: translateY(-1.7em) translateX(-.5em) scale(.8)
+
+      & button
+        line-height: 150%
+        font-size: 150%
+        color: var(--white)
+        text-transform: uppercase
+        padding: .5em 1em
+        background-color: var(--tsGreen)
+        border: none
+        display: block
+        margin: auto
+
+        @media screen and (--laptop)
+          font-size: 100%
+          padding: .2em 1em 0

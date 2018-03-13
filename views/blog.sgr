@@ -1,0 +1,32 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    each(loop='post in dato.blog_post')
+      if(condition='post.position === 1')
+        main(style='background: url(https://www.datocms-assets.com{{ post.image.path }}) no-repeat center center; background-size: cover; background-color: #244c5a')
+          header
+            a(href='{{ post.mediumUrl }}')
+              h3 {{ post.title }}
+              p
+                | {{ post.author }} |
+                | {{ post.date }}
+              p {{ post.excerpt.split(' ').slice(0, 40).join(' ') }}...
+
+    #blog-list
+      each(loop='post in dato.blog_post.sort((a, b) => a.position < b.position ? -1 : 1)')
+        if(condition='post.position !== 1')
+          a(href='{{ post.mediumUrl}}')
+            figure
+              if(condition='post.image !== null')
+                img(src='//{{ dato._meta.imgixHost + post.image.path }}?fit=crop&amp;h=250&amp;w=384')
+              else
+                img.no-img(src='/img/ts-monogram.png')
+              figcaption
+                h3 {{ post.title }}
+                p
+                  | {{ post.author }} |
+                  | {{ post.date }}
+                p {{ post.excerpt.split(' ').slice(0, 13).join(' ') }}...

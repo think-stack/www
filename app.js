@@ -15,21 +15,21 @@ function slugify (text) {
     .toString()
     .trim()
     .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "")
-    .replace(/\-\-+/g, "-")
-    .replace(/^-+/, "")
-    .replace(/-+$/, "")
-  }
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '')
+}
 
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*', '**/_*'],
+  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md', '**/assets/css/_*'],
   reshape: htmlStandards({
     parser: sugarml,
     root: './views',
-    locals: (ctx) => { return Object.assign(locals, { pageId: pageId(ctx) }, { slugify: slugify } )}
+    locals: (ctx) => { return Object.assign(locals, { pageId: pageId(ctx) }, { slugify: slugify }) }
   }),
   postcss: cssStandards({ parser: sugarss }),
   babel: jsStandards(),
@@ -55,10 +55,14 @@ module.exports = {
           name: 'work',
           template: {
             path: 'views/work.sgr',
-            output: (work) => { return `work/${work.slug}.html`}
+            output: (work) => { return `work/${work.slug}.html` }
           },
           json: 'work.json'
         },
+        {
+          name: 'blog_post',
+          json: 'blog.json'
+        }
       ],
       json: 'data.json'
     })

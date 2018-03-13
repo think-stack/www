@@ -56,7 +56,7 @@ html
         .wrapper
           header
             h2 {{ item.feature[0].peopleHeader }}
-          
+
           p {{ item.feature[0].peopleDescription}}
 
       .tech-col
@@ -67,10 +67,11 @@ html
             h2 {{ item.feature[0].techHeader }}
 
           p {{ item.feature[0].techDescription }}
-              
-    section.quote(style="background: url(https://www.datocms-assets.com{{ item.quote[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
-      blockquote {{ item.quote[0].quote }}
-      p {{ item.quote[0].author }} 
+
+    if(condition='item.quote[0].quote !== "null"')
+      section.quote(style="background: url(https://www.datocms-assets.com{{ item.quote[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
+        blockquote {{ item.quote[0].quote }}
+        p {{ item.quote[0].author }}
 
     section.feature
 
@@ -83,7 +84,7 @@ html
         .wrapper
           header
             h2 {{ item.feature[1].peopleHeader }}
-          
+
           p {{ item.feature[1].peopleDescription}}
 
       .tech-col
@@ -95,13 +96,14 @@ html
 
           p {{ item.feature[1].techDescription }}
 
-    section.statistics(style="background: url(https://www.datocms-assets.com{{ item.statistics[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
-      div
-        p {{ item.statistics[0].statOne }}
-        p {{ item.statistics[0].statOneSupport }}
-      div
-        p {{ item.statistics[0].statTwo }}
-        p {{ item.statistics[0].statTwoSupport }}
+    if(condition='item.statistics[0].statOne !== "null"')
+      section.statistics(style="background: url(https://www.datocms-assets.com{{ item.statistics[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
+        div
+          p {{ item.statistics[0].statOne }}
+          p {{ item.statistics[0].statOneSupport }}
+        div
+          p {{ item.statistics[0].statTwo }}
+          p {{ item.statistics[0].statTwoSupport }}
 
     section.feature
 
@@ -114,7 +116,7 @@ html
         .wrapper
           header
             h2 {{ item.feature[2].peopleHeader }}
-          
+
           p {{ item.feature[2].peopleDescription}}
 
       .tech-col

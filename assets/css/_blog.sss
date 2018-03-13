@@ -1,0 +1,72 @@
+#blog
+
+  & h3
+    color: var(--tsGrey)
+    font-weight: bold
+
+  & p
+    color: #000
+
+    &:first-of-type
+      color: var(--tsGreen)
+
+  & main
+    width: 90%
+    min-height: 70vh
+    margin: 5em auto 10em
+    display: flex
+    background-blend-mode: multiply
+
+    @media screen and (--laptop-lg)
+      max-width: 70%
+      margin: 5em auto 10em
+
+    & header
+      padding: 1em
+      align-self: flex-end
+      max-width: 75%
+
+      & h3,
+      & p
+        color: #fff
+
+  & #blog-list
+
+    @media screen and (--tablet)
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+
+    @media screen and (--laptop-lg)
+      max-width: 70%
+      margin: auto
+
+    & a
+      margin: 0 auto 2em
+
+      @media screen and (--tablet)
+        flex: 1 1 auto
+        padding: 1em
+        max-width: 25em
+
+      & figure
+        max-width: 25em
+        margin: 0 auto 8em
+
+        @media screen and (--laptop)
+          margin-bottom: 4em
+
+        & img
+          margin-bottom: 2em
+          max-width: 100%
+
+        & .no-img
+          height: 250px
+          width: 384px
+
+        & figcaption
+
+          & p
+
+            &:first-of-type
+              color: var(--tsGreen)

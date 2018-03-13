@@ -30,5 +30,4 @@ html
 
     block(name='javascript')
       script(src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous")
-      script(src='https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js')
       script(src='/js/main.js' defer)
