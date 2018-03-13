@@ -232,34 +232,34 @@ function removeClass (e) {
 const inputFields = document.getElementsByClassName('js-input')
 const textArea = document.querySelector('form textarea')
 
-textArea.addEventListener('blur', function () {
-  console.log('blurred')
-  let label = this.nextElementSibling
+// textArea.addEventListener('blur', function () {
+//   console.log('blurred')
+//   let label = this.nextElementSibling
 
-  if (textArea.value !== '') {
-    label.classList.add('transform')
-  } else {
-    label.classList.remove('transform')
-  }
-})
+//   if (textArea.value !== '') {
+//     label.classList.add('transform')
+//   } else {
+//     label.classList.remove('transform')
+//   }
+// })
 
-function addListener (arr, type, fn) {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].addEventListener(type, fn, false)
-  }
-}
+// function addListener (arr, type, fn) {
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i].addEventListener(type, fn, false)
+//   }
+// }
 
-function inputFieldCheck () {
-  let label = this.nextElementSibling
+// function inputFieldCheck () {
+//   let label = this.nextElementSibling
 
-  if (this.value !== '') {
-    label.style.opacity = '0'
-  } else {
-    label.style.opacity = '1'
-  }
-}
+//   if (this.value !== '') {
+//     label.style.opacity = '0'
+//   } else {
+//     label.style.opacity = '1'
+//   }
+// }
 
-addListener(inputFields, 'blur', inputFieldCheck)
+// addListener(inputFields, 'blur', inputFieldCheck)
 
 // nameInput.addEventListener('blur', inputFieldCheck, false)
 // inputArr.addEventListener('click', formInputCheck, false)
