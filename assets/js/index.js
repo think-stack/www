@@ -334,7 +334,7 @@ function bgColorChange (e) {
 window.addEventListener('scroll', debounce(bgColorChange))
 
 function checkSlide (e) {
-  // get all images
+  //get all images
   const images = document.querySelectorAll('#about #team img')
 
   images.forEach(function (image) {
