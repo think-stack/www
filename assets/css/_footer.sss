@@ -8,20 +8,44 @@ footer
   position: relative
   padding-bottom: 1em
 
-  @media (min-width: 26em)
+  & #mailchimp-form
+    margin-top: 3em
 
-    &:after
-      content: ''
-      border-top: 1px solid white
-      width: 3em
-      position: absolute
-      top: 69%
-      left: 50%
-      transform: translateX(-50%)
+    & #mc_embed_signup_scroll
+      text-align: center
+
+    & .mc-field-group
+      text-align: center
+
+      & input
+        background-color: var(--tsGrey)
+        border-style: none
+        border-bottom: 2px solid var(--tsGreen)
+        font-size: 1.2rem
+        margin-bottom: .5rem
+
+        &:nth-child(-n+2)
+
+          @media screen and (--laptop)
+            margin-right: 1em
+
+        &::placeholder
+          color: #fff
+
+    & #mce-responses
+      text-align: center
+
+      & #mc-embedded-subscribe
+        margin: 1rem auto
+        font-size: 1.2rem
+
+        &:hover
+          background-color: #fff
+          color: var(--tsGrey)
 
   & #logo
     flex: 1 1 auto
-    text-align: center 
+    text-align: center
     margin: 3em auto 2em
 
     & img
@@ -35,7 +59,7 @@ footer
     @media (min-width: 30em)
       max-width: 30em
 
-    & p 
+    & p
       margin-bottom: 1.5em
 
       @media (max-width: 26em)
@@ -48,7 +72,7 @@ footer
         color: var(--tsGrey)
 
     & .email
-      
+
       @media (min-width: 26em)
         display: none
 
@@ -60,12 +84,12 @@ footer
   & #social
     padding-bottom: 2em
 
-    & ul 
+    & ul
       display: flex
       justify-content: space-between
       min-width: 10em
 
   & #copyright
-    
+
     & small
       text-transform: capitalize

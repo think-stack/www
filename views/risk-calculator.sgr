@@ -1,0 +1,62 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header#main
+      include(src='/includes/_header-dark.sgr')
+
+      h1 Reducing cyber risk is closer than you think.
+
+      #hero
+
+        form#c.validate(id='design-toolkit' name='design-toolkit' action='https://thinkstack.us17.list-manage.com/subscribe/post?u=ad5c409073c6d208ca7885bd4&amp;id=1d328a5022' method='post' name='mc-embedded-subscribe-form' target='_blank')
+          p Take inventory of the tools and systems in your organization to understand your level of risk. Our free Risk Score Calculator is designed to help you do it on your own, but we’re here to help if you have questions. We’ve included a guide with tips for getting started, and will email you a creative exercise each week to keep you going.
+
+          div.input#mce-FNAME
+            input.js-input(type='text' name='FNAME' placeholder='name' required)
+            label(for='name')
+
+          div.input#mce-EMAIL
+            input.js-input(type='email' name='EMAIL' placeholder='email' required)
+            label()
+
+          button(type='submit' id='rc') Download your free Risk Score Calculator
+
+        figure
+          img(src='/img/marketing-campaigns/risk-score-calculator.png')
+
+    section#toolkit
+      h3 How does it work?
+      p.hero The Risk Score Calculator is the first step in building your Design Toolkit—the only IT method that looks at your entire organizational landscape to understand and eliminate risk. Your unique Design Toolkit is made up of a mapping system of your business processes, data, and infrastructure: your roadmap for every technology-related decision you’ll ever make.
+
+      .columns
+
+        .col-1-3
+          header
+            h3 Risk Score Calculator
+          p The first step to developing your design toolkit is to inventory every tool and application in your organization through our free Risk Score Calculator. You can use this data to analyze with your team, or use our algorithm to get an instant risk score.
+
+        .col-1-3
+          header
+            h3 Systems Maps
+          p Make sense of your risk profile through a series of visual maps custom to your organization. Business processes, data, and infrastructure are viewed through a 360º lens to give you the full picture of your risk landscape.
+
+        .col-1-3
+          header
+            h3 Execution Plan
+          p Risk elimination is a process, not a one time project, and security measures affect other goals in your organization. We'll develop a multi-phased plan right by your side to help you achieve realistic goals that create positive impact and get you where you're headed
+
+    section#contact
+      form(name='contact' action='/thank-you' netlify)
+        h2 Want some help? We’ve got you.
+        p Send us your questions and a risk expert will be in touch to help you out.
+
+        div
+          input(type='text' name='name' placeholder='Name' required)
+
+        div
+          input(type='email' name='email' placeholder='Email' required)
+
+        div
+          textarea.textarea(name='message' placeholder='Message' rows='10' cols='50')
+
+        button(type='submit') submit

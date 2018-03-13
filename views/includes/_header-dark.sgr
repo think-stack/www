@@ -3,6 +3,20 @@ nav
     a(href='/')
       img(src='/img/logo-full-lockup-white.png')
 
-  ul
-    li: a(class='closed' href='/about') About
-    li: a(class='closed' href='/contact') Contact
+  #nav-toggle
+    input(type='checkbox')
+    span
+    span
+    span
+
+  ul#nav-panel
+    each(loop='item in ["index", "who we are", "how we work", "contact"]')
+      if(condition='item === "index"')
+        li: a(href='/') home
+      elseif(condition='item === "who we are"')
+        li: a(href='/about') who we are
+      elseif(condition='item === "how we work"')
+        li: a(href='/how-we-work') how we work
+      else
+        li: a(href='/{{ item }}') {{ item }}
+
