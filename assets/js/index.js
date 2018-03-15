@@ -1,5 +1,15 @@
 const body = document.getElementsByTagName('body')
 
+function index () {
+  import('./animate-logos')
+  .then(module => module.default())
+  .catch(err => console.log('Failed to load index scripts', err))
+}
+
+if (body[0].id === 'index') {
+  index()
+}
+
 // check os
 
 function returnOS () {
@@ -7,14 +17,13 @@ function returnOS () {
   if (navigator.appVersion.indexOf('Win') !== -1) OS = 'Windows'
   if (navigator.appVersion.indexOf('Mac') !== -1) OS = 'MacOS'
   if (navigator.appVersion.indexOf('X11') !== -1) OS = 'UNIX'
-  if (navigator.appVersion.indexOf('Linux') !==-1) OS = 'Linux'
+  if (navigator.appVersion.indexOf('Linux') !== -1) OS = 'Linux'
   return OS
 }
 
 if (body[0].id === 'risk-calculator') {
-
-  $('#design-toolkit').submit(function(e) {
-    e.preventDefault();
+  $('#design-toolkit').submit(function (e) {
+    e.preventDefault()
 
     let OS = returnOS()
     console.log(OS)
@@ -83,6 +92,27 @@ if (body[0].id === 'risk-calculator') {
   }
   */
 }
+
+// if (body[0].id === 'index') {
+//   const logoList = document.getElementsByClassName('logo')
+//   const logoArr = []
+
+//   for (let i = 0; i < logoList.length; i++) {
+//     logoArr.push(logoList[i])
+//   }
+
+//   function animateLogos () {
+//     // generate 3 random numbers
+//   }
+//   animateLogos(logoArr)
+
+  /* function () {
+    get first group of logos
+    add is-entering class
+    add is-active class 500ms later
+    add is-exiting class 500ms later
+  } */
+// }
 
 var child = document.querySelectorAll('svg')
 
