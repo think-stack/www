@@ -19,7 +19,7 @@ extends(src='layout.sgr')
             input.js-input(type='email' name='EMAIL' placeholder='email' required)
             label()
 
-          button(type='submit' id='rc') Download your free Risk Score Calculator
+          button(type='submit' id='rc' onClick="ga('send', 'event', 'Landing Page', 'Download', 'Risk Score Calculator')") Download your free Risk Score Calculator
 
         figure
           img(src='/img/marketing-campaigns/risk-score-calculator.png')
