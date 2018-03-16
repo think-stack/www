@@ -25,6 +25,41 @@ function log () {
     const logoArr2 = logoArray.slice(3, 6)
     const logoArr3 = logoArray.slice(6, 9)
 
+    // function newChangeClass (arr) {
+    //   let array = arr
+    //   console.log(array)
+
+    //   function randomNum (array) {
+    //     let num =
+    //     return Math.floor(Math.random() * )
+    //   }
+
+    //   let index = randomNum()
+
+    //   function changeClass (arr) {
+    //     if (arr[0].classList.contains('is-entering')) {
+    //       setTimeout(function () {
+    //         arr[0].classList.add('is-active')
+    //         arr[0].classList.remove('is-entering')
+    //       }, 1000)
+    //     } else if (arr[0].classList.contains('is-active')) {
+    //       setTimeout(function () {
+    //         arr[0].classList.add('is-exiting')
+    //         arr[0].classList.remove('is-active')
+    //       }, 900)
+    //     } else if (arr[0].classList.contains('is-exiting')) {
+    //       setTimeout(function () {
+    //         arr[0].classList.remove('is-exiting')
+    //       }, 1000)
+    //     } else {
+    //       arr[0].classList.add('is-entering')
+    //     }
+    //   }
+    //   setInterval(function () {
+    //     changeClass(arr)
+    //   }, 500)
+    // }
+
     // get first array item and change classes
     function changeClass (arr) {
       for (let i = 0; i < arr.length; i++) {
@@ -46,7 +81,7 @@ function log () {
       }
       setTimeout(function () {
         changeClass(arr)
-      }, 2000)
+      }, 1500)
     }
 
     changeClass(logoArr1)
@@ -56,6 +91,14 @@ function log () {
         changeClass(logoArr3)
       }, 400)
     }, 400)
+
+    // newChangeClass(logoArr1)
+    // setTimeout(function () {
+    //   newChangeClass(logoArr2)
+    // }, 250)
+    // setTimeout(function () {
+    //   newChangeClass(logoArr3)
+    // }, 250)
   }
   animateLogos()
 }
