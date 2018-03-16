@@ -371,9 +371,12 @@
     flex-direction: row
     flex-wrap: wrap
     width: 90%
-    margin: auto
-    margin-bottom: 2em
-    min-height: 30vh
+    margin: 2em auto
+    min-height: 15vh
+
+    @media screen and (--laptop)
+      min-height: 30vh
+      margin: 2em auto
 
     & .column
       flex: 0 1 33%
@@ -408,7 +411,6 @@
     flex-direction: column
     justify-content: space-between
     padding: 0 1em
-    margin-top: 10em
 
     @media (min-width: 23em)
       min-height: 90vh
@@ -430,7 +432,7 @@
     @media (min-width: 64em)
       min-height: 70vh
       padding: 5em 5em
-      margin-top: 0
+      margin-top: 5em
 
     @media (min-width: 78.75em)
       background-position-y: 7.5em
@@ -525,51 +527,3 @@
   & #tech
     background-color: #fff
 
-  & #clients
-    display: flex
-    flex-direction: column
-    height: auto
-
-    & h1
-      width: 100%
-      color: var(--tsGrey)
-      margin: 1em auto
-      text-align: center
-
-    & p
-      margin: auto
-      text-align: center
-
-
-    & #logos
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: space-around
-      background-color: var(--tsBlue)
-      margin-top: 1em
-
-      @media (min-width: 48em)
-        flex-direction: row
-        margin-top: 3em
-
-      & img
-        margin: 0 auto
-        flex: 0 1 auto
-
-        @media (min-width: 48em)
-          margin: 1em auto
-
-        &:nth-of-type(1)
-          width: 20em
-          margin: 3em auto 3em
-
-          @media (min-width: 48em)
-            margin: 1em auto
-
-        &:nth-of-type(2)
-          width: 12em
-          height: 12em
-
-        &:nth-of-type(3)
-          width: 20em
