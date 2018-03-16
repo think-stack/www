@@ -57,7 +57,6 @@
 
 
   & .featured-work
-    margin-bottom: 4em
     flex-direction: column
 
     @media (min-width: 64em)
@@ -353,7 +352,7 @@
         flex: 1 1 100%
 
       @media (min-width: 26em)
-        margin: 3em 0
+        margin: 3em 0 0
 
       @media (min-width: 78.75em)
         flex: 1 0 40%
@@ -373,7 +372,8 @@
     flex-wrap: wrap
     width: 90%
     margin: auto
-    min-height: 40vh
+    margin-bottom: 2em
+    min-height: 30vh
 
     & .column
       flex: 0 1 33%
@@ -384,8 +384,8 @@
         position: absolute
         transform: translateY(5%)
         opacity: 0
-        transition: transform 200ms ease-out, opacity 400ms ease
-        transition-delay: 200ms
+        transition: transform 800ms ease-out, opacity 1200ms ease
+        /* transition-delay: 200ms */
 
         &.is-entering
           transform: translateY(0)

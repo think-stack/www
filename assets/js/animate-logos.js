@@ -46,16 +46,16 @@ function log () {
       }
       setTimeout(function () {
         changeClass(arr)
-      }, 800)
+      }, 2000)
     }
 
     changeClass(logoArr1)
-      setTimeout(function () {
+    setTimeout(function () {
       changeClass(logoArr2)
-        setTimeout(function () {
-          changeClass(logoArr3)
-        }, 100)
-    }, 100)
+      setTimeout(function () {
+        changeClass(logoArr3)
+      }, 400)
+    }, 400)
   }
   animateLogos()
 }
