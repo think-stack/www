@@ -96,7 +96,7 @@ html
 
           p {{ item.feature[1].techDescription }}
 
-    if(condition='item.statistics[0].statOne !== "null"')
+    if(condition='item.statistics.length === 1')
       section.statistics(style="background: url(https://www.datocms-assets.com{{ item.statistics[0].bgImage.path }})no-repeat center center; background-size: cover; background-color: #244c5a" )
         div
           p {{ item.statistics[0].statOne }}
@@ -105,7 +105,8 @@ html
           p {{ item.statistics[0].statTwo }}
           p {{ item.statistics[0].statTwoSupport }}
 
-    section.feature
+    if(condition='item.feature.length === 3')
+      section.feature
 
        figure.feature-image
          img(src='https://www.datocms-assets.com{{ item.feature[2].image.path }}?fit=crop&amp;w=600&amp;h=500')
