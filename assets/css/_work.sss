@@ -135,6 +135,7 @@
       padding: 2em 0 1em 0
       width: 90%
       text-align: center
+      position: relative
 
       @media (min-width: 48em)
         max-width: 24em
@@ -147,16 +148,20 @@
       &:before
         content: '\201c'
         position: absolute
-        left: 0
+        left: -1rem
 
         @media (min-width: 48em)
-          left: 1.8em
+          left: -1.5rem
+
+        @media (--laptop)
+          left: -2rem
+
 
       &:after
         content: '\201d'
         position: relative
-        right: -1em
-        bottom: -.5em
+        right: -.5rem
+        bottom: 0
 
         @media (min-width: 48em)
           right: 0
