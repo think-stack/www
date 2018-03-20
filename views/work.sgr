@@ -110,27 +110,30 @@ html
     if(condition='item.feature.length === 3')
       section.feature
 
-       figure.feature-image
-         img(src='https://www.datocms-assets.com{{ item.feature[2].image.path }}?fit=crop&amp;w=600&amp;h=500')
+        figure.feature-image
+          img(src='https://www.datocms-assets.com{{ item.feature[2].image.path }}?fit=crop&amp;w=600&amp;h=500')
 
-      .people-col
-        svg(viewBox='0 0 500 40')
-          use(xlink:href='#cl')
-        .wrapper
-          header
-            h2 {{ item.feature[2].peopleHeader }}
+        .people-col
+          svg(viewBox='0 0 500 40')
+            use(xlink:href='#cl')
+          .wrapper
+            header
+              h2 {{ item.feature[2].peopleHeader }}
 
-          p {{ item.feature[2].peopleDescription}}
+            p {{ item.feature[2].peopleDescription}}
 
-      .tech-col
-        svg(viewBox='0 0 500 40')
-          use(xlink:href='#clr')
-        .wrapper
-          header
-            h2 {{ item.feature[2].techHeader }}
+        .tech-col
+          svg(viewBox='0 0 500 40')
+            use(xlink:href='#clr')
+          .wrapper
+            header
+              h2 {{ item.feature[2].techHeader }}
 
-          p {{ item.feature[2].techDescription }}
+            p {{ item.feature[2].techDescription }}
 
+    if(condition='item.graphic.length === 1')
+      section.graphic
+        img(src='https://www.datocms-assets.com{{ item.graphic[0].image.path }}?fit=clip&amp;w=1980')
     footer
       include(src='/includes/_footer.sgr')
 
