@@ -11,25 +11,41 @@ function returnOS () {
   return OS
 }
 
-if (body[0].id === 'risk-calculator') {
+function download () {
+  let OS = returnOS()
 
-  $('#design-toolkit').submit(function(e) {
+  if (OS === 'MacOS') {
+    window.open('risk-calculator-mac.zip')
+  } else {
+    window.open('risk-calculator-win.zip')
+  }
+  document.getElementById('design-toolkit').reset()
+}
+
+if (body[0].id === 'risk-calculator') {
+  $('#design-toolkit').submit(function (e) {
     e.preventDefault();
 
     let OS = returnOS()
     console.log(OS)
 
     let form = $(this)
-    let data = form.serialize()
-    console.log(form)
-    console.log(data)
+    // let data = form.serialize()
+    // console.log(form)
+    // console.log(data)
+
+    form.val('sending...')
 
     $.ajax({
-      type: 'POST',
+      type: form.attr('method'),
       url: form.attr('action'),
-      data: data,
-      async: false,
-      success: function () {
+      data: form.serialize(),
+      cache: false,
+      async: true,
+      dataType: 'json',
+      contentType: 'application/json; charset=utf-8',
+      success: function (data) {
+        console.log('success')
         if (OS === 'MacOS') {
           window.open('risk-calculator-mac.zip')
         } else {
@@ -40,48 +56,48 @@ if (body[0].id === 'risk-calculator') {
     })
   })
 
-/*  let form = document.getElementById('design-toolkit')
-  let nameInput = document.querySelector('#design-toolkit input[name="name"')
-  let emailInput = document.querySelector('#design-toolkit input[name="email"')
-  let button = document.getElementById('rc')
-  console.log(form)
-  console.log(emailInput)
+//   let form = document.getElementById('design-toolkit')
+//   let nameInput = document.querySelector('#design-toolkit input[name="name"')
+//   let emailInput = document.querySelector('#design-toolkit input[name="email"')
+//   let button = document.getElementById('rc')
+//   console.log(form)
+//   console.log(emailInput)
 
-  let OS;
+//   let OS;
 
-  // check form fields have value
-  // set button onclick attribute
-  function checkValidity () {
-    console.log(nameInput.value !== '')
-    console.log(emailInput.validity.valid)
-    if (nameInput.value !== '' && emailInput.validity.valid) {
-//      OS = returnOS()
-      button.onclick = 'something'
-    } else {
-      button.onlick = ''
-    }
-  }
+//   // check form fields have value
+//   // set button onclick attribute
+//   function checkValidity () {
+//     console.log(nameInput.value !== '')
+//     console.log(emailInput.validity.valid)
+//     if (nameInput.value !== '' && emailInput.validity.valid) {
+//       OS = returnOS()
+//       button.onclick = 'something'
+//     } else {
+//       button.onlick = ''
+//     }
+//   }
 
-  function click () {
-    console.log('clicked')
-  }
+  // function click () {
+  //   console.log('clicked')
+  // }
 
-  form.addEventListener('click', function () {
-    console.log('clicked')
-  })
-  nameInput.addEventListener('blur', checkValidity, false)
-  emailInput.addEventListener('blur', checkValidity, false)
-  form.addEventListener('submit', checkValidity, false)
+  // form.addEventListener('click', function () {
+  //   console.log('clicked')
+  // })
+  // nameInput.addEventListener('blur', checkValidity, false)
+  // emailInput.addEventListener('blur', checkValidity, false)
+  // form.addEventListener('submit', checkValidity, false)
 
   // wrap download in setTimeout to delay download
-  if (OS === 'MacOS') {
-    button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
-  } else if (OS === 'Windows') {
-    button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
-  } else {
-    button.setAttribute('onclick', '')
-  }
-  */
+  // if (OS === 'MacOS') {
+  //   button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
+  // } else if (OS === 'Windows') {
+  //   button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
+  // } else {
+  //   button.setAttribute('onclick', '')
+  // }
+
 }
 
 var child = document.querySelectorAll('svg')
