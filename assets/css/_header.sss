@@ -12,7 +12,7 @@ header
 
     @media (--laptop-lg)
       width: 90%
-      margin: auto
+      margin: 0 auto
 
     & #nav-toggle
       position: absolute
@@ -22,8 +22,8 @@ header
 
       @media(--laptop)
         position: relative
- 
-      & input 
+
+      & input
         display: block
         position: absolute
         top: -8px
@@ -45,7 +45,7 @@ header
           transform: scale(.02, .02)
 
         &:checked ~ span:last-of-type
-          transform: rotate(-45deg) translate(2px, -7px) 
+          transform: rotate(-45deg) translate(2px, -7px)
 
       & span
         display: block
@@ -62,7 +62,7 @@ header
       display: flex
       position: absolute
       top: 0
-      left: 0 
+      left: 0
       bottom: 0
       right: 0
       background: var(--tsGrey)
@@ -70,7 +70,7 @@ header
       color: white
       flex-direction: column
       justify-content: center
-      align-items: center 
+      align-items: center
       font-size: 1.5em
       opacity: 0
       visibility: hidden
