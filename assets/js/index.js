@@ -66,7 +66,7 @@ if (body[0].id === 'risk-calculator') {
           if (OS === 'MacOS' || OS === 'Linux') {
             window.location.href = 'risk-calculator-mac.zip'
           } else {
-            // newWindow.open('risk-calculator-win.zip')
+            window.location.href ='risk-calculator-win.zip'
             console.log('not a mac')
           }
           document.getElementById('design-toolkit').reset()
