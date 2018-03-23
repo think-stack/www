@@ -60,9 +60,8 @@ if (body[0].id === 'risk-calculator') {
           button.innerHTML = 'download your free risk score calculator'
         } else if (data.result === 'success') {
           console.log(data.msg)
-          button.innerHTML = 'subscribed'
-          result.innerHTML = data.msg
-          result.style.color = 'white'
+          button.innerHTML = data.msg
+          // result.style.color = 'white'
           if (OS === 'MacOS' || OS === 'Linux') {
             window.location.href = 'risk-calculator-mac.zip'
           } else {
