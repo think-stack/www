@@ -8,7 +8,7 @@ extends(src='layout.sgr')
 
       #hero
 
-        form#c.validate(id='design-toolkit' name='design-toolkit' action='https://thinkstack.us17.list-manage.com/subscribe/post?u=ad5c409073c6d208ca7885bd4&amp;id=1d328a5022' method='post' name='mc-embedded-subscribe-form' target='_blank')
+        form#design-toolkit.validate(name='design-toolkit' action='https://thinkstack.us17.list-manage.com/subscribe/post-json?u=ad5c409073c6d208ca7885bd4&amp;id=1d328a5022' method='get' name='mc-embedded-subscribe-form')
           p Take inventory of the tools and systems in your organization to understand your level of risk. Our free Risk Score Calculator is designed to help you do it on your own, but we’re here to help if you have questions. We’ve included a guide with tips for getting started, and will email you a creative exercise each week to keep you going.
 
           div.input#mce-FNAME
@@ -19,7 +19,8 @@ extends(src='layout.sgr')
             input.js-input(type='email' name='EMAIL' placeholder='email' required)
             label()
 
-          button(type='submit' id='rc') Download your free Risk Score Calculator
+          button(type='submit' id='rc' href='') Download your free Risk Score Calculator
+          p#result
 
         figure
           img(src='/img/marketing-campaigns/risk-score-calculator.png')

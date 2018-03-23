@@ -25,72 +25,96 @@ if (body[0].id === 'risk-calculator') {
   $('#design-toolkit').submit(function (e) {
     e.preventDefault()
 
+    // let newWindow = window.open()
+
     let OS = returnOS()
-    console.log(OS)
 
     let form = $(this)
-    let data = form.serialize()
-    console.log(form)
-    console.log(data)
+
+    let button = document.getElementById('rc')
+    let result = document.getElementById('result')
+
+    result.innerHTML = ''
+
+    button.innerHTML = 'sending...'
 
     $.ajax({
-      type: 'POST',
+      type: form.attr('method'),
       url: form.attr('action'),
-      data: data,
-      async: false,
-      success: function () {
-        if (OS === 'MacOS') {
-          window.open('risk-calculator-mac.zip')
-        } else {
-          window.open('risk-calculator-win.zip')
+      data: form.serialize(),
+      cache: false,
+      async: true,
+      dataType: 'jsonp',
+      jsonp: 'c',
+      contentType: 'application/json; charset=utf-8',
+      success: function (data) {
+        if (data.result && data.msg.indexOf('already subscribed') >= 0) {
+          let message = 'You\'re already subscribed.'
+          button.innerHTML = message
+        } else if (data.result !== 'success') {
+          let message = data.msg
+          console.log(data)
+          result.style.color = 'red'
+          result.innerHTML = message
+          button.innerHTML = 'download your free risk score calculator'
+        } else if (data.result === 'success') {
+          console.log(data.msg)
+          button.innerHTML = data.msg
+          // result.style.color = 'white'
+          if (OS === 'MacOS' || OS === 'Linux') {
+            window.location.href = 'risk-calculator-mac.zip'
+          } else {
+            window.location.href ='risk-calculator-win.zip'
+            console.log('not a mac')
+          }
+          document.getElementById('design-toolkit').reset()
         }
-        document.getElementById('design-toolkit').reset()
       }
     })
   })
 
-/*  let form = document.getElementById('design-toolkit')
-  let nameInput = document.querySelector('#design-toolkit input[name="name"')
-  let emailInput = document.querySelector('#design-toolkit input[name="email"')
-  let button = document.getElementById('rc')
-  console.log(form)
-  console.log(emailInput)
+//   let form = document.getElementById('design-toolkit')
+//   let nameInput = document.querySelector('#design-toolkit input[name="name"')
+//   let emailInput = document.querySelector('#design-toolkit input[name="email"')
+//   let button = document.getElementById('rc')
+//   console.log(form)
+//   console.log(emailInput)
 
-  let OS;
+//   let OS;
 
-  // check form fields have value
-  // set button onclick attribute
-  function checkValidity () {
-    console.log(nameInput.value !== '')
-    console.log(emailInput.validity.valid)
-    if (nameInput.value !== '' && emailInput.validity.valid) {
-//      OS = returnOS()
-      button.onclick = 'something'
-    } else {
-      button.onlick = ''
-    }
-  }
+//   // check form fields have value
+//   // set button onclick attribute
+//   function checkValidity () {
+//     console.log(nameInput.value !== '')
+//     console.log(emailInput.validity.valid)
+//     if (nameInput.value !== '' && emailInput.validity.valid) {
+//       OS = returnOS()
+//       button.onclick = 'something'
+//     } else {
+//       button.onlick = ''
+//     }
+//   }
 
-  function click () {
-    console.log('clicked')
-  }
+  // function click () {
+  //   console.log('clicked')
+  // }
 
-  form.addEventListener('click', function () {
-    console.log('clicked')
-  })
-  nameInput.addEventListener('blur', checkValidity, false)
-  emailInput.addEventListener('blur', checkValidity, false)
-  form.addEventListener('submit', checkValidity, false)
+  // form.addEventListener('click', function () {
+  //   console.log('clicked')
+  // })
+  // nameInput.addEventListener('blur', checkValidity, false)
+  // emailInput.addEventListener('blur', checkValidity, false)
+  // form.addEventListener('submit', checkValidity, false)
 
   // wrap download in setTimeout to delay download
-  if (OS === 'MacOS') {
-    button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
-  } else if (OS === 'Windows') {
-    button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
-  } else {
-    button.setAttribute('onclick', '')
-  }
-  */
+  // if (OS === 'MacOS') {
+  //   button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
+  // } else if (OS === 'Windows') {
+  //   button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
+  // } else {
+  //   button.setAttribute('onclick', '')
+  // }
+
 }
 
 // if (body[0].id === 'index') {
