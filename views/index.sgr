@@ -34,19 +34,24 @@ extends(src='layout.sgr')
         a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}
 
     section#logos
-      .column
-        img.is-entering(src='/img/client-logos/Argent-Square.png')
-        img(src='/img/client-logos/BermanMcAleer-Square.png')
-        img(src='/img/client-logos/BridgersSchill-Square.png')
-        //img(src='/img/client-logos/Coastal-Square.png')
-      .column
-        img.is-entering(src='/img/client-logos/Empower-Square.png')
-        img(src='/img/client-logos/HearnKirkwood-Square.png')
-        img(src='/img/client-logos/Mutual-Square.png')
-      .column
-        img.is-entering(src='/img/client-logos/Rolling-Square.png')
-        img(src='/img/client-logos/SnoFalls-Square.png')
-        img(src='/img/client-logos/Solarity-Square.png')
+
+      header
+        h2 Bold innovators we work with
+
+      #logo-flex-wrap
+        .column
+          img.is-entering(src='/img/client-logos/Argent-Square.png')
+          img(src='/img/client-logos/BermanMcAleer-Square.png')
+          img(src='/img/client-logos/BridgersSchill-Square.png')
+          //img(src='/img/client-logos/Coastal-Square.png')
+        .column
+          img.is-entering(src='/img/client-logos/Empower-Square.png')
+          img(src='/img/client-logos/HearnKirkwood-Square.png')
+          img(src='/img/client-logos/Mutual-Square.png')
+        .column
+          img.is-entering(src='/img/client-logos/Rolling-Square.png')
+          img(src='/img/client-logos/SnoFalls-Square.png')
+          img(src='/img/client-logos/Solarity-Square.png')
 
 
     #journey-map

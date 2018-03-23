@@ -368,39 +368,51 @@
           box-shadow: 0 1px 4px var(--tsGrey)
 
   & #logos
-    flex-direction: row
-    flex-wrap: wrap
+    display: flex
+    flex-direction: column
     width: 90%
-    margin: 2em auto
-    min-height: 15vh
+    margin: 8rem auto
 
-    @media screen and (--laptop)
-      min-height: 30vh
+    & header
+      text-align: center
+      margin-bottom: -2rem
+
+    & #logo-flex-wrap
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      width: 100%
       margin: 2em auto
+      min-height: 15vh
 
-    & .column
-      flex: 0 1 33%
-      position: relative
+      @media screen and (--laptop)
+        min-height: 30vh
+        margin: 2em auto
 
-      & img
-        width: 100%
-        position: absolute
-        transform: translateY(5%)
-        opacity: 0
-        transition: transform 800ms ease-out, opacity 1200ms ease
-        /* transition-delay: 200ms */
+      & .column
+        flex: 0 1 33%
+        position: relative
 
-        &.is-entering
-          transform: translateY(0)
-          opacity: 1
-
-        &.is-active
-          transform: translateY(0)
-          opacity: 1
-
-        &.is-exiting
-          transform: translateY(-5%)
+        & img
+          width: 100%
+          position: absolute
+          top: 0
+          transform: translateY(5%)
           opacity: 0
+          transition: transform 800ms ease-out, opacity 1200ms ease
+          /* transition-delay: 200ms */
+
+          &.is-entering
+            transform: translateY(0)
+            opacity: 1
+
+          &.is-active
+            transform: translateY(0)
+            opacity: 1
+
+          &.is-exiting
+            transform: translateY(-5%)
+            opacity: 0
 
   & #journey-map
     min-height: 120vh
