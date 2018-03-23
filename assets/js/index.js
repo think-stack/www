@@ -26,15 +26,18 @@ if (body[0].id === 'risk-calculator') {
   $('#design-toolkit').submit(function (e) {
     e.preventDefault();
 
+    // let newWindow = window.open()
+
     let OS = returnOS()
-    console.log(OS)
 
     let form = $(this)
-    // let data = form.serialize()
-    // console.log(form)
-    // console.log(data)
 
-    form.val('sending...')
+    let button = document.getElementById('rc')
+    let result = document.getElementById('result')
+
+    result.innerHTML = ''
+
+    button.innerHTML = 'sending...'
 
     $.ajax({
       type: form.attr('method'),
@@ -42,16 +45,32 @@ if (body[0].id === 'risk-calculator') {
       data: form.serialize(),
       cache: false,
       async: true,
-      dataType: 'json',
+      dataType: 'jsonp',
+      jsonp: 'c',
       contentType: 'application/json; charset=utf-8',
       success: function (data) {
-        console.log('success')
-        if (OS === 'MacOS') {
-          window.open('risk-calculator-mac.zip')
-        } else {
-          window.open('risk-calculator-win.zip')
+        if (data.result && data.msg.indexOf('already subscribed') >= 0) {
+          let message = 'You\'re already subscribed.'
+          button.innerHTML = message
+        } else if (data.result !== 'success') {
+          let message = data.msg
+          console.log(data)
+          result.style.color = 'red'
+          result.innerHTML = message
+          button.innerHTML = 'download your free risk score calculator'
+        } else if (data.result === 'success') {
+          console.log(data.msg)
+          button.innerHTML = 'subscribed'
+          result.innerHTML = data.msg
+          result.style.color = 'white'
+          if (OS === 'MacOS' || OS === 'Linux') {
+            window.location.href = 'risk-calculator-mac.zip'
+          } else {
+            window.location.href ='risk-calculator-win.zip'
+            console.log('not a mac')
+          }
+          document.getElementById('design-toolkit').reset()
         }
-        document.getElementById('design-toolkit').reset()
       }
     })
   })
