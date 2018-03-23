@@ -81,7 +81,7 @@ function log () {
       }
       setTimeout(function () {
         changeClass(arr)
-      }, 1500)
+      }, 1200)
     }
 
     changeClass(logoArr1)
