@@ -11,17 +11,6 @@ function returnOS () {
   return OS
 }
 
-function download () {
-  let OS = returnOS()
-
-  if (OS === 'MacOS') {
-    window.open('risk-calculator-mac.zip')
-  } else {
-    window.open('risk-calculator-win.zip')
-  }
-  document.getElementById('design-toolkit').reset()
-}
-
 if (body[0].id === 'risk-calculator') {
   $('#design-toolkit').submit(function (e) {
     e.preventDefault();
@@ -34,6 +23,15 @@ if (body[0].id === 'risk-calculator') {
 
     let button = document.getElementById('rc')
     let result = document.getElementById('result')
+
+    function initiateDownload () {
+      if (OS === 'MacOS' || OS === 'Linux') {
+        window.location.href = 'risk-calculator-mac.zip'
+      } else {
+        window.location.href ='risk-calculator-win.zip'
+      }
+      document.getElementById('design-toolkit').reset()
+    }
 
     result.innerHTML = ''
 
@@ -50,72 +48,21 @@ if (body[0].id === 'risk-calculator') {
       contentType: 'application/json; charset=utf-8',
       success: function (data) {
         if (data.result && data.msg.indexOf('already subscribed') >= 0) {
-          let message = 'You\'re already subscribed.'
+          initiateDownload()
+          let message = 'Download Successful'
           button.innerHTML = message
         } else if (data.result !== 'success') {
           let message = data.msg
-          console.log(data)
           result.style.color = 'red'
           result.innerHTML = message
           button.innerHTML = 'download your free risk score calculator'
         } else if (data.result === 'success') {
-          console.log(data.msg)
-          button.innerHTML = data.msg
-          // result.style.color = 'white'
-          if (OS === 'MacOS' || OS === 'Linux') {
-            window.location.href = 'risk-calculator-mac.zip'
-          } else {
-            window.location.href ='risk-calculator-win.zip'
-            console.log('not a mac')
-          }
-          document.getElementById('design-toolkit').reset()
+          initiateDownload()
+          button.innerHTML = 'Download Successful'
         }
       }
     })
   })
-
-//   let form = document.getElementById('design-toolkit')
-//   let nameInput = document.querySelector('#design-toolkit input[name="name"')
-//   let emailInput = document.querySelector('#design-toolkit input[name="email"')
-//   let button = document.getElementById('rc')
-//   console.log(form)
-//   console.log(emailInput)
-
-//   let OS;
-
-//   // check form fields have value
-//   // set button onclick attribute
-//   function checkValidity () {
-//     console.log(nameInput.value !== '')
-//     console.log(emailInput.validity.valid)
-//     if (nameInput.value !== '' && emailInput.validity.valid) {
-//       OS = returnOS()
-//       button.onclick = 'something'
-//     } else {
-//       button.onlick = ''
-//     }
-//   }
-
-  // function click () {
-  //   console.log('clicked')
-  // }
-
-  // form.addEventListener('click', function () {
-  //   console.log('clicked')
-  // })
-  // nameInput.addEventListener('blur', checkValidity, false)
-  // emailInput.addEventListener('blur', checkValidity, false)
-  // form.addEventListener('submit', checkValidity, false)
-
-  // wrap download in setTimeout to delay download
-  // if (OS === 'MacOS') {
-  //   button.setAttribute('onclick', "window.open('risk-calculator-mac.zip')")
-  // } else if (OS === 'Windows') {
-  //   button.setAttribute('onclick', "window.open('risk-calculator-win.zip')")
-  // } else {
-  //   button.setAttribute('onclick', '')
-  // }
-
 }
 
 var child = document.querySelectorAll('svg')
