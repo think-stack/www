@@ -1,106 +1,84 @@
-function log () {
-  console.log('this is the index page')
-  function randomNum () {
-    return Math.floor(Math.random() * 11)
+function animation () {
+
+  function randomNum (arr) {
+    return Math.floor(Math.random() * arr.length)
   }
 
-  // generate new random number every 2 seconds
+  // NodeList
+  const allLogos = document.querySelectorAll('#logos .column img')
 
-  // setInterval(function () {
-  //   console.log(Math.floor(Math.random() * 10))
-  // }, 1000)
-
-  function animateLogos () {
-    // NodeList
-    const allLogos = document.querySelectorAll('#logos .column img')
-
-    // create array from NodeList
-    const logoArray = []
-    for (let i = 0; i < allLogos.length; i++) {
-      logoArray.push(allLogos[i])
-    }
-
-    // create an array for each column
-    const logoArr1 = logoArray.slice(0, 3)
-    const logoArr2 = logoArray.slice(3, 6)
-    const logoArr3 = logoArray.slice(6, 9)
-
-    // function newChangeClass (arr) {
-    //   let array = arr
-    //   console.log(array)
-
-    //   function randomNum (array) {
-    //     let num =
-    //     return Math.floor(Math.random() * )
-    //   }
-
-    //   let index = randomNum()
-
-    //   function changeClass (arr) {
-    //     if (arr[0].classList.contains('is-entering')) {
-    //       setTimeout(function () {
-    //         arr[0].classList.add('is-active')
-    //         arr[0].classList.remove('is-entering')
-    //       }, 1000)
-    //     } else if (arr[0].classList.contains('is-active')) {
-    //       setTimeout(function () {
-    //         arr[0].classList.add('is-exiting')
-    //         arr[0].classList.remove('is-active')
-    //       }, 900)
-    //     } else if (arr[0].classList.contains('is-exiting')) {
-    //       setTimeout(function () {
-    //         arr[0].classList.remove('is-exiting')
-    //       }, 1000)
-    //     } else {
-    //       arr[0].classList.add('is-entering')
-    //     }
-    //   }
-    //   setInterval(function () {
-    //     changeClass(arr)
-    //   }, 500)
-    // }
-
-    // get first array item and change classes
-    function changeClass (arr) {
-      for (let i = 0; i < arr.length; i++) {
-        if (arr[i].classList.contains('is-entering')) {
-          arr[i].classList.add('is-active')
-          arr[i].classList.remove('is-entering')
-        } else if (arr[i].classList.contains('is-active')) {
-          arr[i].classList.add('is-exiting')
-          arr[i].classList.remove('is-active')
-        } else if (arr[i].classList.contains('is-exiting')) {
-          if (i === (arr.length - 1)) {
-            arr[i].classList.remove('is-exiting')
-            arr[0].classList.add('is-entering')
-          } else {
-            arr[i].classList.remove('is-exiting')
-            arr[i + 1].classList.add('is-entering')
-          }
-        }
-      }
-      setTimeout(function () {
-        changeClass(arr)
-      }, 1200)
-    }
-
-    changeClass(logoArr1)
-    setTimeout(function () {
-      changeClass(logoArr2)
-      setTimeout(function () {
-        changeClass(logoArr3)
-      }, 400)
-    }, 400)
-
-    // newChangeClass(logoArr1)
-    // setTimeout(function () {
-    //   newChangeClass(logoArr2)
-    // }, 250)
-    // setTimeout(function () {
-    //   newChangeClass(logoArr3)
-    // }, 250)
+  // create array from NodeList
+  const logoArray = []
+  for (let i = 0; i < allLogos.length; i++) {
+    logoArray.push(allLogos[i])
   }
-  animateLogos()
+
+  logoArray.forEach((logo) => logo.addEventListener('transitionend', changeClass))
+
+  // create an array for each column
+  const logoArr1 = logoArray.slice(0, 4)
+  const logoArr2 = logoArray.slice(4, 7)
+  const logoArr3 = logoArray.slice(7, 10)
+
+  // start animation
+  function animateLogos (arr, currEl) {
+    let index = randomNum(arr)
+    let currentIndex = currEl
+
+    // randomize logos
+    if (currentIndex === 'undefined') {
+      arr[index].classList.add('is-entering')
+    } else if (index === currentIndex) {
+      index = randomNum(arr)
+      arr[index].classList.add('is-entering')
+    } else {
+      arr[index].classList.add('is-entering')
+    }
+  }
+
+  // get array that logo belongs too
+  function getParent (element) {
+    if (logoArr1.includes(element)) {
+      return logoArr1
+    } else if (logoArr2.includes(element)) {
+      return logoArr2
+    } else if (logoArr3.includes(element)) {
+      return logoArr3
+    }
+  }
+
+  function changeClass (e) {
+    // determines which array current logo belongs to
+    let parentEl = getParent(e.target)
+
+    // get that index
+    let currentIndex = parentEl.indexOf(e.target)
+
+    if (this.classList.contains('is-entering')) {
+      this.classList.add('is-active')
+      this.classList.remove('is-entering')
+    } else if (this.classList.contains('is-active')) {
+      this.classList.add('is-exiting')
+      this.classList.remove('is-active')
+    } else if (this.classList.contains('is-exiting')) {
+      this.classList.remove('is-exiting')
+    } else {
+      animateLogos(parentEl, currentIndex)
+    }
+  }
+
+  // set delay on initial function call
+  setTimeout(function () {
+    animateLogos(logoArr2)
+  }, 1000)
+
+  setTimeout(function () {
+    animateLogos(logoArr1)
+  }, 1100)
+
+  setTimeout(function () {
+    animateLogos(logoArr3)
+  }, 1200)
 }
 
-export default log
+export default animation

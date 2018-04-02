@@ -400,22 +400,23 @@
           width: 100%
           position: absolute
           top: 0
-          transform: translateY(5%)
+          transform: translateY(1.5rem)
           opacity: 0
-          transition: transform 800ms ease-out, opacity 1200ms ease
-          /* transition-delay: 200ms */
+          transition: transform 500ms ease-in, opacity 250ms
 
           &.is-entering
             transform: translateY(0)
             opacity: 1
+            transition: opacity 500ms ease, transform 250ms
 
           &.is-active
             transform: translateY(0)
             opacity: 1
 
           &.is-exiting
-            transform: translateY(-5%)
+            transform: translateY(-1.5rem)
             opacity: 0
+            transition-delay: 750ms
 
   & #journey-map
     min-height: 120vh
