@@ -32,6 +32,15 @@ if (body[0].id === 'risk-calculator') {
     let button = document.getElementById('rc')
     let result = document.getElementById('result')
 
+    function initiateDownload () {
+      if (OS === 'MacOS' || OS === 'Linux') {
+        window.location.href = 'risk-calculator-mac.zip'
+      } else {
+        window.location.href ='risk-calculator-win.zip'
+      }
+      document.getElementById('design-toolkit').reset()
+    }
+
     result.innerHTML = ''
 
     button.innerHTML = 'sending...'
@@ -47,24 +56,17 @@ if (body[0].id === 'risk-calculator') {
       contentType: 'application/json; charset=utf-8',
       success: function (data) {
         if (data.result && data.msg.indexOf('already subscribed') >= 0) {
-          let message = 'You\'re already subscribed.'
+          initiateDownload()
+          let message = 'Download Successful'
           button.innerHTML = message
         } else if (data.result !== 'success') {
           let message = data.msg
-          console.log(data)
           result.style.color = 'red'
           result.innerHTML = message
           button.innerHTML = 'download your free risk score calculator'
         } else if (data.result === 'success') {
-          console.log(data.msg)
-          button.innerHTML = data.msg
-          if (OS === 'MacOS' || OS === 'Linux') {
-            window.location.href = 'risk-calculator-mac.zip'
-          } else {
-            window.location.href ='risk-calculator-win.zip'
-            console.log('not a mac')
-          }
-          document.getElementById('design-toolkit').reset()
+          initiateDownload()
+          button.innerHTML = 'Download Successful'
         }
       }
     })
