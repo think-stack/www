@@ -74,11 +74,11 @@ function animation () {
 
   setTimeout(function () {
     animateLogos(logoArr1)
-  }, 1050)
+  }, 1100)
 
   setTimeout(function () {
     animateLogos(logoArr3)
-  }, 1100)
+  }, 1200)
 }
 
 export default animation
