@@ -1,5 +1,15 @@
 const body = document.getElementsByTagName('body')
 
+function index () {
+  import('./animate-logos')
+  .then(module => module.default())
+  .catch(err => console.log('Failed to load index scripts', err))
+}
+
+if (body[0].id === 'index') {
+  index()
+}
+
 // check os
 
 function returnOS () {
@@ -7,15 +17,13 @@ function returnOS () {
   if (navigator.appVersion.indexOf('Win') !== -1) OS = 'Windows'
   if (navigator.appVersion.indexOf('Mac') !== -1) OS = 'MacOS'
   if (navigator.appVersion.indexOf('X11') !== -1) OS = 'UNIX'
-  if (navigator.appVersion.indexOf('Linux') !==-1) OS = 'Linux'
+  if (navigator.appVersion.indexOf('Linux') !== -1) OS = 'Linux'
   return OS
 }
 
 if (body[0].id === 'risk-calculator') {
   $('#design-toolkit').submit(function (e) {
-    e.preventDefault();
-
-    // let newWindow = window.open()
+    e.preventDefault()
 
     let OS = returnOS()
 

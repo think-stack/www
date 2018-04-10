@@ -7,13 +7,13 @@ extends(src='layout.sgr')
     main
 
       #hero
-        h1 We are a design thinking and IT innovation company. 
+        h1 We are a design thinking and IT innovation company.
         p We design meaningful customer experiences and innovative technology solutions for conscious brands.
-      
+
     section.featured-work
       each(loop='item of dato.work.sort((a, b) => a.position < b.position ? -1 : 1)')
         if(condition='item.featuredWork')
-        
+
           .case-study
 
             svg(viewBox='0 0 250 105')
@@ -24,14 +24,35 @@ extends(src='layout.sgr')
 
             .wrapper.slide
               h2 {{ item.title }}
-              p {{ item.hero }} 
+              p {{ item.hero }}
               a.button(href='/work/{{ item.slug }}') learn more
-      
+
 
       .cta.slide
         h2 {{ dato.index[0].ctaButton[0].title }}
         p {{ dato.index[0].ctaButton[0].ctaContent }}
         a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}
+
+    section#logos
+
+      header
+        h2 Bold innovators we work with
+
+      #logo-flex-wrap
+        .column
+          img(src='/img/client-logos/Argent-Square.png')
+          img(src='/img/client-logos/BermanMcAleer-Square.png')
+          img(src='/img/client-logos/BridgersSchill-Square.png')
+          img(src='/img/client-logos/Coastal-Square.png')
+        .column
+          img(src='/img/client-logos/Empower-Square.png')
+          img(src='/img/client-logos/HearnKirkwood-Square.png')
+          img(src='/img/client-logos/Mutual-Square.png')
+        .column
+          img(src='/img/client-logos/Rolling-Square.png')
+          img(src='/img/client-logos/SnoFalls-Square.png')
+          img(src='/img/client-logos/Solarity-Square.png')
+
 
     #journey-map
       .wrapper.slide
@@ -44,4 +65,4 @@ extends(src='layout.sgr')
           h2 {{ dato.index[0].journeyMap[0].techTitle }}
           p {{ dato.index[0].journeyMap[0].techContent }}
 
-      
+

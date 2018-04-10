@@ -37,7 +37,7 @@
 
         @media (min-width: 48em)
           max-width: 26em
-       
+
   & section
     display: flex
     flex-direction: column
@@ -57,7 +57,6 @@
 
 
   & .featured-work
-    margin-bottom: 4em
     flex-direction: column
 
     @media (min-width: 64em)
@@ -72,7 +71,7 @@
 
     @media (min-width: 80em)
       max-width: 71em
-      
+
     @media (min-width: 90em)
       margin: auto
       max-width: 75%
@@ -98,14 +97,14 @@
       @media (min-width: 26em)
         flex-direction: row
 
-      & svg 
+      & svg
         height: 3em
         z-index: -1
         top: 63%
         left: 50%
         position: absolute
         transform: rotate(-.25turn)
-        
+
         @media (max-width: 26em)
           transform: rotate(-.25turn) translateY(-120%)
 
@@ -117,7 +116,7 @@
 
       & p
         max-width: 20em
-        margin-bottom: 1.5em  
+        margin-bottom: 1.5em
 
       & .wrapper
         opacity: 0
@@ -133,7 +132,7 @@
 
           &:hover
             background: var(--tsBlue)
-            box-shadow: 0 1px 4px var(--tsGrey) 
+            box-shadow: 0 1px 4px var(--tsGrey)
 
       &:nth-of-type(odd)
         flex: 1 0 auto
@@ -160,9 +159,9 @@
 
           @media (min-width: 35.5em)
             flex: 1 0 45%
-        
+
           & img
-            width: 100%  
+            width: 100%
 
         & .wrapper
           flex: 1 0 auto
@@ -185,7 +184,7 @@
 
         @media (min-width: 35.5em)
           flex-direction: row
-    
+
         @medai (min-width: 48em)
           flex: 1 1 35%
 
@@ -207,8 +206,8 @@
 
           @media (min-width: 64em)
             width: 50%
-            text-align: center        
-        
+            text-align: center
+
           @media (min-width: 78.75em)
             width: 70%
             margin-bottom: 3em
@@ -221,9 +220,9 @@
 
           @media (min-width: 26em)
             transform: rotate(.5turn)
-            top: 29% 
+            top: 29%
             left: 32%
-          
+
           @media (min-width: 35.5em)
             left: 30%
 
@@ -236,7 +235,7 @@
             top: 24.5%
 
         & .wrapper
-  
+
           @media (min-width: 64em)
             max-width: 40%
 
@@ -294,7 +293,7 @@
             position: relative
 
       &:nth-of-type(3)
-    
+
         @media (min-width: 26em)
           text-align: right
 
@@ -306,7 +305,7 @@
 
         & svg
           top: 50%
-        
+
           @media (min-width: 26em)
             top: 19%
             left: 54%
@@ -332,7 +331,7 @@
           margin-left: auto
 
 
-      
+
     & .cta
       display: flex
       flex-direction: column
@@ -344,16 +343,16 @@
       opacity: 0
       transform: translateY(10%)
       transition: opacity 600ms ease, transform 1200ms ease
-    
+
       &.active
         transform: translateY(0)
         opacity: 1
-      
+
       @media (min-width: 26em)
         flex: 1 1 100%
 
       @media (min-width: 26em)
-        margin: 3em 0
+        margin: 3em 0 0
 
       @media (min-width: 78.75em)
         flex: 1 0 40%
@@ -361,12 +360,63 @@
       & p
         max-width: 20em
 
-      & .button 
+      & .button
         max-width: 12em
 
         &:hover
           background: var(--tsBlue)
-          box-shadow: 0 1px 4px var(--tsGrey) 
+          box-shadow: 0 1px 4px var(--tsGrey)
+
+  & #logos
+    display: flex
+    flex-direction: column
+    width: 90%
+    margin: 8rem auto
+
+    & header
+      text-align: center
+      margin-bottom: -2rem
+
+      @media screen and (--laptop)
+        margin-bottom: -4rem
+
+    & #logo-flex-wrap
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      width: 100%
+      margin: 2em auto
+      min-height: 15vh
+
+      @media screen and (--laptop)
+        min-height: 30vh
+        margin: 2em auto
+
+      & .column
+        flex: 0 1 33%
+        position: relative
+
+        & img
+          width: 100%
+          position: absolute
+          top: 0
+          transform: translateY(1.5rem)
+          opacity: 0
+          transition: transform 500ms ease-in, opacity 250ms
+
+          &.is-entering
+            transform: translateY(0)
+            opacity: 1
+            transition: opacity 500ms ease, transform 250ms
+
+          &.is-active
+            transform: translateY(0)
+            opacity: 1
+
+          &.is-exiting
+            transform: translateY(-1.5rem)
+            opacity: 0
+            transition-delay: 750ms
 
   & #journey-map
     min-height: 120vh
@@ -377,7 +427,6 @@
     flex-direction: column
     justify-content: space-between
     padding: 0 1em
-    margin-top: 10em
 
     @media (min-width: 23em)
       min-height: 90vh
@@ -399,7 +448,7 @@
     @media (min-width: 64em)
       min-height: 70vh
       padding: 5em 5em
-      margin-top: 0
+      margin-top: 5em
 
     @media (min-width: 78.75em)
       background-position-y: 7.5em
@@ -415,7 +464,7 @@
       min-height: 70vh
       background-position-y: 1.5em
 
-    @media (min-width: 3000px) 
+    @media (min-width: 3000px)
       padding: 4em 20em
       min-height: 85vh
 
@@ -428,14 +477,14 @@
       transition: opacity 600ms ease, transform 1200ms ease
 
       &:nth-of-type(1)
-        transform: translateX(-10%) 
+        transform: translateX(-10%)
 
         &.active
           transform: translateX(0)
           opacity: 1
 
       &:nth-of-type(2)
-        transform: translateX(10%) 
+        transform: translateX(10%)
 
         &.active
           transform: translateX(0)
@@ -443,7 +492,7 @@
 
       & h2
         margin-rigth: auto
-  
+
         @media (min-width: 35.5em)
           max-width: 10em
 
@@ -454,7 +503,7 @@
         margin-bottom: 2em
 
         & h2
-    
+
           @media (min-width: 35.5em)
             margin-left: auto
 
@@ -468,7 +517,7 @@
     align-items: center
     height: 40vh
 
-    @media (min-width: 48em) 
+    @media (min-width: 48em)
       height: 75vh
 
     & p
@@ -489,56 +538,8 @@
 
     & cite
       margin: 0 10em 1em auto
-      align-self: flex-end  
+      align-self: flex-end
 
   & #tech
     background-color: #fff
 
-  & #clients
-    display: flex
-    flex-direction: column
-    height: auto
-
-    & h1
-      width: 100%
-      color: var(--tsGrey)
-      margin: 1em auto
-      text-align: center
-
-    & p
-      margin: auto
-      text-align: center
-
-
-    & #logos
-      display: flex
-      flex-direction: column
-      flex-wrap: wrap
-      justify-content: space-around
-      background-color: var(--tsBlue)
-      margin-top: 1em
-
-      @media (min-width: 48em)
-        flex-direction: row
-        margin-top: 3em
-
-      & img
-        margin: 0 auto 
-        flex: 0 1 auto
-
-        @media (min-width: 48em)
-          margin: 1em auto
-
-        &:nth-of-type(1)
-          width: 20em
-          margin: 3em auto 3em
-
-          @media (min-width: 48em)
-            margin: 1em auto
-
-        &:nth-of-type(2)
-          width: 12em
-          height: 12em
-
-        &:nth-of-type(3)
-          width: 20em
