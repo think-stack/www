@@ -1,3 +1,6 @@
+#mailchimp-form
+  include(src='/includes/_mailchimp-form.sgr')
+
 #logo
   img(src='/img/logo-full-lockup-white.png')
 
@@ -20,6 +23,6 @@
       |
         svg(viewBox='0 0 56 56' class='icon icon-twitter-circ')
           use(xlink:href='#icon-twitter-circ' target='_blank')
- 
+
 #copyright
   small &copy 2017 think|stack
