@@ -43,7 +43,7 @@ p
 a
   text-decoration: none
   padding: 0
-  color: #fff
+  /* color: #fff */
 
 /* Lists */
 
@@ -63,8 +63,14 @@ input[type='button']
   border-style: none
   outline: none
 
-/* Icons */
+/* Inputs and textareas */
 
+input,
+textarea
+  &:focus
+    outline: none
+
+/* Icons */
 svg.icon
   display: inline-block
   fill: currentColor

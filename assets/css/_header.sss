@@ -14,109 +14,240 @@ header
       width: 90%
       margin: 0 auto
 
-    & #nav-toggle
-      position: absolute
-      top: 2.5em
-      right: 2em
-      z-index: 10
+    & #toggle-wrap
+      color: var(--tsBlue)
+      display: flex
 
-      @media(--laptop)
-        position: relative
-
-      & input
-        display: block
-        position: absolute
-        top: -8px
-        right: -8px
-        width: 40px
-        height: 32px
-        cursor: pointer
-        opacity: 0
-        z-index: 11
-
-        &:checked ~ span
-          background: white
-
-        &:checked ~span:first-of-type
-          transform: rotate(45deg) translate(3px, 8px)
-
-        &:checked ~ span:nth-of-type(2)
-          opacity: 0
-          transform: scale(.02, .02)
-
-        &:checked ~ span:last-of-type
-          transform: rotate(-45deg) translate(2px, -7px)
-
-      & span
-        display: block
-        position: relative
-        width: 25px
-        height: 2px
-        margin-bottom: 5px
-        border-radius: .2em
-        background: var(--tsBlue)
+      &.active
+        color: var(--white)
         z-index: 10
-        transition: transform .25s ease-in-out
 
-    & #nav-panel
-      display: flex
-      position: absolute
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
-      background: var(--tsGrey)
-      font-family: var(--headerFont)
-      color: white
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      font-size: 1.5em
-      opacity: 0
-      visibility: hidden
-      z-index: 1
+      & #search
+        position: absolute
+        top: 1.75rem
+        right: 4rem
+        color: currentColor
 
-    & ul
-      display: flex
-      text-transform: uppercase
+        @media screen and (--tablet)
+          top: 2rem
 
-      & li
-        margin: 1em
+        @media screen and (--laptop)
+          position:  relative
+          top: 2.25rem
+          right: 3rem
 
-        & a.closed
+        & svg
+          fill: currentColor
+          width: 1.25rem
 
-          &:after
-            display: block
-            content: ''
-            border-bottom: 1px solid #000
-            transform: scaleX(0)
-            transition: transform .5s ease
-          &:hover::after
-            transform: scaleX(1)
+          &.hide
+            opacity: 0
+            display: none
 
-        @media (min-width: 49em)
+          &.show
+            opacity: 1
+            display: inline
 
-          &:last-of-type
+          &#close-icon
+            stroke-width: 2px
+            width: 2rem
+            right: 0
+            top: 0
+            stroke: var(--white)
 
-    & #terms
-      font-size: .8em
-      text-align: center
+        & #search-input
+          color: var(--white)
+          background: transparent
+          border: none
+          width: 0
+          font-size: 1.2rem
+          transition: width 200ms ease-in
 
-    & #logo
-      margin: 2em
-      text-align: center
-      margin: 2em 1.5em
+          &.active
+            border-bottom: 2px solid var(--tsGreen)
+            width: 10rem
 
-      @media (min-width: 48em)
-        text-align: left
+        & img
+          width: 6rem
+          position: absolute
+          top: 2.5rem
+          right: 0
+          display: none
 
-      & img
-        width: 10.625em
-        margin: auto
+          &.active
+            display: inline
 
-      @media (min-width: 26em)
-        width: 15.625
+      & #nav-toggle
+        position: absolute
+        top: 2.5em
+        right: 2em
+        z-index: 10
+
+        @media(--laptop)
+          position: relative
+
+        & input
+          display: block
+          position: absolute
+          top: -8px
+          right: -8px
+          width: 40px
+          height: 32px
+          cursor: pointer
+          opacity: 0
+          z-index: 11
+
+          &:checked ~ span
+            background: white
+
+          &:checked ~span:first-of-type
+            transform: rotate(45deg) translate(3px, 8px)
+
+          &:checked ~ span:nth-of-type(2)
+            opacity: 0
+            transform: scale(.02, .02)
+
+          &:checked ~ span:last-of-type
+            transform: rotate(-45deg) translate(2px, -7px)
+
+        & span
+          display: block
+          position: relative
+          width: 25px
+          height: 2px
+          margin-bottom: 5px
+          border-radius: .2em
+          background: currentColor
+          z-index: 10
+          transition: transform .25s ease-in-out
+
+  & #nav-panel
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: var(--tsGrey)
+    font-family: var(--headerFont)
+    color: white
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    font-size: 1.5em
+    opacity: 0
+    visibility: hidden
+    z-index: 2
+
+    & a
+      color: #fff
+
+  & ul
+    display: flex
+    text-transform: uppercase
+
+    & li
+      margin: 1em
+
+      & a.closed
+
+        &:after
+          display: block
+          content: ''
+          border-bottom: 1px solid #000
+          transform: scaleX(0)
+          transition: transform .5s ease
+        &:hover::after
+          transform: scaleX(1)
 
       @media (min-width: 49em)
-        margin: 2em 1em 1em 2em
-        flex: 1 0 auto
+
+        &:last-of-type
+
+  & #logo
+    margin: 2em
+    text-align: center
+    margin: 2em 1.5em
+
+    @media (min-width: 48em)
+      text-align: left
+
+    & img
+      width: 10.625em
+      margin: auto
+
+    @media (min-width: 26em)
+      width: 15.625
+
+    @media (min-width: 49em)
+      margin: 2em 1em 1em 2em
+      flex: 1 0 auto
+
+  & #search-panel
+    display: none
+
+    &.active
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      min-height: 100vh
+      width: 100%
+      background-color: var(--tsGrey)
+      z-index: 1
+
+    & #results-container
+      display: flex
+      justify-content: space-around
+      width: 90%
+      margin: 10rem auto
+      color: var(--white)
+
+      @media screen and (--laptop)
+        width: 70%
+
+      & #blog,
+      & #team,
+      & #page
+        position: relative
+        margin-bottom: 2rem
+        z-index: 2
+        cursor: pointer
+
+      & #page,
+      & #team
+        flex: 1 1 25%
+
+      & #blog
+        flex: 2 1 auto
+
+        @media screen and (--tablet)
+          padding: 0 1rem
+
+      & h3
+        color: currentColor
+        margin-bottom: 1rem
+        width: max-content
+        position: relative
+
+        &:after
+          content: ''
+          border-bottom: 2px solid var(--tsGreen)
+          width: 100%
+          position: absolute
+          top: 2rem
+          left: 0
+
+      & ul
+        display: flex
+        flex-direction: column
+
+      & li
+        margin-left: 0
+
+        & a
+          color: currentColor
+          transition: color 200ms ease-in
+
+          &:hover
+            color: var(--tsGreen)
