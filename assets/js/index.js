@@ -52,6 +52,7 @@ function renderHits (content) {
       let li = document.createElement('li')
       let anchor = document.createElement('a')
       anchor.innerHTML = i.pageTitle
+      anchor.href = i.pageTitle === 'Home' ? '/' : `/${i.pageTitle}`
       li.appendChild(anchor)
       ul.appendChild(li)
     })
@@ -94,10 +95,6 @@ function renderHits (content) {
     teamList.appendChild(ul)
 
     resultsContainer.appendChild(teamList)
-
-    // clear old search results
-    // might not need to clear
-    // ul.innerHTML = ''
 
     // add search results to list
     team.forEach(function (i) {
@@ -146,30 +143,18 @@ searchIcon.addEventListener('click', function () {
 })
 
 // close search panel
-// const searchPanel = document.getElementById('search-panel')
-
-// searchPanel.addEventListener('click', function () {
-//   toggleActiveClass('toggle-wrap')
-//   toggleActiveClass('search-panel')
-//   toggleActiveClass('search-input')
-//   toggleActiveClass('algolia-logo')
-//   clearSearch('search-input')
-
-//   closeIcon.classList.remove('show')
-//   closeIcon.classList.add('hide')
-//   searchIcon.classList.remove('hide')
-//   searchIcon.classList.add('show')
-
-// })
+const searchPanel = document.getElementById('search-panel')
 
 // close search icon
 const closeIcon = document.getElementById('close-icon')
 
 closeIcon.addEventListener('click', function () {
+  const body = document.querySelector('body')
   closeIcon.classList.remove('show')
   closeIcon.classList.add('hide')
   searchIcon.classList.remove('hide')
   searchIcon.classList.add('show')
+  body.style.overflow = ''
 
   toggleActiveClass('toggle-wrap')
   toggleActiveClass('search-panel')
@@ -182,10 +167,12 @@ searchIcon.addEventListener('click', function () {
   let navPanel = document.getElementById('nav-panel')
   let hamburger = document.querySelector('#nav-toggle input[type="checkbox"]')
   let closeX = document.getElementById('close-icon')
+  let body = document.querySelector('body')
 
   searchIcon.classList.add('hide')
   searchIcon.classList.remove('show')
   closeX.classList.add('show')
+  body.style.overflow = 'hidden'
 
 
   if (navPanel.classList.contains('active')) {
