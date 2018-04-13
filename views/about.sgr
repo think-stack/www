@@ -19,7 +19,7 @@ extends(src='layout.sgr')
         | think
         span |
         | stack
-      a.button(href='#') read
+      a.button(href='https://www.flipsnack.com/thinkstack/the-book-of-think-stack.html') read
 
 
     section.about.slide
