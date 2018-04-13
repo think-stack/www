@@ -12,6 +12,16 @@ extends(src='layout.sgr')
       h2 {{ dato.about[0].techTitle }}
       div(md) {{ dato.about[0].techAbout}}
 
+    section#book
+      .bg-wrap
+      h1 the book of
+      h1.large
+        | think
+        span |
+        | stack
+      a.button(href='#') read
+
+
     section.about.slide
       h2 {{ dato.about[0].aboutUsTitle }}
       div(md) {{ dato.about[0].aboutUsHero }}
