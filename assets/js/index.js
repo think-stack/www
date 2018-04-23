@@ -211,7 +211,10 @@ function index () {
 }
 
 if (body[0].id === 'index') {
-  index()
+  window.addEventListener('load', function () {
+    index()
+  })
+  // index()
 }
 
 // check os

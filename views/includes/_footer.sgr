@@ -1,28 +1,29 @@
-#mailchimp-form
-  include(src='/includes/_mailchimp-form.sgr')
+.footer__flex-wrap
+  #cta
+    p Experience design thinking with a free journey exploration session.
+    a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.co
+    a.button(href='mailto:sales@thinkstack.co') work with us
 
-#logo
-  img(src='/img/logo-full-lockup-white.png')
+  #logo
+    img(src='/img/logo-full-lockup-white.png')
 
-#cta
-  p Experience design thinking with a free journey exploration session.
-  a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.co
-  a.button(href='mailto:sales@thinkstack.co') work with us
+    #social
+      ul
+        li: a(href='https://www.linkedin.com/company/11195699/' target='_blank')
+          |
+            svg(viewBox='0 0 56 56' class='icon icon-linkedin-circ')
+              use(xlink:href='#icon-linkedin-circ')
+        li: a(href='https://www.facebook.com/thinkstacktech/' target='_blank')
+          |
+            svg(viewBox='0 0 56 56' class='icon icon-facebook-circle')
+              use(xlink:href='#icon-facebook-circle')
+        li: a(href='https://twitter.com/thinkstacktech' target='_blank')
+          |
+            svg(viewBox='0 0 56 56' class='icon icon-twitter-circ')
+              use(xlink:href='#icon-twitter-circ' target='_blank')
 
-#social
-  ul
-    li: a(href='https://www.linkedin.com/company/11195699/' target='_blank')
-      |
-        svg(viewBox='0 0 56 56' class='icon icon-linkedin-circ')
-          use(xlink:href='#icon-linkedin-circ')
-    li: a(href='https://www.facebook.com/thinkstacktech/' target='_blank')
-      |
-        svg(viewBox='0 0 56 56' class='icon icon-facebook-circle')
-          use(xlink:href='#icon-facebook-circle')
-    li: a(href='https://twitter.com/thinkstacktech' target='_blank')
-      |
-        svg(viewBox='0 0 56 56' class='icon icon-twitter-circ')
-          use(xlink:href='#icon-twitter-circ' target='_blank')
+  #mailchimp-form
+    include(src='/includes/_mailchimp-form.sgr')
 
 #copyright
   small &copy 2017 think|stack

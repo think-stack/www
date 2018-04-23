@@ -1,15 +1,7 @@
 // h1 mailchimp
 #mc_embed_signup
   form(action="https://thinkstack.us17.list-manage.com/subscribe/post?u=ad5c409073c6d208ca7885bd4&amp;id=c44a50e474" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
-    #mc_embed_signup_scroll
-	    h2 Subscribe to our mailing list
     .mc-field-group
-      // label(for="mce-EMAIL") Email Address
-    .mc-field-group
-      // label(for="mce-FNAME") First Name
-      input#mce-FNAME(placeholder='first name' type="text" value="" name="FNAME" class="")
-      // label(for="mce-LNAME") Last Name
-      input#mce_LNAME(placeholder='last name' type="text" value="" name="LNAME" class="")
       input(placeholder='email' type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL")
 
     #mce-responses.clear

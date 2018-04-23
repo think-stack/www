@@ -6,88 +6,112 @@ footer
   justify-content: space-between
   align-items: center
   position: relative
-  padding-bottom: 1em
+  padding: 1rem
 
-  & #mailchimp-form
-    margin-top: 3em
+  & .footer__flex-wrap
+    display: flex
+    flex-direction: column
 
-    & #mc_embed_signup_scroll
+    @media screen and (--tablet)
+      flex-direction: row
+
+    & #cta
+      max-width: 80%
+      margin: 0 auto 3em
       text-align: center
 
-    & .mc-field-group
-      text-align: center
+      @media screen and (--tablet)
+        text-align: left
+        width: 33.33%
 
-      & input
-        background-color: var(--tsGrey)
-        border-style: none
-        border-bottom: 2px solid var(--tsGreen)
-        font-size: 1.2rem
-        margin-bottom: .5rem
+      & p
+        margin-bottom: 1.5em
 
-        &:nth-child(-n+2)
+        @media (max-width: 26em)
+          display: none
 
-          @media screen and (--laptop)
-            margin-right: 1em
-
-        &::placeholder
-          color: #fff
-
-    & #mce-responses
-      text-align: center
-
-      & #mc-embedded-subscribe
-        margin: 1rem auto
-        font-size: 1.2rem
+      & .button
 
         &:hover
-          background-color: #fff
+          background: var(--white)
           color: var(--tsGrey)
 
-  & #logo
-    flex: 1 1 auto
-    text-align: center
-    margin: 3em auto 2em
+      & .email
+        color: var(--white)
+        display: inline-block
+        font-size: 1.5rem
+        margin-top: 1rem
 
-    & img
-      width: 60%
+        @media (min-width: 26em)
+          display: none
 
-  & #cta
-    max-width: 80%
-    margin: 0 auto 3em
-    text-align: center
+      & .button
 
-    @media (min-width: 30em)
-      max-width: 30em
+        @media (max-width: 26em)
+          display: none
 
-    & p
-      margin-bottom: 1.5em
+    & #mailchimp-form
 
-      @media (max-width: 26em)
-        display: none
+      @media screen and (--tablet)
+        width: 33.33%
 
-    & .button
+      & #mc_embed_signup_scroll
+        text-align: center
 
-      &:hover
-        background: var(--white)
-        color: var(--tsGrey)
 
-    & .email
+      & .mc-field-group
+        text-align: center
 
-      @media (min-width: 26em)
-        display: none
+        @media screen and (--tablet)
+          text-align: right
 
-    & .button
+        & input
+          background-color: var(--tsGrey)
+          border-style: none
+          border-bottom: 2px solid var(--tsGreen)
+          font-size: 1.2rem
+          margin-bottom: .5rem
 
-      @media (max-width: 26em)
-        display: none
+          @media screen and (--tablet)
+            text-align: right
 
-  & #social
-    padding-bottom: 2em
+          &::placeholder
+            color: #fff
 
-    & ul
+      & #mce-responses
+        display: flex
+        justify-content: flex-end
+        text-align: center
+
+        & #mc-embedded-subscribe
+          margin: 1rem auto
+          font-size: inherit
+
+          &:hover
+            background-color: #fff
+            color: var(--tsGrey)
+
+    & #logo
+      align-items: center
       display: flex
-      justify-content: space-between
-      min-width: 10em
+      flex-direction: column
+      flex: 1 1 auto
+      text-align: center
+      margin: 0 auto 1rem
+
+      & img
+        width: 60%
+        margin-bottom: 1rem
+
+
+
+    & #social
+      padding-bottom: 2em
+
+      & ul
+        display: flex
+        justify-content: space-between
+        min-width: 10em
 
   & #copyright
 

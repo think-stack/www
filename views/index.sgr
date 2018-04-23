@@ -19,7 +19,7 @@ extends(src='layout.sgr')
             figure.case-study__figure
               img(src='//{{ dato._meta.imgixHost + item.featImage.path }}?fit=clip&amp;w=800&amp;h=800')
 
-            .case-study__wrapper
+            .case-study__wrapper.slide
               h2 {{ item.title }}
               p {{ item.hero }}
               a.button(href='/work/{{ item.slug }}') learn more
