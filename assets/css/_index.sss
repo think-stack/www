@@ -123,25 +123,22 @@
           align-items: flex-end
 
     & .cta
+      background: url(/img/cta-bg.jpg) center center no-repeat
+      background-size: cover
+      border-radius: 1rem
       display: flex
       flex-direction: column
       justify-content: center
       flex: 1 1 auto
       text-align: center
       align-items: center
-      margin: 3em auto 0
-      transform: translateY(10%)
-      transition: opacity 600ms ease, transform 1200ms ease
+      margin: auto
+      padding: 2rem
+      width: 80%
 
-      &.active
-        transform: translateY(0)
-        opacity: 1
-
-      @media (min-width: 26em)
-        flex: 1 1 100%
-
-      @media (min-width: 26em)
-        margin: 3em 0 0
+      @media screen and (--tablet)
+        margin: 5rem auto
+        width: 60%
 
       @media (min-width: 78.75em)
         flex: 1 0 40%
