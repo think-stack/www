@@ -13,14 +13,7 @@ extends(src='layout.sgr')
       div(md) {{ dato.about[0].techAbout}}
 
     section#book
-      .bg-wrap
-      h1 the book of
-      h1.large
-        | think
-        span |
-        | stack
-      a.button(href='https://www.flipsnack.com/thinkstack/the-book-of-think-stack.html') read
-
+      iframe(src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fdp5o853z&bgcolor=EEEEEE&t=1524536272" width="640" height="385" seamless="seamless" scrolling="no" frameBorder="0"        allowTransparency="true" allowFullScreen="true")
 
     section.about.slide
       h2 {{ dato.about[0].aboutUsTitle }}
