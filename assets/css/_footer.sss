@@ -1,16 +1,17 @@
 footer
   color: #fff
   background-color: var(--tsGrey)
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
-  position: relative
   padding: 1rem
+
+  @media screen and (--tablet)
+    padding: 2rem
 
   & .footer__flex-wrap
     display: flex
     flex-direction: column
+    justify-content: space-around
+    margin: auto
+    max-width: 1500px
 
     @media screen and (--tablet)
       flex-direction: row
@@ -71,6 +72,7 @@ footer
           border-bottom: 2px solid var(--tsGreen)
           font-size: 1.2rem
           margin-bottom: .5rem
+          text-align: center
 
           @media screen and (--tablet)
             text-align: right
@@ -80,8 +82,11 @@ footer
 
       & #mce-responses
         display: flex
-        justify-content: flex-end
+        justify-content: center
         text-align: center
+
+        @media screen and (--tablet)
+          justify-content: flex-end
 
         & #mc-embedded-subscribe
           margin: 1rem auto
@@ -91,7 +96,7 @@ footer
             background-color: #fff
             color: var(--tsGrey)
 
-    & #logo
+    & #footer-logo
       align-items: center
       display: flex
       flex-direction: column
@@ -99,21 +104,28 @@ footer
       text-align: center
       margin: 0 auto 1rem
 
+      @media screen and (--tablet)
+        justify-content: space-between
+
       & img
-        width: 60%
+        width: 4rem
         margin-bottom: 1rem
 
 
 
-    & #social
-      padding-bottom: 2em
+      & #social
+        padding-bottom: 2em
 
-      & ul
-        display: flex
-        justify-content: space-between
-        min-width: 10em
+        @media screen and (--tablet)
+          padding-bottom: 0
+
+        & ul
+          display: flex
+          justify-content: space-between
+          min-width: 10em
 
   & #copyright
+    text-align: center
 
     & small
       text-transform: capitalize

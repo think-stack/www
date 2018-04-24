@@ -4,8 +4,8 @@
     a.email(href='mailto:sales@thinkstack.co') sales@thinkstack.co
     a.button(href='mailto:sales@thinkstack.co') work with us
 
-  #logo
-    img(src='/img/logo-full-lockup-white.png')
+  #footer-logo
+    img(src='/img/ts-monogram-green.svg')
 
     #social
       ul
