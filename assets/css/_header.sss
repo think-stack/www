@@ -173,8 +173,20 @@ header
       text-align: left
 
     & img
-      width: 10.625em
+      width: 10.5rem
       margin: auto
+
+      @media screen and (--tablet)
+        width: 13.5rem
+
+      @media screen and (--laptop)
+        width: 15.5rem
+
+      @media screen and (--laptop-md)
+        width: 17.5rem
+
+      @media screen and (--laptop-lg)
+        width: 21rem
 
     @media (min-width: 26em)
       width: 15.625

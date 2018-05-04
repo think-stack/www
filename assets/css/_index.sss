@@ -55,309 +55,97 @@
       @media (min-width: 48em)
         max-width: 12em
 
-
   & .featured-work
     flex-direction: column
 
-    @media (min-width: 64em)
-      flex-wrap: wrap
-      flex-direction: row
-      max-width: 90%
-      margin: auto
-
-    @media (min-width: 78.75em)
-      margin: auto
-      max-width: 85%
-
-    @media (min-width: 80em)
-      max-width: 71em
-
-    @media (min-width: 90em)
-      margin: auto
-      max-width: 75%
-
-    @media (min-width: 100em)
-      margin: auto
-      max-width: 65%
-
-    @media(--laptop-lg)
-      max-width: 55%
-
-    @media (min-width: 3000px)
-      max-width: 100rem
-
     & .case-study
-      position: relative
       display: flex
       flex-direction: column
-      margin: 2em auto 2em
-      align-items: center
-      max-width: 90%
+      justify-content: center
+      margin: 0 auto 4rem
+      width: 80%
 
-      @media (min-width: 26em)
+      @media screen and (--tablet)
+        display: flex
         flex-direction: row
+        justify-content: center
+        margin: 0 auto 4rem
+        width: 80%
 
-      & svg
-        height: 3em
-        z-index: -1
-        top: 63%
-        left: 50%
-        position: absolute
-        transform: rotate(-.25turn)
+      & .case-study__figure
+        text-align: center
+        width: 100%
 
-        @media (max-width: 26em)
-          transform: rotate(-.25turn) translateY(-120%)
+        @media screen and (--tablet)
+          width: 40%
 
-      & figure
-        margin-bottom: 3em
+        & img
+          width: 80%
 
-        @media (min-width: 78.75em)
-          margin-bottom: 0
+      & .case-study__wrapper
+        display: flex
+        flex: 1 1 auto
+        flex-direction: column
+        justify-content: center
+        padding: 1rem
+        width: 100%
 
-      & p
-        max-width: 20em
-        margin-bottom: 1.5em
+        @media screen and (--tablet)
+          width: 40%
 
-      & .wrapper
-        opacity: 0
-        transform: translateY(10%)
-        transition: opacity 600ms ease, transform 1200ms ease
-        margin-top: 1em
-
-        &.active
-          transform: translateY(0)
-          opacity: 1
+        & p
+          max-width: 24rem
 
         & .button
+          max-width: 10rem
+          text-align: center
 
           &:hover
             background: var(--tsBlue)
             box-shadow: 0 1px 4px var(--tsGrey)
 
+    & .case-study
+
       &:nth-of-type(odd)
-        flex: 1 0 auto
-        justify-content: space-around
 
-        @media (min-width: 26em)
-          flex: 1 0 auto
-
-        @media (min-width: 48em)
-          flex: 2 1 50%
-
-        @media (min-width: 64em)
-          justify-content: center
-
-        @media (min-width: 78.75em)
-          justify-content: space-around
-          flex: 2 0 60%
-
-
-        & figure
-          flex: 1 0 auto
-          max-width: 14em
-          order: 1
-
-          @media (min-width: 35.5em)
-            flex: 1 0 45%
-
-          & img
-            width: 100%
-
-        & .wrapper
-          flex: 1 0 auto
-          max-width: 20em
-          align-self: center
-          order: 3
-
-          @media (min-width: 35.5em)
-            flex: 1 0 45%
-            text-align: right
-
-        & svg
-          order: 2
+        & .case-study__wrapper
+          align-items: flex-start
 
       &:nth-of-type(even)
-        flex: 1 1 auto
 
-        @media (min-width: 26em)
-          flex: 1 0 auto
+        & .case-study__figure
 
-        @media (min-width: 35.5em)
-          flex-direction: row
+          @media screen and (--tablet)
+            order: 2
 
-        @medai (min-width: 48em)
-          flex: 1 1 35%
-
-        @media (min-width: 64em)
-          justify-content: center
-
-        @media (min-width: 78.75em)
-          flex: 1 0 40%
-
-        & figure
-          order: 1
-          width: 80%
-
-          @media (min-width: 26em)
-            width: 60%
-
-          @media (min-width: 35.5em)
-            order: 3
-
-          @media (min-width: 64em)
-            width: 50%
-            text-align: center
-
-          @media (min-width: 78.75em)
-            width: 70%
-            margin-bottom: 3em
-
-      &:nth-of-type(1)
-        text-align: left
-
-        & svg
-          top: 60%
-
-          @media (min-width: 26em)
-            transform: rotate(.5turn)
-            top: 29%
-            left: 32%
-
-          @media (min-width: 35.5em)
-            left: 30%
-
-          @media (min-width: 64em)
-            left: 38%
-            top: 31.5%
-
-          @media (min-width: 78.75em)
-            left: 36%
-            top: 24.5%
-
-        & .wrapper
-
-          @media (min-width: 64em)
-            max-width: 40%
-
-          & p
-
-            @media (min-width: 64em)
-              margin-left: auto
-
-      &:nth-of-type(2)
-
-        @media (min-width: 78.75em)
-          flex-direction: column-reverse
-
-        & svg
-          top: 28%
-
-          @media (min-width: 23em)
-            top: 35%
-
-          @media (min-width: 26em)
-            top: -8%
-
-          @media (min-width: 35.5em)
-            transform: rotate(0turn)
-            top: -2%
-            left: 38%
-
-          @media (min-width: 41.6em)
-            top: 6%
-            left: 34%
-
-          @media (min-width: 46em)
-            top: 14%
-
-          @media (min-width: 64em)
-            top: 23%
-            left: 39%
-
-          @media (min-width: 78.75em)
-            transform: rotate(-.25turn)
-            top: 38%
-
-        & figure
-
-
-          & img
-            max-width: 100%
-
-        & .wrapper
-
-          @media (min-width: 35.5em)
-            order: 1
-
-          & h2
-            position: relative
-
-      &:nth-of-type(3)
-
-        @media (min-width: 26em)
+        & .case-study__wrapper
           text-align: right
-
-        @media (min-width: 78.75em)
-          flex-direction: row-reverse
-
-        & figure
-          order: 2
-
-        & svg
-          top: 50%
-
-          @media (min-width: 26em)
-            top: 19%
-            left: 54%
-
-          @media (min-width: 35.5em)
-            transform: rotate(.5turn)
-            top: 19%
-            left: 36%
-
-          @media (min-width: 64em)
-            left: 40%
-
-
-          @media (min-width: 78.75em)
-            transform: rotate(.0turn)
-            top: 18%
-            left: 54%
-
-        & .wrapper
-          flex: 1 0 auto
-
-        & p
-          margin-left: auto
-
-
+          align-items: flex-end
 
     & .cta
+      background: url(/img/cta-bg.jpg) center center no-repeat
+      background-size: cover
+      border-radius: 1rem
       display: flex
       flex-direction: column
       justify-content: center
       flex: 1 1 auto
       text-align: center
       align-items: center
-      margin: 3em auto 0
-      opacity: 0
-      transform: translateY(10%)
-      transition: opacity 600ms ease, transform 1200ms ease
+      margin: auto
+      padding: 2rem
+      width: 80%
 
-      &.active
-        transform: translateY(0)
-        opacity: 1
-
-      @media (min-width: 26em)
-        flex: 1 1 100%
-
-      @media (min-width: 26em)
-        margin: 3em 0 0
+      @media screen and (--tablet)
+        margin: 5rem auto
+        width: 60%
 
       @media (min-width: 78.75em)
         flex: 1 0 40%
 
       & p
+        color: var(--tsGrey)
+        font-weight: 900
         max-width: 20em
 
       & .button

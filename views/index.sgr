@@ -16,19 +16,16 @@ extends(src='layout.sgr')
 
           .case-study
 
-            svg(viewBox='0 0 250 105')
-              use(xlink:href='#icon-circ')
+            figure.case-study__figure
+              img(src='//{{ dato._meta.imgixHost + item.featImage.path }}?fit=clip&amp;w=800&amp;h=800')
 
-            figure
-              img(src='//{{ dato._meta.imgixHost + item.featImage.path }}')
-
-            .wrapper.slide
+            .case-study__wrapper.slide
               h2 {{ item.title }}
               p {{ item.hero }}
               a.button(href='/work/{{ item.slug }}') learn more
 
 
-      .cta.slide
+      .cta
         h2 {{ dato.index[0].ctaButton[0].title }}
         p {{ dato.index[0].ctaButton[0].ctaContent }}
         a.button(href='mailto:sales@thinkstack.co') {{ dato.index[0].ctaButton[0].buttonText }}
