@@ -8,9 +8,12 @@ extends(src='layout.sgr')
       h1.slide {{ dato.about[0].heroStatement }}
       div.slide(md) {{ dato.about[0].introParagraph}}
 
-    section.tech.color-shift.slide
+    section.tech.slide
       h2 {{ dato.about[0].techTitle }}
       div(md) {{ dato.about[0].techAbout}}
+
+    section#book
+      iframe(src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=ftklg5im7&bgcolor=EEEEEE&t=1525744531" width="640" height="385" seamless="seamless" scrolling="no" frameBorder="0" allowTransparency="true" allowFullScreen="true")
 
     section.about.slide
       h2 {{ dato.about[0].aboutUsTitle }}

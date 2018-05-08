@@ -38,11 +38,49 @@
 
   & .tech
     transition: background-color .5s ease-in
-    height: 100vh
+    height: 40vh
 
   & .about
     justify-content: center
     height: 40vh
+
+  & #book
+    position: relative
+
+    & .bg-wrap
+
+      &:before
+        content: ' '
+        background: url(../img/BOTS-Badge.png) no-repeat center center
+        background-size: 30%
+        display: block
+        position: absolute
+        height: 100%
+        left: -3px
+        opacity: .4
+        top: 0
+        width: 100%
+        z-index: -1
+
+    & h1
+      text-transform: uppercase
+      font-weight: lighter
+
+    & .large
+      font-size: 425%
+      font-weight: 100
+      margin: 1rem auto
+
+      & span
+        color: var(--tsGreen)
+
+    & .button
+      background-color: var(--tsBlue)
+      font-family: var(--headerFont)
+      font-size: 150%
+      letter-spacing: .5rem
+      padding: .75rem 2.5rem
+
 
   & #team
     display: flex
@@ -56,7 +94,7 @@
     @media(--laptop)
       max-width: 95%
 
-    & figure 
+    & figure
       flex: 1 1 auto
       max-width: 22rem
       padding: 1em
