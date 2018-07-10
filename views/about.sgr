@@ -13,7 +13,7 @@ extends(src='layout.sgr')
       div(md) {{ dato.about[0].techAbout}}
 
     section#book
-      iframe(src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=ftklg5im7&bgcolor=EEEEEE&t=1525744531" width="640" height="385" seamless="seamless" scrolling="no" frameBorder="0" allowTransparency="true" allowFullScreen="true")
+      iframe(src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=ftklg5im7&bgcolor=EEEEEE&t=1531188430" width="640" height="385" seamless="seamless" scrolling="no" frameBorder="0" allowTransparency="true" allowFullScreen="true")
 
     section.about.slide
       h2 {{ dato.about[0].aboutUsTitle }}
