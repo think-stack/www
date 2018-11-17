@@ -15,7 +15,7 @@ extends(src='layout.sgr')
           figure.service__figure
             img.service__icon(src='/img/Build-Icon.png')
           .service__body
-            h2.service__heading build
+            h2.service__heading design &amp build
             h4.service__sub-heading We help you implement technology solutions
             ul.service__ul
               li.service__li AWS Cloud migration & optimization
