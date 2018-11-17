@@ -1,0 +1,62 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    main
+
+      #hero
+        h2.h1 We work with companies to guide them along their digital transformation journey.
+        h2.h1 We design, build,maintain and secure the technology infrastructure ofthe future.
+
+      section#services-wrapper
+        .service
+          figure.service__figure
+            img.service__icon(src='/img/Build-Icon.png')
+          .service__body
+            h2.service__heading build
+            h4.service__sub-heading We help you implement technology solutions
+            ul.service__ul
+              li.service__li AWS Cloud migration & optimization
+              li.service__li WAN/LAN implementation
+              li.service__li Cyber security tools and platforms
+        .service
+          figure.service__figure
+            img.service__icon(src='/img/Maintain-Icon.png')
+          .service__body
+            h2.service__heading maintain
+            h4.service__sub-heading We help you manage technology infrastructure
+            ul.service__ul
+              li.service__li NOC as a Service
+              li.service__li Maintenance & management
+              li.service__li Change management
+
+        .service
+          figure.service__figure
+            img.service__icon(src='/img/Secure-Icon.png')
+          .service__body
+            h2.service__heading secure
+            h4.service__sub-heading We watch and triage your security alerts, then we fix them
+            p.service__paragraph Our SOC collects, monitors, triages and responds to the alerts created by yourcyber tools. Combined with our NOC, we make changes to maintain constantsecurity of your member's data.
+
+      section#tools
+        h2.tools__heading tools
+
+        .tools__flex-wrap
+          figure.tools__figure
+            img.tools__img(src='/img/Sophos-Logo-200px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Microsoft-CSP-Logo-200px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Intelligent-ID-Logo-200px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Goma-Logo-200px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Fortinet-logo-200px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Darktrace-Logo-200px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Cisco-Logo-80px.png')
+          figure.tools__figure
+            img.tools__img(src='/img/Amazon-Web-Services-Logo-120px.png')
