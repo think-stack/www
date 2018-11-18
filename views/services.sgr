@@ -8,7 +8,7 @@ extends(src='layout.sgr')
 
       #hero
         h2.h1 We work with companies to guide them along their digital transformation journey.
-        h2.h1 We design, build,maintain and secure the technology infrastructure ofthe future.
+        h2.h1 We design, build, maintain and secure the technology infrastructure of the future.
 
       section#services-wrapper
         .service
@@ -38,7 +38,7 @@ extends(src='layout.sgr')
           .service__body
             h2.service__heading secure
             h4.service__sub-heading We watch and triage your security alerts, then we fix them
-            p.service__paragraph Our SOC collects, monitors, triages and responds to the alerts created by yourcyber tools. Combined with our NOC, we make changes to maintain constantsecurity of your member's data.
+            p.service__paragraph Our SOC collects, monitors, triages and responds to the alerts created by your cyber tools. Combined with our NOC, we make changes to maintain constantsecurity of your member's data.
 
       section#tools
         h2.tools__heading tools
