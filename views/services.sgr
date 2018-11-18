@@ -38,7 +38,7 @@ extends(src='layout.sgr')
           .service__body
             h2.service__heading secure
             h4.service__sub-heading We watch and triage your security alerts, then we fix them
-            p.service__paragraph Our SOC collects, monitors, triages and responds to the alerts created by your cyber tools. Combined with our NOC, we make changes to maintain constantsecurity of your member's data.
+            p.service__paragraph Our SOC collects, monitors, triages and responds to the alerts created by your cyber tools. Combined with our NOC, we make changes to maintain constant security of your member's data.
 
       section#tools
         h2.tools__heading tools
