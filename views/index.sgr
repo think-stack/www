@@ -7,8 +7,8 @@ extends(src='layout.sgr')
     main
 
       #hero
-        h1 We are a design thinking and IT innovation company.
-        p We design meaningful customer experiences and innovative technology solutions for conscious brands.
+        h1 {{ dato.index[0].heroTitle }}
+        p {{ dato.index[0].heroContent }}
 
     section.featured-work
       each(loop='item of dato.work.sort((a, b) => a.position < b.position ? -1 : 1)')
