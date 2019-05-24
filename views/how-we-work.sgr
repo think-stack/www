@@ -5,18 +5,18 @@ extends(src='layout.sgr')
       include(src='/includes/_header.sgr')
 
     #hero.test
-      
-      h2 Our process is rooted in relationships from day one. Every project begins with a goal mapping session to uncover true client's needs. 
+
+      h2 {{ dato.how_we_work[0].heroCopy }}
 
     section.block
-      
+
       img.bg(src='/img/project-lenses.svg')
 
     #process
 
       header
 
-        h1 3 Step Immersion Process
+        h1 {{ dato.how_we_work[0].processHeading }}
 
       .flex-container.process
         span.slide-l.hide
@@ -24,15 +24,11 @@ extends(src='layout.sgr')
 
         .flex-slider
 
-          figure
-            h2 Ask
-            p We want to help you optimize your business. We’ll ask you questions about how you use technology to see if we fix any redundant processes.
-          figure
-            h2 Observe
-            p To understand the way you use technology, we’ll observe your team’s interactions with the platforms you use to brainstorm ways we can improve efficiency.
-          figure
-            h2 Research
-            p We’ll research different platforms that will optimize your business's efficiency and explain all technical solutions so you understand how we’ll improve your system.
+          each(loop='item of dato.how_we_work[0].processSliderModules')
+            figure
+              h2 {{ item.heading }}
+              p {{ item.body }}
+
       .connect.sm-scrn
 
         img.connector(src='/img/connector.svg')
@@ -47,17 +43,17 @@ extends(src='layout.sgr')
 
           figure
 
-            h2 Epics
+            h2 {{ dato.how_we_work[0].processSubHeadings[0].heading }}
             img(src='/img/epic.svg')
 
           figure
 
-            h2 Users
+            h2 {{ dato.how_we_work[0].processSubHeadings[1].heading }}
             img(src='/img/users.svg')
 
           figure
 
-            h2 Journey Map
+            h2 {{ dato.how_we_work[0].processSubHeadings[2].heading }}
             img(src='/img/journey.svg')
 
       .connect
@@ -67,12 +63,11 @@ extends(src='layout.sgr')
       section#design
 
         header
-          h2 Product Design
+          h2 {{ dato.how_we_work[0].listHeading }}
 
         ul
-          li Define Approach
-          li Create Project Charter
-          li Develop Schedule
+          each(loop='item of dato.how_we_work[0].list')
+            li {{ item.item }}
 
       .connect
 
@@ -92,18 +87,7 @@ extends(src='layout.sgr')
         span.slide-r
 
         .flex-slider
-
-          figure
-
-            h2 Training
-            p After the new technical process we implement is in place, we’ll train your team to ensure a smooth transition into new roles and platform utilization.
-
-          figure
-
-            h2 Implementation
-            p What makes us different from other design thinking companies is that we work with you to implement the changes we’ve made to your operational process.
-
-          figure
-
-            h2 Management
-            p We’ll manage the entire project from start to finish, even working with any third-party vendors your company currently works with.
+          each(loop='item of dato.how_we_work[0].slider')
+            figure
+              h2 {{ item.heading }}
+              p {{ item.body }}
