@@ -62,7 +62,11 @@ module.exports = {
         {
           name: 'blog_post',
           json: 'blog.json'
-        }
+        },
+        {
+          name: 'how_we_work',
+          json: 'how_we_work.json',
+        },
       ],
       json: 'data.json'
     })
