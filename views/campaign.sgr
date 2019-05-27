@@ -1,0 +1,50 @@
+extends(src='./layout.sgr')
+
+  block(name='seo')
+    if(condition='dato.how_we_work[0].seo.title')
+      title Think|Stack - {{ dato.how_we_work[0].seo.title }}
+    else
+      title {{ dato._meta.globalSeo.fallbackSeo.title}}
+
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    main
+
+      section#hero
+        h1 header text
+        p Maecenas ut leo scelerisque, tristique eros quis, suscipit quam. In tempus elit ac tristique varius.
+
+      section#banner
+        h2 campaign header
+        img(src='/img/imgix-391813-unsplash.jpg')
+
+      section#cta-banner
+        a.button(href='#') cta
+        a.button(href='#') cta
+
+      section#pre-footer
+        #events
+          h2 events
+          .flex-wrapper
+            a.event(href='#' target='_blank')
+              .event-info
+                h3 event title
+                p Event description tristique eros quis, suscipit quam. In tempus elit
+            a.event(href='#' target='_blank')
+              .event-info
+                h3 event title
+                p Event description tristique eros quis, suscipit quam. In tempus elit
+        #contact
+          h2 contact heading
+          .contact-detail
+            figure
+              img(src='/img/team/chris-sachse-sq-crop.jpg')
+            .contact-body
+              h3 Joe Ireland
+              a.phone(href='#') 123.456.7890
+              a.email(href='#') joe@thinkstack.co
+
+
