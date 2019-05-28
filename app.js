@@ -67,6 +67,13 @@ module.exports = {
           name: 'how_we_work',
           json: 'how_we_work.json',
         },
+        {
+          name: 'campaign',
+          template: {
+            path: 'views/campaign.sgr',
+            output: (campaign) => { return `/${campaign.slug}.html`},
+          },
+        },
       ],
       json: 'data.json'
     })

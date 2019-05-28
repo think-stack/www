@@ -14,37 +14,36 @@ extends(src='./layout.sgr')
     main
 
       section#hero
-        h1 header text
-        p Maecenas ut leo scelerisque, tristique eros quis, suscipit quam. In tempus elit ac tristique varius.
+        h1 {{ item.heroTitle }}
+        p {{ item.heroBody }}
 
       section#banner
-        h2 campaign header
-        img(src='/img/imgix-391813-unsplash.jpg')
+        h2 {{ item.campaignHeading }}
+        img(src='https://www.datocms-assets.com{{item.campaignImg.path}}?fit=crop&amp;w=1920')
 
       section#cta-banner
-        a.button(href='#') cta
-        a.button(href='#') cta
+
+        each(loop='cta in item.ctaBanner')
+          a.button(href='https://{{ cta.url }}' target='_blank') {{ cta.text }}
 
       section#pre-footer
         #events
-          h2 events
+          h2 {{ item.eventHeading}}
           .flex-wrapper
-            a.event(href='#' target='_blank')
-              .event-info
-                h3 event title
-                p Event description tristique eros quis, suscipit quam. In tempus elit
-            a.event(href='#' target='_blank')
-              .event-info
-                h3 event title
-                p Event description tristique eros quis, suscipit quam. In tempus elit
+            each(loop='event in item.event')
+                a.event(href='https://{{ event.url }}' target='_blank' style='background: url(//{{ dato._meta.imgixHost + event.backgroundImg.path }})?fit=crop&amp;w=600')
+                  .event-info
+                    h3 {{ event.title }}
+                    p {{ event.excerpt }}
+
         #contact
-          h2 contact heading
+          h2 {{ item.contactHeading }}
           .contact-detail
             figure
-              img(src='/img/team/chris-sachse-sq-crop.jpg')
+              img(src='//{{ dato._meta.imgixHost + item.contact[0].img.path }}?fit=crop&amp;width=600')
             .contact-body
-              h3 Joe Ireland
-              a.phone(href='#') 123.456.7890
-              a.email(href='#') joe@thinkstack.co
+              h3 {{ item.contact[0].name }}
+              a.phone(href='tel:1{{ item.contact[0].phone }}') {{ item.contact[0].phone }}
+              a.email(href='mailto:{{ item.contact[0].email }}') {{ item.contact[0].email }}
 
 
