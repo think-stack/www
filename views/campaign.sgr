@@ -1,11 +1,5 @@
 extends(src='./layout.sgr')
 
-  block(name='seo')
-    if(condition='item.seo')
-      title Think|Stack - {{ item.seo.title }}
-    else
-      title {{ dato._meta.globalSeo.fallbackSeo.title}}
-
   block(name='content')
 
     header
