@@ -8,6 +8,7 @@ extends(src='./layout.sgr')
     main
 
       section#hero
+        h1 test
         h1 {{ item.heroTitle }}
         p {{ item.heroBody }}
 
