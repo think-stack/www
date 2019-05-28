@@ -71,7 +71,7 @@ module.exports = {
           name: 'campaign',
           template: {
             path: 'views/campaign.sgr',
-            output: (campaign) => { return `${campaign.slug}.html`},
+            output: (campaign) => { return `campaign/${campaign.slug}.html`},
           },
         },
       ],
