@@ -1,14 +1,14 @@
 extends(src='layout.sgr')
-  block(name='seo')
-    if(condition='dato.how_we_work[0].seo.title')
-      title Think|Stack - {{ dato.how_we_work[0].seo.title }}
-    else
-      title {{ dato._meta.globalSeo.fallbackSeo.title}}
+  // block(name='seo')
+  //   if(condition='dato.how_we_work[0].seo.title')
+  //     title Think|Stack - {{ dato.how_we_work[0].seo.title }}
+  //   else
+  //     title {{ dato._meta.globalSeo.fallbackSeo.title}}
 
-    if(condition='dato.how_we_work[0].seo.description')
-      meta(name='description' content='{{ dato.how_we_work[0].seo.description }}')
-    else
-      meta(name='description' content='{{ dato._meta.globalSeo.fallbackSeo.description}}')
+  //   if(condition='dato.how_we_work[0].seo.description')
+  //     meta(name='description' content='{{ dato.how_we_work[0].seo.description }}')
+  //   else
+  //     meta(name='description' content='{{ dato._meta.globalSeo.fallbackSeo.description}}')
 
   block(name='content')
 
