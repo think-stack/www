@@ -1,8 +1,8 @@
 extends(src='./layout.sgr')
 
   block(name='seo')
-    if(condition='dato.how_we_work[0].seo.title')
-      title Think|Stack - {{ dato.how_we_work[0].seo.title }}
+    if(condition='item.seo.title')
+      title Think|Stack - {{ item.seo.title }}
     else
       title {{ dato._meta.globalSeo.fallbackSeo.title}}
 
