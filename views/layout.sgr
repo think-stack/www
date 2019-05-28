@@ -4,7 +4,6 @@ html
     block(name='meta')
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
-      meta(name='description' content='We design meaningful customer experiences and innovative technology solutions for conscious brands')
       meta(name='author' content='asasmith')
       meta(name="viewport" content="width=device-width, initial-scale=1")
       link(rel='icon' type='img/png' sizes='32x32' href='/favicon-32x32.png')
@@ -12,8 +11,9 @@ html
       link(rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5')
       include(src='/includes/_google-analytics.sgr')
 
-    block(name='title')
-      title Think|Stack
+    block(name='seo')
+      title {{ dato._meta.globalSeo.fallbackSeo.title}}
+      meta(name='description' content='We design meaningful customer experiences and innovative technology solutions for conscious brands')
 
     block(name='stylesheets')
       link(rel='stylesheet' href='/css/main.css')
