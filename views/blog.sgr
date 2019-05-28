@@ -21,7 +21,7 @@ extends(src='layout.sgr')
           a(href='{{ post.mediumUrl}}')
             figure
               if(condition='post.image !== null')
-                img(src='//{{ dato._meta.imgixHost + post.image.path }}?fit=crop&amp;h=250&amp;w=384')
+                img(src='https://www.datocms-assets.com{{ post.image.path }}?fit=crop&amp;h=250&amp;w=384')
               else
                 img.no-img(src='/img/ts-monogram.png')
               figcaption

@@ -18,7 +18,7 @@ extends(src='layout.sgr')
           .case-study
 
             figure.case-study__figure
-              img(src='//{{ dato._meta.imgixHost + item.featImage.path }}?fit=clip&amp;w=800&amp;h=800')
+              img(src='https://www.datocms-assets.com{{ item.featImage.path }}?fit=clip&amp;w=800&amp;h=800')
 
             .case-study__wrapper.slide
               h2 {{ item.title }}
