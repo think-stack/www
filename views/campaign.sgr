@@ -40,13 +40,16 @@ html
 
       section#pre-footer
         #events
-          h2 {{ item.eventHeading}}
           .flex-wrapper
-            each(loop='event in item.event')
-                a.event(href='https://{{ event.url }}' target='_blank' style='background: url(https://www.datocms-assets.com{{ event.backgroundImg.path }})?fit=crop&amp;w=600')
-                  .event-info
-                    h3 {{ event.title }}
-                    p {{ event.excerpt }}
+              a.event(href='https://{{ item.event[0].url }}' target='_blank' style='background: url(https://www.datocms-assets.com{{ item.event[0].backgroundImg.path }})?fit=crop&amp;w=600')
+                .event-info
+                  h3 {{ item.event[0].title }}
+                  p {{ item.event[0].excerpt }}
+
+              a.event(href='https://{{ item.event[1].url }}' target='_blank' style='background: url(https://www.datocms-assets.com{{ item.event[1].backgroundImg.path }})?fit=crop&amp;w=600')
+                .event-info
+                  h3 {{ item.event[1].title }}
+                  p {{ item.event[1].excerpt }}
 
         #contact
           h2 {{ item.contactHeading }}
