@@ -12,7 +12,7 @@ html
       include(src='/includes/_google-analytics.sgr')
 
     block(name='seo')
-      title {{ dato._meta.globalSeo.fallbackSeo.title}}
+      title Think|Stack
       meta(name='description' content='We design meaningful customer experiences and innovative technology solutions for conscious brands')
 
     block(name='stylesheets')
