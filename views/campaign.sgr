@@ -40,12 +40,27 @@ html
 
       section#pre-footer
         #events
+          h2 {{ item.eventHeading }}
           .flex-wrapper
+            if(condition='item.event[0].imageOverlay')
+              a.event.overlay(href='https://{{ item.event[0].url }}' target='_blank' style='background-image: url(https://www.datocms-assets.com{{ item.event[0].backgroundImg.path }}?fit=crop&amp;w=600)')
+                .event-info
+                  h3 {{ item.event[0].title }}
+                  p {{ item.event[0].excerpt }}
+
+            else
               a.event(href='https://{{ item.event[0].url }}' target='_blank' style='background-image: url(https://www.datocms-assets.com{{ item.event[0].backgroundImg.path }}?fit=crop&amp;w=600)')
                 .event-info
                   h3 {{ item.event[0].title }}
                   p {{ item.event[0].excerpt }}
 
+            if(condition='item.event[1].imageOverlay')
+              a.event.overlay(href='https://{{ item.event[1].url }}' target='_blank' style='background-image: url(https://www.datocms-assets.com{{ item.event[1].backgroundImg.path }}?fit=crop&amp;w=600)')
+                .event-info
+                  h3 {{ item.event[1].title }}
+                  p {{ item.event[1].excerpt }}
+
+            else
               a.event(href='https://{{ item.event[1].url }}' target='_blank' style='background-image: url(https://www.datocms-assets.com{{ item.event[1].backgroundImg.path }}?fit=crop&amp;w=600)')
                 .event-info
                   h3 {{ item.event[1].title }}

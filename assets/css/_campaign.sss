@@ -89,9 +89,9 @@
           justify-content: space-between
 
       & .event
-        background-blend-mode: multiply
-        background-color: var(--tsGrey)
-        background-size: contain
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
         color: var(--white)
         display: flex
         flex-direction: column
@@ -100,6 +100,10 @@
         min-height: 35vh
         padding: 1rem 2rem 1rem 1rem
         width: 90%
+
+        &.overlay
+          background-color: var(--tsGrey)
+          background-blend-mode: multiply
 
         &:focus
           outline: var(--tsBlue) auto 5px
