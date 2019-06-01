@@ -34,9 +34,15 @@ html
         img(src='https://www.datocms-assets.com{{item.campaignImg.path}}?fit=crop&amp;w=1920')
 
       section#cta-banner
+        h2 {{ item.formHeading }}
+        form.contact(name='contact' action='/thank-you' netlify netlify-honeypot='bot-field')
+          input(type='text' name='name' placeholder='Name' required)
+          input(type='email' name='email' placeholder='Email' required)
+          input(type='phone' name='subject' placeholder='Phone Number' required)
+          textarea(name='message' rows='10' cols='50' placeholder='Ask us somthing')
+          input(name='bot-field' type='hidden')
+          button.button(type='submit') submit
 
-        each(loop='cta in item.ctaBanner')
-          a.button(href='https://{{ cta.url }}' target='_blank') {{ cta.text }}
 
       section#pre-footer
         #events
