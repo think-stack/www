@@ -62,11 +62,18 @@
 
       & button
         background-color: var(--tsGrey)
+        border: 1px solid var(--tsGrey)
         border-radius: 5rem
         font-size: 1rem
         margin: 0 auto
         padding: 1rem
         width: 50%
+
+        &:hover
+          background-color: var(--white)
+          color: var(--tsGrey)
+          cursor: pointer
+
     @media (min-width: 1024px)
       flex-direction: row
       flex-wrap: wrap
