@@ -62,11 +62,21 @@
 
       & button
         background-color: var(--tsGrey)
+        border: 1px solid var(--tsGrey)
         border-radius: 5rem
         font-size: 1rem
         margin: 0 auto
         padding: 1rem
         width: 50%
+
+        &:hover
+          background-color: var(--white)
+          color: var(--tsGrey)
+          cursor: pointer
+
+        &:focus
+          outline: var(--tsGreen) auto 5px
+
     @media (min-width: 1024px)
       flex-direction: row
       flex-wrap: wrap
@@ -130,7 +140,11 @@
         margin: 0 auto 1rem
         min-height: 35vh
         padding: 1rem 2rem 1rem 1rem
+        transition: box-shadow ease 1s
         width: 90%
+
+        &:hover
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
         &.overlay
           background-color: var(--tsGrey)
@@ -197,6 +211,7 @@
       text-align: center
 
       @media (min-width: 1024px)
+        align-items: flex-start
         flex: 0 1 auto
         text-align: left
         width: 48%
@@ -209,4 +224,19 @@
         color: var(--tsGrey)
         display: block
         margin-bottom: .5rem
-        width: 100%
+        position: relative
+
+        &:after
+          background-color: var(--tsGrey)
+          bottom: 0
+          content: ''
+          height: 1px
+          left: 0
+          position: absolute
+          transition: width ease .5s
+          width: 0
+
+        &:hover
+          &:after
+            width: 100%
+

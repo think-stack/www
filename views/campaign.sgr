@@ -36,10 +36,15 @@ html
       section#cta-banner
         h2 {{ item.formHeading }}
         form.contact(name='contact' action='/thank-you' netlify netlify-honeypot='bot-field')
-          input(type='text' name='name' placeholder='Name' required)
-          input(type='email' name='email' placeholder='Email' required)
-          input(type='phone' name='subject' placeholder='Phone Number' required)
-          textarea(name='message' rows='10' cols='50' placeholder='Ask us somthing')
+          label(for='cf-name')
+          input(type='text' name='name' id='cf-name' placeholder='Name' required)
+          label(for='cf-email' aria-label='email')
+          input(type='email' name='email' id='cf-email' placeholder='Email' required)
+          label(for='cf-phone' aria-label='phone')
+          input(type='text' name='phone' id='cf-phone' placeholder='Phone Number' required)
+          label(for='cf-message' aria-label='message')
+          textarea(name='message' id='cf-message' rows='10' cols='50' placeholder='Ask us somthing')
+          label(for='bot-field' aria-label='bot-field')
           input(name='bot-field' type='hidden')
           button.button(type='submit') submit
 
@@ -82,4 +87,6 @@ html
               a.phone(href='tel:1{{ item.contact[0].phone }}') {{ item.contact[0].phone }}
               a.email(href='mailto:{{ item.contact[0].email }}') {{ item.contact[0].email }}
 
+      footer
+        include(src='/includes/_footer.sgr')
 
