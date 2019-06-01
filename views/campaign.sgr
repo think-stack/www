@@ -82,4 +82,6 @@ html
               a.phone(href='tel:1{{ item.contact[0].phone }}') {{ item.contact[0].phone }}
               a.email(href='mailto:{{ item.contact[0].email }}') {{ item.contact[0].email }}
 
+      footer
+        include(src='/includes/_footer.sgr')
 
