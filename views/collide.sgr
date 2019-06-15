@@ -1,0 +1,66 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    main
+      #hero
+        header
+          h1 header
+          p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
+          img(src='/img/temp/undraw_process_e90d.svg')
+
+      #products
+        header
+          h2 header
+          p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
+
+        section
+          .product-card
+            figure
+              img(src='/img/temp/undraw_bookmarks_r6up.svg')
+            .body
+              h3 title
+              p Vestibulum pharetra at leo vel gravida.
+            .counter
+              button.decrement -
+              input(type='number' value='1')
+              button.increment +
+            button add to cart
+
+          .product-card
+            figure
+              img(src='/img/temp/undraw_bookmarks_r6up.svg')
+            .body
+              h3 title
+              p Vestibulum pharetra at leo vel gravida.
+            .counter(data-num='3')
+              button.decrement -
+              input(type='number' value='1')
+              button.increment +
+            button add to cart
+
+          .product-card
+            figure
+              img(src='/img/temp/undraw_bookmarks_r6up.svg')
+            .body
+              h3 title
+              p Vestibulum pharetra at leo vel gravida.
+            .counter
+              button.decrement -
+              input(type='number' value='1')
+              button.increment +
+            button add to cart
+
+          .product-card
+            figure
+              img(src='/img/temp/undraw_bookmarks_r6up.svg')
+            .body
+              h3 title
+              p Vestibulum pharetra at leo vel gravida.
+            .counter
+              button.decrement -
+              input(type='number' value='1')
+              button.increment +
+            button add to cart
