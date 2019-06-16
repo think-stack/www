@@ -9,6 +9,7 @@
   "bugs": "https://github.com/asasmith/spike-test/issues",
   "dependencies": {
     "interactive": "^0.1.9",
+    "netlify-lambda": "^1.4.13",
     "reshape-standard": "^3.1.0",
     "spike": "^2.0.2",
     "spike-css-standards": "^3.0.0",
@@ -35,6 +36,8 @@
     "test": "NODE_ENV=test ava",
     "start": "spike watch",
     "build": "spike compile",
-    "prod": "NODE_ENV=production spike compile -e production"
+    "prod": "NODE_ENV=production spike compile -e production",
+    "lambda-serve": "netlify-lambda serve lambda-src",
+    "lambda-build": "netlify-lambda build lambda-src"
   }
 }
