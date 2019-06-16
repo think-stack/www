@@ -9,6 +9,7 @@ extends(src='layout.sgr')
         header
           h1 header
           p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
+        figure
           img(src='/img/temp/undraw_process_e90d.svg')
 
       #products
@@ -17,50 +18,93 @@ extends(src='layout.sgr')
           p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
 
         section
-          .product-card
+          .product-card(data-id='1' data-name='book-one' data-price='11' data-quantity='1')
             figure
               img(src='/img/temp/undraw_bookmarks_r6up.svg')
             .body
-              h3 title
+              h3 Book one
               p Vestibulum pharetra at leo vel gravida.
             .counter
-              button.decrement -
-              input(type='number' value='1')
-              button.increment +
-            button add to cart
+              button.decrement.button -
+              input(type='text' value='1')
+              button.increment.button +
+            button.add-to-cart.button add to cart
 
-          .product-card
+          .product-card(data-id='2' data-name='book-two' data-price='12' data-quantity='1')
             figure
               img(src='/img/temp/undraw_bookmarks_r6up.svg')
             .body
-              h3 title
+              h3 book two
               p Vestibulum pharetra at leo vel gravida.
             .counter(data-num='3')
-              button.decrement -
-              input(type='number' value='1')
-              button.increment +
-            button add to cart
+              button.decrement.button -
+              input(type='text' value='1')
+              button.increment.button +
+            button.add-to-cart.button add to cart
 
-          .product-card
+          .product-card(data-id='3' data-name='book-three' data-price='13' data-quantity='1')
             figure
               img(src='/img/temp/undraw_bookmarks_r6up.svg')
             .body
-              h3 title
+              h3 book three
               p Vestibulum pharetra at leo vel gravida.
             .counter
-              button.decrement -
-              input(type='number' value='1')
-              button.increment +
-            button add to cart
+              button.decrement.button -
+              input(type='text' value='1')
+              button.increment.button +
+            button.add-to-cart.button add to cart
 
-          .product-card
+          .product-card(data-id='4' data-name='book-four' data-price='14' data-quantity='1')
             figure
               img(src='/img/temp/undraw_bookmarks_r6up.svg')
             .body
-              h3 title
+              h3 book four
               p Vestibulum pharetra at leo vel gravida.
             .counter
-              button.decrement -
-              input(type='number' value='1')
-              button.increment +
-            button add to cart
+              button.decrement.button -
+              input(type='text' value='1')
+              button.increment.button +
+            button.add-to-cart.button add to cart
+
+          .product-card(data-id='5' data-name='card-one' data-price='14' data-quantity='1')
+            figure
+              img(src='/img/temp/undraw_playing_cards_cywn.svg')
+            .body
+              h3 card pack one
+              p Vestibulum pharetra at leo vel gravida.
+            .counter
+              button.decrement.button -
+              input(type='text' value='1')
+              button.increment.button +
+            button.add-to-cart.button add to cart
+
+          .product-card(data-id='6' data-name='card-two' data-price='14' data-quantity='1')
+            figure
+              img(src='/img/temp/undraw_playing_cards_cywn.svg')
+            .body
+              h3 card pack two
+              p Vestibulum pharetra at leo vel gravida.
+            .counter
+              button.decrement.button -
+              input(type='text' value='1')
+              button.increment.button +
+            button.add-to-cart.button add to cart
+
+      section#cart
+        svg.icon.icon-cart
+          use(xlink:href='#icon-cart')
+
+      section#checkout
+
+        table
+          thead
+            tr
+              th item
+              th quantity
+              th price
+              th total price
+          tbody#item-wrapper
+
+        button#checkout-btn.button(type='button') checkout
+
+      script(src='https://checkout.stripe.com/checkout.js')
