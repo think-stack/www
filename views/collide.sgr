@@ -7,10 +7,10 @@ extends(src='layout.sgr')
     main
       #hero
         header
-          h1 header
-          p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
+          h1 {{ dato.collide[0].title }}
+          p {{ dato.collide[0].heroCopy }}
         figure
-          img(src='/img/temp/undraw_process_e90d.svg')
+          img(src='https://www.datocms-assets.com{{ dato.collide[0].heroImg.path }}')
 
       #products
         header
@@ -18,77 +18,21 @@ extends(src='layout.sgr')
           p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
 
         section
-          .product-card(data-id='1' data-name='book-one' data-price='11' data-quantity='1')
-            figure
-              img(src='/img/temp/undraw_bookmarks_r6up.svg')
-            .body
-              h3 Book one
-              p Vestibulum pharetra at leo vel gravida.
-            .counter
-              button.decrement.button -
-              input(type='text' value='1')
-              button.increment.button +
-            button.add-to-cart.button add to cart
 
-          .product-card(data-id='2' data-name='book-two' data-price='12' data-quantity='1')
-            figure
-              img(src='/img/temp/undraw_bookmarks_r6up.svg')
-            .body
-              h3 book two
-              p Vestibulum pharetra at leo vel gravida.
-            .counter(data-num='3')
-              button.decrement.button -
-              input(type='text' value='1')
-              button.increment.button +
-            button.add-to-cart.button add to cart
+          each(loop='item in dato.collide_product.sort((a, b) => a.position < b.position ? -1 : 1)')
+            .product-card(data-id='{{ item.productId }}' data-name='{{ item.productTitle }}' data-price='{{ item.price }}' data-quantity='1')
+              figure
+                img(src='https://www.datocms-assets.com{{ item.img.path }}')
+              .body
+                h3 {{ item.title }}
+                p {{ item.excerpt }}
+              .counter
+                button.decrement.button -
+                input(type='text' value='1')
+                button.increment.button +
+              button.add-to-cart.button add to cart
 
-          .product-card(data-id='3' data-name='book-three' data-price='13' data-quantity='1')
-            figure
-              img(src='/img/temp/undraw_bookmarks_r6up.svg')
-            .body
-              h3 book three
-              p Vestibulum pharetra at leo vel gravida.
-            .counter
-              button.decrement.button -
-              input(type='text' value='1')
-              button.increment.button +
-            button.add-to-cart.button add to cart
 
-          .product-card(data-id='4' data-name='book-four' data-price='14' data-quantity='1')
-            figure
-              img(src='/img/temp/undraw_bookmarks_r6up.svg')
-            .body
-              h3 book four
-              p Vestibulum pharetra at leo vel gravida.
-            .counter
-              button.decrement.button -
-              input(type='text' value='1')
-              button.increment.button +
-            button.add-to-cart.button add to cart
-
-          .product-card(data-id='5' data-name='card-one' data-price='14' data-quantity='1')
-            figure
-              img(src='/img/temp/undraw_playing_cards_cywn.svg')
-            .body
-              h3 card pack one
-              p Vestibulum pharetra at leo vel gravida.
-            .counter
-              button.decrement.button -
-              input(type='text' value='1')
-              button.increment.button +
-            button.add-to-cart.button add to cart
-
-          .product-card(data-id='6' data-name='card-two' data-price='14' data-quantity='1')
-            figure
-              img(src='/img/temp/undraw_playing_cards_cywn.svg')
-            .body
-              h3 card pack two
-              p Vestibulum pharetra at leo vel gravida.
-            .counter
-              button.decrement.button -
-              input(type='text' value='1')
-              button.increment.button +
-            button.add-to-cart.button add to cart
 
       section#cart
         svg.icon.icon-cart

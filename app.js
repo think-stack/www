@@ -88,6 +88,14 @@ module.exports = {
             output: (campaign) => { return `${campaign.slug}.html`},
           },
         },
+        {
+          name: 'collide',
+          json: 'collide.json',
+        },
+        {
+          name: 'collide_product',
+          json: 'collide-products.json',
+        },
       ],
       json: 'data.json'
     }),
