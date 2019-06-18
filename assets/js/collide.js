@@ -6,7 +6,7 @@ import debounce from './debounce'
 // TODO: update cart quantity when items are added
 // TODO: button to edit quantity/remove item
 // TODO: remove console.logs
-// TODO: amount is not defined error
+// TODO: amount is not defined error - create amount function
 
 
 export default function Collide () {
