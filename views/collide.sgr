@@ -14,8 +14,8 @@ extends(src='layout.sgr')
 
       #products
         header
-          h2 header
-          p Vestibulum pharetra at leo vel gravida. Etiam vitae lectus venenatis, sollicitudin sapien sodales, tincidunt quam.
+          h2 {{ dato.collide[0].productHeading }}
+          p {{ dato.collide[0].productCopy }}
 
         section
 
