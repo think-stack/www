@@ -32,7 +32,7 @@ export default function Collide () {
           method: "POST",
           body: JSON.stringify({
             token,
-            amount,
+            amount: amount(),
             idempotency_key: uuid()
           }),
           headers: new Headers({
@@ -48,16 +48,20 @@ export default function Collide () {
     }
   })
 
+
+  function amount() {
+    cart.reduce((acc, curr) => acc + curr.totalPrice, 0)
+  }
+
   // Stripe handles pricing in cents, so this is actually $10.00.
   // const amount = 1000;
 
   document.getElementById("checkout-btn").addEventListener("click", function(e) {
-    const amount = cart.reduce((acc, curr) => acc + curr.totalPrice, 0)
     console.log(amount)
     e.preventDefault()
 
     handler.open({
-      amount,
+      amount: amount(),
       name: "Collide",
       description: "Buy Stuff",
       shippingAddress: true,
@@ -70,6 +74,7 @@ export default function Collide () {
 
   function itemHTML () {
     const html = cart.map(item => {
+      console.log(cart)
       return `
         <tr>
           <td>${item.name}</td>
@@ -123,8 +128,6 @@ export default function Collide () {
       }, 2500)
     },
     isScrolled() {
-      console.log('scrolling')
-      console.log(window.scrollY)
       if (window.scrollY < 250) {
         cartBtn.classList.remove('is-scrolled')
       } else {
