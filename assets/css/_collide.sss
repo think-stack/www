@@ -68,7 +68,10 @@
       justify-content: space-around
 
       & .product-card
+        display: flex
         flex: 0 1 auto
+        flex-direction: column
+        justify-content: space-between
         margin-bottom: 5rem
         text-align: center
         width: 35%
@@ -83,7 +86,8 @@
         & .counter
           display: flex
           justify-content: center
-          margin-bottom: 1rem
+          margin: 0 auto 1rem
+          width: 30%
 
           & input
             border: 1px solid var(--black)
@@ -93,7 +97,15 @@
             font-size: 1.2rem
             margin: 0 1rem
             text-align: center
-            width: 10%
+            width: 25%
+
+          & .button
+            margin: 0 auto
+            width: 2rem
+
+        & button
+          margin: 0 auto
+          width: 50%
 
   & #cart
     position: fixed
