@@ -37,6 +37,7 @@ extends(src='layout.sgr')
       section#cart
         svg.icon.icon-cart
           use(xlink:href='#icon-cart')
+        span#cart-quantity 1
 
       section#checkout
 

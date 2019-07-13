@@ -124,18 +124,18 @@
     & .icon-cart
       fill: var(--tsBlue)
 
-    &::after
+    & #cart-quantity
       background-color: var(--black)
       border-radius: 1rem
-      bottom: 0
       color: var(--white)
-      content: '3'
-      font-size: 1rem
-      height: 1rem
-      padding: .25rem
+      display: none
+      left: 50%
+      padding: 0 .5rem
       position: absolute
-      right: 0
-      width: 1rem
+      top: -.5rem
+
+      &.is-active
+        display: block
 
   & #checkout
     background-color: var(--white)

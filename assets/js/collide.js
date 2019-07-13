@@ -17,6 +17,7 @@ export default function Collide () {
   const cartBtn = document.getElementById('cart')
   const checkoutPanel = document.getElementById('checkout')
   const checkoutItems = document.querySelector('#checkout #item-wrapper')
+  const cartTotal = document.getElementById('cart-quantity')
 
   const handler = StripeCheckout.configure({
     key: STRIPE_PUBLISHABLE_KEY,
@@ -50,14 +51,13 @@ export default function Collide () {
 
 
   function amount() {
-    cart.reduce((acc, curr) => acc + curr.totalPrice, 0)
+    return cart.reduce((acc, curr) => acc + curr.totalPrice, 0)
   }
 
   // Stripe handles pricing in cents, so this is actually $10.00.
   // const amount = 1000;
 
   document.getElementById("checkout-btn").addEventListener("click", function(e) {
-    console.log(amount)
     e.preventDefault()
 
     handler.open({
@@ -74,7 +74,6 @@ export default function Collide () {
 
   function itemHTML () {
     const html = cart.map(item => {
-      console.log(cart)
       return `
         <tr>
           <td>${item.name}</td>
@@ -90,10 +89,20 @@ export default function Collide () {
     checkoutItems.innerHTML = html
   }
 
+  function updateCartTotal () {
+    cartTotal.innerText = ''
+    // cartTotal.innerText = cart.reduce((acc, item) => acc + item.quantity)
+    cartTotal.innerText = cart.reduce((acc, curr) => acc + Number(curr.quantity), 0)
+
+
+    if (cart.length > 0) {
+      cartTotal.classList.add('is-active')
+    } else {
+      cartTotal.classList.remove('is-active')
+    }
+  }
+
   const events = {
-    clicked() {
-      console.log(this)
-    },
     increment() {
       const parentEl = this.parentElement.parentElement
       this.previousElementSibling.value ++
@@ -120,8 +129,8 @@ export default function Collide () {
         totalPrice,
       }
       cart.push(item)
-      console.table(cart)
       itemHTML()
+      updateCartTotal()
       checkoutPanel.classList.add('in-view')
       setTimeout(() => {
         checkoutPanel.classList.remove('in-view')
