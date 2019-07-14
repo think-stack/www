@@ -2,9 +2,6 @@ require ('dotenv').config({ silent: true })
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
-console.log(process.env.STRIPE_SECRET_KEY)
-console.log(process.env.STRIPE_PUBLISHABLE_KEY)
-
 const statusCode = 200
 const headers = {
   "Access-Control-Allow-Origin": "*",
