@@ -8,7 +8,7 @@ const headers = {
   "Access-Control-Allow-Headers": "Content-Type"
 }
 
-exports.handler = async function(event) {
+exports.handler = async function(event, context, callback) {
   // We only care to do anything if this is our POST request.
   if (event.httpMethod !== "POST") {
     return {
@@ -67,6 +67,8 @@ exports.handler = async function(event) {
 
   const status =
     charge === null || charge.status !== "succeeded" ? "failed" : charge.status
+
+    console.log(`${data.amount}`)
 
   return {
     statusCode,
