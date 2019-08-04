@@ -29,6 +29,7 @@ const { DefinePlugin } = require('webpack')
 const definePlugin = new DefinePlugin({
   STRIPE_LAMBDA_ENDPOINT: JSON.stringify(process.env.STRIPE_LAMBDA_ENDPOINT),
   STRIPE_PUBLISHABLE_KEY: JSON.stringify(process.env.STRIPE_PUBLISHABLE_KEY),
+  SPARKPOST_LAMBDA_ENDPOINT: JSON.stringify(process.env.SPARKPOST_LAMBDA_ENDPOINT)
 })
 
 module.exports = {

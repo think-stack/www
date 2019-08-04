@@ -20,6 +20,25 @@ exports.handler = async function(event, context, callback) {
 
   // Parse the body contents into an object.
   const data = JSON.parse(event.body)
+  const {
+     token:
+    {
+      card:
+      {
+        name,
+        id,
+        address_line1,
+        addres_line2,
+        address_city,
+        address_state,
+        address_zip,
+      },
+      email
+    }
+  } = data
+
+  console.log('data below')
+  console.log(data)
 
   // check for required data
   if (!data.token || !data.amount || !data.idempotency_key) {
@@ -68,13 +87,19 @@ exports.handler = async function(event, context, callback) {
   const status =
     charge === null || charge.status !== "succeeded" ? "failed" : charge.status
 
-    console.log(`${data.amount}`)
-
   return {
     statusCode,
     headers,
     body: JSON.stringify({
       status,
+      statusCode,
+      id,
+      email,
+      name,
+      address_line1,
+      city: address_city,
+      state: address_state,
+      zip: address_zip,
       message: "Charge successfully created!",
     })
   }

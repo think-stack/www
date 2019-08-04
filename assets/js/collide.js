@@ -17,9 +17,11 @@ export default function Collide () {
   const checkoutItems = document.querySelector('#checkout #item-wrapper')
   const cartTotal = document.getElementById('cart-quantity')
 
+  const cart = []
+
+  // stripe setup and lambda
   const handler = StripeCheckout.configure({
     key: STRIPE_PUBLISHABLE_KEY,
-    // image: "https://stripe.com/img/documentation/checkout/marketplace.png",
     image: '/img/ts-monogram.jpg',
     locale: "auto",
     token: async (token) => {
@@ -40,6 +42,17 @@ export default function Collide () {
         })
 
         data = await response.json();
+        const { name, email, address_line1, city, state, zip } = data
+
+        //
+        if (data.statusCode === 200) {
+          console.log(checkoutItems)
+
+          console.log(cart)
+
+          checkoutItems.innerHTML = ''
+          sendEmail(name, email, address_line1, city, state, zip, cart)
+        }
       } catch (error) {
         console.error(error.message);
         return
@@ -47,13 +60,38 @@ export default function Collide () {
     }
   })
 
+  // lambda email function
+  async function sendEmail (name, email, address_line1, city, state, zip, items) {
+    let response
 
+    console.log(items)
+
+    try {
+      console.log(`the catch block`)
+      response = await fetch(SPARKPOST_LAMBDA_ENDPOINT, {
+        method: 'Post',
+        body: JSON.stringify({
+          message: 'testing',
+          email,
+          name,
+          address_line1,
+          city,
+          state,
+          zip,
+          items,
+        }),
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+  // get cart amount total
+  // Stripe handles pricing in cents, so this is actually $10.00.
   function amount() {
     return cart.reduce((acc, curr) => acc + curr.totalPrice, 0)
   }
-
-  // Stripe handles pricing in cents, so this is actually $10.00.
-  // const amount = 1000;
 
   document.getElementById("checkout-btn").addEventListener("click", function(e) {
     e.preventDefault()
@@ -66,9 +104,6 @@ export default function Collide () {
       billingAddress: true,
     })
   })
-
-  const cart = []
-
 
   function itemHTML () {
     const html = cart.map(item => {
@@ -115,7 +150,7 @@ export default function Collide () {
       parentEl.dataset.quantity = this.nextElementSibling.value
     },
     addToCart() {
-      const { dataset: {id, name, price, quantity} } = this.parentElement
+      const { dataset: {id, name, price, quantity, imgSrc} } = this.parentElement
       const convertedPrice = price * 100
       const totalPrice = convertedPrice * quantity
 
@@ -125,6 +160,7 @@ export default function Collide () {
         quantity,
         price,
         totalPrice,
+        imgSrc,
       }
       cart.push(item)
       itemHTML()
@@ -143,8 +179,8 @@ export default function Collide () {
     }
   }
 
+  // init events
   window.addEventListener('scroll', debounce(events.isScrolled, 5))
-
   incBtns.forEach(btn => btn.addEventListener('click', events.increment))
   decBtns.forEach(btn => btn.addEventListener('click', events.decrement))
   addToCartBtns.forEach(btn => btn.addEventListener('click', events.addToCart))

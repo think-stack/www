@@ -1,17 +1,24 @@
+require ('dotenv').config({ silent: true })
+
 const SparkPost = require('sparkpost');
-const client = new SparkPost('02f5d1423bf05ee45cf8eac69d2e21dbb1e8326a');
+const client = new SparkPost(process.env.SPARKPOST_API_KEY);
+import EmailTemplate from '../assets/js/email-template'
 
 exports.handler = function(event, context, callback) {
-  console.log(event)
+  // console.log(`this is the event: ${ event }`)
+  // console.log(`this is the event body: JSON.parse(${event.body})`)
+  const responseBody = JSON.parse(event.body)
+  const { message, name, email, address_line1, city, state, zip, items } = responseBody
+  console.log(items)
+
   client.transmissions
     .send({
       content: {
         from: 'asa@backroom.io',
-        subject: 'Hello, World!',
-        html:
-          "<html><body><p>My cool email.</p></body></html>"
+        subject: `Hello, ${name}!`,
+        html: EmailTemplate(message, address_line1, city, state, zip, items),
       },
-    recipients: [{ address: 'smith.asa.la@gmail.com' }]
+    recipients: [{ address: email }]
   })
   .then(data => {
     console.log('success')
