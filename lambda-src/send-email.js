@@ -44,9 +44,4 @@ exports.handler = async function(event, context, callback) {
     console.log('fail')
     console.log(err)
   })
-
-  return {
-    statusCode,
-    headers,
-  }
 }
