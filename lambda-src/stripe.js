@@ -37,9 +37,6 @@ exports.handler = async function(event, context, callback) {
     }
   } = data
 
-  console.log('data below')
-  console.log(data)
-
   // check for required data
   if (!data.token || !data.amount || !data.idempotency_key) {
     const message = "Required information is missing!"

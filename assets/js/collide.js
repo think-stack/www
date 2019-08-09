@@ -69,17 +69,21 @@ export default function Collide () {
     try {
       console.log(`the catch block`)
       response = await fetch(SPARKPOST_LAMBDA_ENDPOINT, {
-        method: 'POST',
-        body: JSON.stringify({
-          message: 'testing',
-          email,
-          name,
-          address_line1,
-          city,
-          state,
-          zip,
-          items,
-        }),
+        // method: 'POST',
+        // body: JSON.stringify({
+        //   message: 'testing',
+        //   email,
+        //   name,
+        //   address_line1,
+        //   city,
+        //   state,
+        //   zip,
+        //   items,
+        // }),
+        cors: "no-cors",
+        headers: new Headers({
+          "Content-Type": "application/json"
+        })
       })
 
       console.log(`response object: ${response}`)

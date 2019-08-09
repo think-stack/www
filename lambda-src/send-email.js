@@ -16,8 +16,8 @@ const headers = {
   "Access-Control-Allow-Headers": "Content-Type"
 }
 
-exports.handler = async function(event, context, callback) {
-  // console.log(`this is the event: ${ event }`)
+exports.handler = function(event, context, callback) {
+  console.log(event)
   // console.log(`this is the event body: JSON.parse(${event.body})`)
   // const responseBody = JSON.parse(event.body)
   // const { message, name, email, address_line1, city, state, zip, items } = responseBody
@@ -32,13 +32,10 @@ exports.handler = async function(event, context, callback) {
   recipients: [{ address: 'smith.asa.la@gmail.com'  }]
   })
   .then(data => {
-    console.log('success')
-    console.log(data)
     callback(null, {
       statusCode: 200,
       body: 'wow',
     })
-
   })
   .catch(err => {
     console.log('fail')
