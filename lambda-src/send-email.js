@@ -10,6 +10,11 @@ const options = {
 const client = new SparkPost(process.env.SPARKPOST_API_KEY, options);
 import EmailTemplate from '../assets/js/email-template'
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "Content-Type"
+}
+
 exports.handler = function(event, context, callback) {
   console.log(event)
   // console.log(`this is the event body: JSON.parse(${event.body})`)
@@ -29,7 +34,7 @@ exports.handler = function(event, context, callback) {
     callback(null, {
       statusCode: 200,
       headers,
-      body: data,
+      body: JSON.stringify(data),
     })
   })
   .catch(err => {
