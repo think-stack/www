@@ -69,7 +69,7 @@ export default function Collide () {
     try {
       console.log(`the catch block`)
       response = await fetch(SPARKPOST_LAMBDA_ENDPOINT, {
-        method: 'Post',
+        method: 'POST',
         body: JSON.stringify({
           message: 'testing',
           email,
@@ -82,7 +82,7 @@ export default function Collide () {
         }),
       })
 
-      console.log(response)
+      console.log(`response object: ${response}`)
     } catch (error) {
       console.log(error)
     }
