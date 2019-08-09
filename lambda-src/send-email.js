@@ -7,7 +7,7 @@ const options = {
     "Access-Control-Allow-Headers": "Content-Type"
   }
 }
-const client = new SparkPost(process.env.SPARKPOST_API_KEY);
+const client = new SparkPost(process.env.SPARKPOST_API_KEY, options);
 import EmailTemplate from '../assets/js/email-template'
 
 const statusCode = 200
