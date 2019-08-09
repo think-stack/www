@@ -81,6 +81,8 @@ export default function Collide () {
           items,
         }),
       })
+
+      console.log(response)
     } catch (error) {
       console.log(error)
     }
