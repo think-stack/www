@@ -34,10 +34,10 @@ exports.handler = async function(event, context, callback) {
   .then(data => {
     console.log('success')
     console.log(data)
-    // callback(null, {
-    //   statusCode: 200,
-    //   body: 'wow',
-    // })
+    callback(null, {
+      statusCode: 200,
+      body: 'wow',
+    })
 
   })
   .catch(err => {
