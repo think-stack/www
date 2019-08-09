@@ -1,0 +1,55 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    main
+      #hero
+        header
+          h1 {{ dato.collide[0].title }}
+          p {{ dato.collide[0].heroCopy }}
+        figure
+          img(src='https://www.datocms-assets.com{{ dato.collide[0].heroImg.path }}')
+
+      #products
+        header
+          h2 {{ dato.collide[0].productHeading }}
+          p {{ dato.collide[0].productCopy }}
+
+        section
+
+          each(loop='item in dato.collide_product.sort((a, b) => a.position < b.position ? -1 : 1)')
+            .product-card(data-id='{{ item.id }}' data-name='{{ item.title }}' data-price='{{ item.price }}' data-quantity='1' data-img-src='https://www.datocms-assets.com{{ item.img.path }}')
+              figure
+                img(src='https://www.datocms-assets.com{{ item.img.path }}')
+              .body
+                h3 {{ item.title }}
+                p {{ item.excerpt }}
+              .counter
+                button.decrement.button -
+                input(type='text' value='1')
+                button.increment.button +
+              button.add-to-cart.button add to cart
+
+
+
+      section#cart
+        svg.icon.icon-cart
+          use(xlink:href='#icon-cart')
+        span#cart-quantity 1
+
+      section#checkout
+
+        table
+          thead
+            tr
+              th item
+              th quantity
+              th price
+              th total price
+          tbody#item-wrapper
+
+        button#checkout-btn.button(type='button') checkout
+
+      script(src='https://checkout.stripe.com/checkout.js')

@@ -1,3 +1,5 @@
+require ('dotenv').config({ silent: true })
+
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
@@ -6,6 +8,7 @@ const SpikeDatoCMS = require('spike-datocms')
 const sugarml = require('sugarml')
 const sugarss = require('sugarss')
 const locals = {}
+const env = process.env.SPIKE_ENV
 
 // Used to convert anything to URL friendly slug
 // thanks @mwickett
@@ -22,6 +25,13 @@ function slugify (text) {
     .replace(/-+$/, '')
 }
 
+const { DefinePlugin } = require('webpack')
+const definePlugin = new DefinePlugin({
+  STRIPE_LAMBDA_ENDPOINT: JSON.stringify(process.env.STRIPE_LAMBDA_ENDPOINT),
+  STRIPE_PUBLISHABLE_KEY: JSON.stringify(process.env.STRIPE_PUBLISHABLE_KEY),
+  SPARKPOST_LAMBDA_ENDPOINT: JSON.stringify(process.env.SPARKPOST_LAMBDA_ENDPOINT)
+})
+
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
@@ -34,6 +44,11 @@ module.exports = {
   postcss: cssStandards({ parser: sugarss }),
   babel: jsStandards(),
   server: { open: false },
+  entry: { 'js/main': [
+    'babel-polyfill',
+    './assets/js/index.js',
+    ]
+  },
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
@@ -74,9 +89,18 @@ module.exports = {
             output: (campaign) => { return `${campaign.slug}.html`},
           },
         },
+        {
+          name: 'collide',
+          json: 'collide.json',
+        },
+        {
+          name: 'collide_product',
+          json: 'collide-products.json',
+        },
       ],
       json: 'data.json'
-    })
+    }),
+    definePlugin,
   ]
 }
 

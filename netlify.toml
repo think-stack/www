@@ -1,2 +1,6 @@
 [build]
-functions = "./lambda"
+  functions = "./lambda"
+[dev]
+  command = "spike clean && spike build"
+  port = 1111
+  publish = "public"

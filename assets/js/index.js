@@ -1,3 +1,10 @@
+import Collide from './collide'
+
+if (document.body.id === 'collide') {
+  // console.log(Collide())
+  Collide()
+}
+
 const client = algoliasearch('NDZKXKRSA7', 'e4dde62d4e2f8323b8f46d3825bbd8fc')
 const helper = algoliasearchHelper(client, 'test_thinkstack')
 
