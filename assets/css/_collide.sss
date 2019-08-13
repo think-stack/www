@@ -64,8 +64,12 @@
 
     & section
       display: flex
-      flex-wrap: wrap
-      justify-content: space-around
+      flex-direction: column
+
+      @media screen and (min-width: 765px)
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
 
       & .product-card
         display: flex
@@ -74,7 +78,10 @@
         justify-content: space-between
         margin-bottom: 5rem
         text-align: center
-        width: 35%
+        width: 100%
+
+        @media screen and (min-width: 765px)
+          width: 35%
 
         & figure
           margin: 0 auto
