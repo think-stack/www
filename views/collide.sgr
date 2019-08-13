@@ -20,7 +20,7 @@ extends(src='layout.sgr')
         section
 
           each(loop='item in dato.collide_product.sort((a, b) => a.position < b.position ? -1 : 1)')
-            .product-card(data-id='{{ item.id }}' data-name='{{ item.title }}' data-price='{{ item.price }}' data-quantity='1' data-img-src='https://www.datocms-assets.com{{ item.img.path }}')
+            .product-card(data-sku='{{ item.sku }}' data-name='{{ item.title }}' data-price='{{ item.price }}' data-quantity='1' data-img-src='https://www.datocms-assets.com{{ item.img.path }}')
               figure
                 img(src='https://www.datocms-assets.com{{ item.img.path }}')
               .body
@@ -52,4 +52,6 @@ extends(src='layout.sgr')
 
         button#checkout-btn.button(type='button') checkout
 
-      script(src='https://checkout.stripe.com/checkout.js')
+      // script(src='https://checkout.stripe.com/checkout.js')
+      script(src='https://js.stripe.com/v3')
+
