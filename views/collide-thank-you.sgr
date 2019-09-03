@@ -5,6 +5,6 @@ extends(src='layout.sgr')
       include(src='/includes/_header.sgr')
 
     main
-      h1 Thank you for you purchase
-      p You will recieve and email receipt confirming you order
+      h1 Thank you for you purchase!
+      p You will receive an email receipt confirming you order.
       a(href='/collide') continue shopping
