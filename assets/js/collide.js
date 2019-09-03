@@ -86,7 +86,7 @@ export default function Collide () {
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://thinkstack.co/collide',
+      successUrl: 'https://thinkstack.co/collide-thank-you',
       cancelUrl: 'https://thinkstack.co/collide',
       billingAddressCollection: 'required',
       // metadata: stripeCart,

@@ -1,0 +1,10 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    header
+      include(src='/includes/_header.sgr')
+
+    main
+      h1 Thank you for you purchase
+      p You will recieve and email receipt confirming you order
+      a(href='/collide') continue shopping
